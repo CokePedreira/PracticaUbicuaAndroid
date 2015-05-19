@@ -1,38 +1,30 @@
 package com.example.cokepedreira.ocalimochoapp;
 
-import android.app.Activity;
+import com.google.gson.annotations.Expose;
 
 import java.io.Serializable;
 
 /**
  * Created by andres on 16/05/2015.
  */
-public class jugador  implements Serializable {
-    private String nombre;
-    private int copasadeber;
-    private Activity casilla;
+public class Jugador implements Serializable {
 
-    public Activity getcasilla(){
-        return this.casilla;
-    }
-    public String getnombre() {
-        return this.nombre;
-    }
-    public void setnombre(String nombre){
+    @Expose private final String nombre;
+    @Expose private int copasADeber;
+
+    public Jugador(String nombre) {
         this.nombre = nombre;
     }
-    public void setcasilla ( Activity casilla){
-        this.casilla = casilla;
-    }
-    public int getcopasadeber(){
-        return this.copasadeber;
-    }
-    public void sumarcopas(int copas){
-        this.copasadeber+=copas;
-    }
-    public jugador(){
-        this.nombre ="";
-        this.copasadeber=0;
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getCopasADeber() {
+        return copasADeber;
+    }
+
+    public void setCopasADeber(int copasADeber) {
+        this.copasADeber = copasADeber;
     }
 }

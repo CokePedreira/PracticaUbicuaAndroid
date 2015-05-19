@@ -24,12 +24,8 @@
         </activity>
 
         <activity
-            android:name=".casilla1"
-            android:label="@string/title_activity_casilla1" >
-        </activity>
-        <activity
-            android:name=".casilla2"
-            android:label="@string/title_activity_casilla2" >
+            android:name=".Tablero"
+            android:label="Nombre casilla" >
         </activity>
     </application>
 

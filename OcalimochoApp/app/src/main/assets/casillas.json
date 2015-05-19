@@ -1,0 +1,23 @@
+[
+  {
+    "posicion": 0,
+    "nombre": "Salida",
+    "descripcion": "Casilla de salida",
+    "imagen": "salida",
+    "minijuego": null
+  },
+  {
+    "posicion": 1,
+    "nombre": "Machos",
+    "descripcion": "Los hombres beben",
+    "imagen": "machos",
+    "minijuego": "MIMICA"
+  },
+  {
+    "posicion": 2,
+    "nombre": "Cegatos",
+    "descripcion": "Quien lleve gafas bebe",
+    "imagen": "cegatos",
+    "minijuego": null
+  }
+]
