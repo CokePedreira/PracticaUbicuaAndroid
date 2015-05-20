@@ -8,8 +8,15 @@ public enum Minijuego {
     PALABRA_TABU(MainActivity.class),
     YO_NUNCA(MainActivity.class),
     CARTA_ALTA(MainActivity.class),
-    RULETA_COLOR(MainActivity.class),
-    MINI_CARRERA(MainActivity.class);
+    RULETA(MainActivity.class),
+    MINI_CARRERA(MainActivity.class),
+    LABERINTO(MainActivity.class),
+    DUELO(MainActivity.class),
+    DUELOTRES(MainActivity.class),
+    CARCEL(MainActivity.class);
+
+
+
 
     private final Class<?> activityClass;
 
