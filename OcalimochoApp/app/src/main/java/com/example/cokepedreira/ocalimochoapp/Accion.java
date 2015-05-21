@@ -3,7 +3,7 @@ package com.example.cokepedreira.ocalimochoapp;
 /**
  * Created by cokepedreira on 19/5/15.
  */
-public enum Minijuego {
+public enum Accion {
     MIMICA(MainActivity.class),
     PALABRA_TABU(MainActivity.class),
     YO_NUNCA(MainActivity.class),
@@ -20,7 +20,7 @@ public enum Minijuego {
 
     private final Class<?> activityClass;
 
-    Minijuego(Class<?> activityClass) {
+    Accion(Class<?> activityClass) {
         this.activityClass = activityClass;
     }
 

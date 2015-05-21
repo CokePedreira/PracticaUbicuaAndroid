@@ -54,10 +54,10 @@ public class Tablero extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 //DEBUG
-                Minijuego minijuego = casillas.get(1).getMinijuego();
+                Accion accion = casillas.get(1).getAccion();
 
-                if(minijuego != null) {
-                    Intent intent = new Intent(Tablero.this, minijuego.getActivityClass());
+                if(accion != null) {
+                    Intent intent = new Intent(Tablero.this, accion.getActivityClass());
                     startActivity(intent);
                 }
             }

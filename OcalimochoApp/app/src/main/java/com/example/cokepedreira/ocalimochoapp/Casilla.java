@@ -12,7 +12,7 @@ public class Casilla {
     @Expose private int posicion;
     @Expose private String imagen;
     @Expose private String descripcion;
-    @Expose private Minijuego minijuego;
+    @Expose private Accion accion;
 
     public String getNombre() {
         return nombre;
@@ -30,7 +30,7 @@ public class Casilla {
         return descripcion;
     }
 
-    public Minijuego getMinijuego() {
-        return minijuego;
+    public Accion getAccion() {
+        return accion;
     }
 }
