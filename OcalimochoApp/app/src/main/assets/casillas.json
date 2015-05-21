@@ -200,7 +200,7 @@
     "nombre": "Patinazo",
     "descripcion": "Te has columpiado y vuelves a la casilla 15",
     "imagen": "patin",
-    "accion": null
+    "accion": "PATINAZO"
   },
   {
     "posicion": 29,
@@ -396,7 +396,7 @@
     "nombre": "Patinazo",
     "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 30...",
     "imagen": "patin",
-    "accion": null
+    "accion": "PATINAZO"
   },
   {
     "posicion": 57,
