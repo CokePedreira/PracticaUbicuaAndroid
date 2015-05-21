@@ -2,6 +2,9 @@ package com.example.cokepedreira.ocalimochoapp;
 
 import com.google.gson.annotations.Expose;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by cokepedreira on 19/5/15.
  */
@@ -13,6 +16,7 @@ public class Casilla {
     @Expose private String imagen;
     @Expose private String descripcion;
     @Expose private Accion accion;
+    private List<Jugador> jugadoresEnLaCasilla = new ArrayList<>();
 
     public String getNombre() {
         return nombre;
@@ -32,5 +36,9 @@ public class Casilla {
 
     public Accion getAccion() {
         return accion;
+    }
+
+    public List<Jugador> getJugadoresEnLaCasilla() {
+        return jugadoresEnLaCasilla;
     }
 }

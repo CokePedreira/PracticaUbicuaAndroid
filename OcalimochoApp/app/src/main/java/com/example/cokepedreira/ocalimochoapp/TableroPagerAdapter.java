@@ -26,4 +26,10 @@ public class TableroPagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return casillas.size();
     }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
+    }
+
 }

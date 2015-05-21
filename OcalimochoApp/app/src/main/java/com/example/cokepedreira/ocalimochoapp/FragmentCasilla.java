@@ -7,17 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import java.util.ArrayList;
 
 /**
  * Created by cokepedreira on 21/5/15.
  */
+
 public class FragmentCasilla extends Fragment {
 
     private Casilla casilla;
 
     private TextView nombreCasilla;
+    private TextView listaJugadores;
 
     public static FragmentCasilla newInstance(Casilla casilla) {
         FragmentCasilla fragmentCasilla = new FragmentCasilla();
@@ -41,7 +41,20 @@ public class FragmentCasilla extends Fragment {
         View view = inflater.inflate(R.layout.fragment_casilla, container, false);
 
         nombreCasilla = (TextView) view.findViewById(R.id.nombreCasilla);
-        nombreCasilla.setText(this.casilla.getNombre());
+        nombreCasilla.setText(this.casilla.getPosicion() + ": " +this.casilla.getNombre());
+
+        listaJugadores = (TextView) view.findViewById(R.id.listaJugadores);
+        String nombresJugadores = "";
+        for (Jugador jugador : casilla.getJugadoresEnLaCasilla()) {
+            nombresJugadores += jugador.getNombre() + " ";
+        }
+
+        if(nombresJugadores.isEmpty()) {
+            listaJugadores.setVisibility(View.GONE);
+        } else {
+            listaJugadores.setVisibility(View.VISIBLE);
+            listaJugadores.setText("Jugadores: " + nombresJugadores);
+        }
 
         return view;
     }

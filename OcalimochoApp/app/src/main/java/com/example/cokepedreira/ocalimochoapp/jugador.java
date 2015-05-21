@@ -10,21 +10,22 @@ import java.io.Serializable;
 public class Jugador implements Serializable {
 
     @Expose private final String nombre;
-    @Expose private int copasADeber;
+    @Expose private int casillaActual;
 
     public Jugador(String nombre) {
         this.nombre = nombre;
+        this.casillaActual = 0;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public int getCopasADeber() {
-        return copasADeber;
+    public int getCasillaActual() {
+        return casillaActual;
     }
 
-    public void setCopasADeber(int copasADeber) {
-        this.copasADeber = copasADeber;
+    public void setCasillaActual(int casillaActual) {
+        this.casillaActual = casillaActual;
     }
 }
