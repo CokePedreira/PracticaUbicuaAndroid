@@ -10,7 +10,7 @@ public enum Minijuego {
     CARTA_ALTA(MainActivity.class),
     RULETA(MainActivity.class),
     MINI_CARRERA(MainActivity.class),
-    LABERINTO(MainActivity.class),
+    LABERINTO(null),
     DUELO(MainActivity.class),
     DUELOTRES(MainActivity.class),
     CARCEL(MainActivity.class);

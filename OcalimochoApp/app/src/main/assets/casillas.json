@@ -28,419 +28,416 @@
     "minijuego": "DUELO"
   },
   {
-          "posicion": 4,
-          "nombre": "Zona Cultural",
-          "descripcion": "Quien caiga en esta casilla debe hacer una pregunta de respuesta multiple",
-          "imagen": "zona",
-          "minijuego": null
+    "posicion": 4,
+    "nombre": "Zona Cultural",
+    "descripcion": "Quien caiga en esta casilla debe hacer una pregunta de respuesta multiple",
+    "imagen": "zona",
+    "minijuego": null
   },
   {
-      "posicion": 5,
-      "nombre": "Minijuego",
-      "descripcion": "Juega a la palabra Tabu.",
-      "imagen": "minijuego",
-      "minijuego": "PALABRA_TABU"
+    "posicion": 5,
+    "nombre": "Minijuego",
+    "descripcion": "Juega a la palabra Tabu.",
+    "imagen": "minijuego",
+    "minijuego": "PALABRA_TABU"
   },
   {
-        "posicion": 6,
-        "nombre": "Travoltas",
-        "descripcion": "Quien tenga pelo largo o melena bebe 1",
-        "imagen": "travoltas",
-        "minijuego": null
+    "posicion": 6,
+    "nombre": "Travoltas",
+    "descripcion": "Quien tenga pelo largo o melena bebe 1",
+    "imagen": "travoltas",
+    "minijuego": null
   },
   {
-          "posicion": 7,
-          "nombre": "Reglas Puñeteras",
-          "descripcion": "Pon una regla que os afecte a todos y que durara hasta que otro caiga en la casilla",
-          "imagen": "regla",
-          "minijuego": null
+    "posicion": 7,
+    "nombre": "Reglas Puñeteras",
+    "descripcion": "Pon una regla que os afecte a todos y que durara hasta que otro caiga en la casilla",
+    "imagen": "regla",
+    "minijuego": null
   },
   {
-              "posicion": 8,
-              "nombre": "Hembras",
-              "descripcion": "Todas las mujeres que se precien de serlo beben 1",
-              "imagen": "hembras",
-              "minijuego": null
+    "posicion": 8,
+    "nombre": "Hembras",
+    "descripcion": "Todas las mujeres que se precien de serlo beben 1",
+    "imagen": "hembras",
+    "minijuego": null
   },
   {
-                "posicion": 9,
-                "nombre": "Para los de alante",
-                "descripcion": "Beben todos aquellos que vayan delante de ti en el juego",
-                "imagen": "alante",
-                "minijuego": null
+    "posicion": 9,
+    "nombre": "Para los de alante",
+    "descripcion": "Beben todos aquellos que vayan delante de ti en el juego",
+    "imagen": "alante",
+    "minijuego": null
   },
   {
-          "posicion": 10,
-          "nombre": "Laberinto",
-          "descripcion": "Tiras un dado cada turno y solo puedes salir si sacas 5 o 6. Si no lo sacas bebes la cantidad que obtengas en el dado.",
-          "imagen": "laberinto",
-          "minijuego": "LABERINTO"
+    "posicion": 10,
+    "nombre": "Laberinto",
+    "descripcion": "Tiras un dado cada turno y solo puedes salir si sacas 5 o 6. Si no lo sacas bebes la cantidad que obtengas en el dado.",
+    "imagen": "laberinto",
+    "minijuego": "LABERINTO"
   },
   {
-                  "posicion": 11,
-                  "nombre": "Pobres",
-                  "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1por cada 2€ de menos",
-                  "imagen": "pobres",
-                  "minijuego": null
+    "posicion": 11,
+    "nombre": "Pobres",
+    "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1por cada 2€ de menos",
+    "imagen": "pobres",
+    "minijuego": null
   },
   {
-                    "posicion": 12,
-                    "nombre": "Hipnosis",
-                    "descripcion": "Durante el turno que estes en esta casilla, te tocara ayudar al resto de jugadores bebiendo la mitad de las deudas que les toque.",
-                    "imagen": "hipnosis",
-                    "minijuego": null
+    "posicion": 12,
+    "nombre": "Hipnosis",
+    "descripcion": "Durante el turno que estes en esta casilla, te tocara ayudar al resto de jugadores bebiendo la mitad de las deudas que les toque.",
+    "imagen": "hipnosis",
+    "minijuego": null
   },
   {
-                    "posicion": 13,
-                    "nombre": "Impares",
-                    "descripcion": "Beben 1 todos los que hayan nacido en año impar",
-                    "imagen": "impar",
-                    "minijuego": null
+    "posicion": 13,
+    "nombre": "Impares",
+    "descripcion": "Beben 1 todos los que hayan nacido en año impar",
+    "imagen": "impar",
+    "minijuego": null
   },
   {
-                      "posicion": 14,
-                      "nombre": "Minijuego",
-                      "descripcion": "Juega al juego de la carta mas alta",
-                      "imagen": "minijuego",
-                      "minijuego": "CARTA_ALTA"
+    "posicion": 14,
+    "nombre": "Minijuego",
+    "descripcion": "Juega al juego de la carta mas alta",
+    "imagen": "minijuego",
+    "minijuego": "CARTA_ALTA"
   },
   {
-                      "posicion": 15,
-                      "nombre": "Duelox2",
-                      "descripcion": "Reta a otro jugador por 2, quien saque menos en el dado bebe",
-                      "imagen": "duelo",
-                      "minijuego": "DUELO"
+    "posicion": 15,
+    "nombre": "Duelox2",
+    "descripcion": "Reta a otro jugador por 2, quien saque menos en el dado bebe",
+    "imagen": "duelo",
+    "minijuego": "DUELO"
   },
   {
-                      "posicion": 16,
-                      "nombre": "Condones",
-                      "descripcion": "Bebe 1 todo aquel que no lleve un condon encima",
-                      "imagen": "condon",
-                      "minijuego": null
+    "posicion": 16,
+    "nombre": "Condones",
+    "descripcion": "Bebe 1 todo aquel que no lleve un condon encima",
+    "imagen": "condon",
+    "minijuego": null
   },
   {
-                      "posicion": 17,
-                      "nombre": "Pintados",
-                      "descripcion": "Todo aquel que lleve maquillaje puesto bebe 1",
-                      "imagen": "pintados",
-                      "minijuego": null
+    "posicion": 17,
+    "nombre": "Pintados",
+    "descripcion": "Todo aquel que lleve maquillaje puesto bebe 1",
+    "imagen": "pintados",
+    "minijuego": null
   },
   {
-                      "posicion": 18,
-                      "nombre": "Musculitos",
-                      "descripcion": "Todo aquel que vaya al gimmnasio o  haga deporte de forma regular bebe 1",
-                      "imagen": "musculo",
-                      "minijuego": null
+    "posicion": 18,
+    "nombre": "Musculitos",
+    "descripcion": "Todo aquel que vaya al gimmnasio o  haga deporte de forma regular bebe 1",
+    "imagen": "musculo",
+    "minijuego": null
   },
   {
-                      "posicion": 19,
-                      "nombre": "Suerte",
-                      "descripcion": "Reparte 2 a tu gusto",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 19,
+    "nombre": "Suerte",
+    "descripcion": "Reparte 2 a tu gusto",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 20,
-                      "nombre": "Minijueg",
-                      "descripcion": "Juega al juego de la ruleta",
-                      "imagen": "minijuego",
-                      "minijuego": "RULETA"
+    "posicion": 20,
+    "nombre": "Minijueg",
+    "descripcion": "Juega al juego de la ruleta",
+    "imagen": "minijuego",
+    "minijuego": "RULETA"
   },
   {
-                      "posicion": 21,
-                      "nombre": "Pares",
-                      "descripcion": "Todos aquellos que hayan nacido en año par beben 1",
-                      "imagen": "par",
-                      "minijuego": null
+    "posicion": 21,
+    "nombre": "Pares",
+    "descripcion": "Todos aquellos que hayan nacido en año par beben 1",
+    "imagen": "par",
+    "minijuego": null
   },
   {
-                      "posicion": 22,
-                      "nombre": "Los 2 patitos",
-                      "descripcion": "Te han tocado los dos patitos asique bebes dos vasitos",
-                      "imagen": "patito",
-                      "minijuego": null
+    "posicion": 22,
+    "nombre": "Los 2 patitos",
+    "descripcion": "Te han tocado los dos patitos asique bebes dos vasitos",
+    "imagen": "patito",
+    "minijuego": null
   },
   {
-                      "posicion": 23,
-                      "nombre": "Meones",
-                      "descripcion": "Todos aquellos que se hayan levantado durante el juego para ir al baño beben 2",
-                      "imagen": "pis",
-                      "minijuego": null
+    "posicion": 23,
+    "nombre": "Meones",
+    "descripcion": "Todos aquellos que se hayan levantado durante el juego para ir al baño beben 2",
+    "imagen": "pis",
+    "minijuego": null
   },
   {
-                      "posicion": 24,
-                      "nombre": "Suerte",
-                      "descripcion": "Reparte dos a una unica persona",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 24,
+    "nombre": "Suerte",
+    "descripcion": "Reparte dos a una unica persona",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                        "posicion": 25,
-                        "nombre": "Fumadores",
-                        "descripcion": "Todas aquellas personas que esten fumando en ete momento beben 3",
-                        "imagen": "piti",
-                        "minijuego": null
+    "posicion": 25,
+    "nombre": "Fumadores",
+    "descripcion": "Todas aquellas personas que esten fumando en ete momento beben 3",
+    "imagen": "piti",
+    "minijuego": null
   },
   {
-                        "posicion": 26,
-                        "nombre": "Para el de en frente",
-                        "descripcion": "Bebe 2 el que este sentado en frente de ti",
-                        "imagen": "enfrente",
-                        "minijuego": null
+    "posicion": 26,
+    "nombre": "Para el de en frente",
+    "descripcion": "Bebe 2 el que este sentado en frente de ti",
+    "imagen": "enfrente",
+    "minijuego": null
   },
   {
-                        "posicion": 27,
-                        "nombre": "Minijuego",
-                        "descripcion": "Yo Nunca",
-                        "imagen": "Juega una ronda de yo nunca ",
-                        "minijuego": "YO_NUNCA"
+    "posicion": 27,
+    "nombre": "Minijuego",
+    "descripcion": "Yo Nunca",
+    "imagen": "Juega una ronda de yo nunca ",
+    "minijuego": "YO_NUNCA"
   },
   {
-                        "posicion": 28,
-                        "nombre": "Patinazo",
-                        "descripcion": "Te has columpiado y vuelves a la casilla 15",
-                        "imagen": "patin",
-                        "minijuego": null
+    "posicion": 28,
+    "nombre": "Patinazo",
+    "descripcion": "Te has columpiado y vuelves a la casilla 15",
+    "imagen": "patin",
+    "minijuego": null
   },
   {
-                        "posicion": 29,
-                        "nombre": "Suerte",
-                        "descripcion": "Mala suerte, te toca beber 3",
-                        "imagen": "suerte",
-                        "minijuego": null
+    "posicion": 29,
+    "nombre": "Suerte",
+    "descripcion": "Mala suerte, te toca beber 3",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                        "posicion": 30,
-                        "nombre": "Duelox3",
-                        "descripcion": "Reta a un compañero por 3",
-                        "imagen": "duelo",
-                        "minijuego": "DUELO"
+    "posicion": 30,
+    "nombre": "Duelox3",
+    "descripcion": "Reta a un compañero por 3",
+    "imagen": "duelo",
+    "minijuego": "DUELO"
   },
   {
-                      "posicion": 31,
-                      "nombre": "Suerte",
-                      "descripcion": "Bebe 4 o retrocede 3 casillas",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 31,
+    "nombre": "Suerte",
+    "descripcion": "Bebe 4 o retrocede 3 casillas",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 32,
-                      "nombre": "Para el de la derecha",
-                      "descripcion": "bebe 2 aquel que este sentado a tu derecha",
-                      "imagen": "alante",
-                      "minijuego": null
+    "posicion": 32,
+    "nombre": "Para el de la derecha",
+    "descripcion": "bebe 2 aquel que este sentado a tu derecha",
+    "imagen": "alante",
+    "minijuego": null
   },
   {
-                      "posicion": 33,
-                      "nombre": "MINIJUEGO",
-                      "descripcion": "Juega al juego de mimica",
-                      "imagen": "minijuego",
-                      "minijuego": "MIMICA"
+    "posicion": 33,
+    "nombre": "MINIJUEGO",
+    "descripcion": "Juega al juego de mimica",
+    "imagen": "minijuego",
+    "minijuego": "MIMICA"
   },
   {
-                      "posicion": 34,
-                      "nombre": "Triple duelo",
-                      "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, el que pierda se lo bebe ",
-                      "imagen": "duelo",
-                      "minijuego": "DUELOTRES"
+    "posicion": 34,
+    "nombre": "Triple duelo",
+    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, el que pierda se lo bebe ",
+    "imagen": "duelo",
+    "minijuego": "DUELOTRES"
   },
   {
-                      "posicion": 35,
-                      "nombre": "Posada",
-                      "descripcion": "Mientras estes en esta casilla no te pueden mandar beber",
-                      "imagen": "posada",
-                      "minijuego": null
+    "posicion": 35,
+    "nombre": "Posada",
+    "descripcion": "Mientras estes en esta casilla no te pueden mandar beber",
+    "imagen": "posada",
+    "minijuego": null
   },
   {
-                      "posicion": 36,
-                      "nombre": "Suerte",
-                      "descripcion": "bebe 2, pringao",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 36,
+    "nombre": "Suerte",
+    "descripcion": "bebe 2, pringao",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 37,
-                      "nombre": "Hipnosis",
-                      "descripcion": "Mientras estes en esta casilla beberas la mitad de las deudas de todos tus compañeros",
-                      "imagen": "hipnosis",
-                      "minijuego": null
+    "posicion": 37,
+    "nombre": "Hipnosis",
+    "descripcion": "Mientras estes en esta casilla beberas la mitad de las deudas de todos tus compañeros",
+    "imagen": "hipnosis",
+    "minijuego": null
   },
   {
-                      "posicion": 38,
-                      "nombre": "Suerte",
-                      "descripcion": "Avanza 3 casillas",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 38,
+    "nombre": "Suerte",
+    "descripcion": "Avanza 3 casillas",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 39,
-                      "nombre": "Guerra de sexos",
-                      "descripcion": "Cada sexo selecciona un representante y luchan en un duelo por 3. Si pierdes, cada miembro de tu grupo bebe esa cantidad",
-                      "imagen": "sexo",
-                      "minijuego": "DUELO"
+    "posicion": 39,
+    "nombre": "Guerra de sexos",
+    "descripcion": "Cada sexo selecciona un representante y luchan en un duelo por 3. Si pierdes, cada miembro de tu grupo bebe esa cantidad",
+    "imagen": "sexo",
+    "minijuego": "DUELO"
   },
   {
-                      "posicion": 40,
-                      "nombre": "Reglas puñeteras",
-                      "descripcion": "Pon una regla que os afecte a todos que durara hasta que otro jugador caiga en esta casilla",
-                      "imagen": "regla",
-                      "minijuego": null
+    "posicion": 40,
+    "nombre": "Reglas puñeteras",
+    "descripcion": "Pon una regla que os afecte a todos que durara hasta que otro jugador caiga en esta casilla",
+    "imagen": "regla",
+    "minijuego": null
   },
   {
-                      "posicion": 41,
-                      "nombre": "Suerte",
-                      "descripcion": "Te ha tocado, bebes 4 o te tomas un buen chupito",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 41,
+    "nombre": "Suerte",
+    "descripcion": "Te ha tocado, bebes 4 o te tomas un buen chupito",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 42,
-                      "nombre": "Para el de la izquierda",
-                      "descripcion": "Bebe 1 quien este sentado a tu izquierda",
-                      "imagen": "atras",
-                      "minijuego": null
+    "posicion": 42,
+    "nombre": "Para el de la izquierda",
+    "descripcion": "Bebe 1 quien este sentado a tu izquierda",
+    "imagen": "atras",
+    "minijuego": null
   },
   {
-                      "posicion": 43,
-                      "nombre": "Para los de atras",
-                      "descripcion": "Beben todos aquellos que vayan detras de ti en la partida",
-                      "imagen": "atras",
-                      "minijuego": null
+    "posicion": 43,
+    "nombre": "Para los de atras",
+    "descripcion": "Beben todos aquellos que vayan detras de ti en la partida",
+    "imagen": "atras",
+    "minijuego": null
   },
   {
-                      "posicion": 44,
-                      "nombre": "Suerte",
-                      "descripcion": "Es hora de putear. Reparte 5 como tu gustes",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 44,
+    "nombre": "Suerte",
+    "descripcion": "Es hora de putear. Reparte 5 como tu gustes",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 45,
-                      "nombre": "Minijuego",
-                      "descripcion": "Reta a alguien a una carrera por la cantidad que decidas, el que pierda se lo bebe",
-                      "imagen": "minijuego",
-                      "minijuego": "MINI_CARRERA"
+    "posicion": 45,
+    "nombre": "Minijuego",
+    "descripcion": "Reta a alguien a una carrera por la cantidad que decidas, el que pierda se lo bebe",
+    "imagen": "minijuego",
+    "minijuego": "MINI_CARRERA"
   },
   {
-                      "posicion": 46,
-                      "nombre": "Corleone",
-                      "descripcion": "Todos aquellos que tengan familia o pareja jugando beben 3",
-                      "imagen": "corleone",
-                      "minijuego": null
+    "posicion": 46,
+    "nombre": "Corleone",
+    "descripcion": "Todos aquellos que tengan familia o pareja jugando beben 3",
+    "imagen": "corleone",
+    "minijuego": null
   },
   {
-                      "posicion": 47,
-                      "nombre": "Duelox4",
-                      "descripcion": "Reta a aquien quieras a un duelo por 4",
-                      "imagen": "duelo",
-                      "minijuego": "DUELO"
+    "posicion": 47,
+    "nombre": "Duelox4",
+    "descripcion": "Reta a aquien quieras a un duelo por 4",
+    "imagen": "duelo",
+    "minijuego": "DUELO"
   },
   {
-                      "posicion": 48,
-                      "nombre": "Zona cultural",
-                      "descripcion": "Haz una pregunta con respuestas multiples, el primero que falle o repita bebe",
-                      "imagen": "zona",
-                      "minijuego": null
+    "posicion": 48,
+    "nombre": "Zona cultural",
+    "descripcion": "Haz una pregunta con respuestas multiples, el primero que falle o repita bebe",
+    "imagen": "zona",
+    "minijuego": null
   },
   {
-                      "posicion": 49,
-                      "nombre": "Suerte",
-                      "descripcion": "Retrocedes 3 casillas",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 49,
+    "nombre": "Suerte",
+    "descripcion": "Retrocedes 3 casillas",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 50,
-                      "nombre": "INMUNE",
-                      "descripcion": "Ahora eres inmune, la casilla de muerte no te afectara",
-                      "imagen": "inmune",
-                      "minijuego": null
-  },
-
-  {
-                      "posicion": 51,
-                      "nombre": "Posada",
-                      "descripcion": "Ha sido un duro camino, tomate un descanso. Durante este turno nadie puede mandarte beber",
-                      "imagen": "posada",
-                      "minijuego": null
+    "posicion": 50,
+    "nombre": "INMUNE",
+    "descripcion": "Ahora eres inmune, la casilla de muerte no te afectara",
+    "imagen": "inmune",
+    "minijuego": null
   },
   {
-                      "posicion": 52,
-                      "nombre": "Suerte",
-                      "descripcion": "ES tu momento, reparte el bote como quieras",
-                      "imagen": "suerte",
-                      "minijuego": null
+    "posicion": 51,
+    "nombre": "Posada",
+    "descripcion": "Ha sido un duro camino, tomate un descanso. Durante este turno nadie puede mandarte beber",
+    "imagen": "posada",
+    "minijuego": null
   },
   {
-                      "posicion": 53,
-                      "nombre": "Carcel",
-                      "descripcion": "ESTAS EN LA CARCEL. Tira el dado dos veces, la suma de los dados es tu fianza. El juego no contunia hasta que te lo termines",
-                      "imagen": "carcel",
-                      "minijuego": "CARCEL"
+    "posicion": 52,
+    "nombre": "Suerte",
+    "descripcion": "ES tu momento, reparte el bote como quieras",
+    "imagen": "suerte",
+    "minijuego": null
   },
   {
-                      "posicion": 54,
-                      "nombre": "Trabalenguas",
-                      "descripcion": "Recita un trabalenguas, tienes dos oportunidades. Despues los demas tendran que decir el mismo a la primera. El primero que falle bebe 3",
-                      "imagen": "lengua",
-                      "minijuego": null
+    "posicion": 53,
+    "nombre": "Carcel",
+    "descripcion": "ESTAS EN LA CARCEL. Tira el dado dos veces, la suma de los dados es tu fianza. El juego no contunia hasta que te lo termines",
+    "imagen": "carcel",
+    "minijuego": "CARCEL"
   },
   {
-                      "posicion": 55,
-                      "nombre": "Duelox5",
-                      "descripcion": "Reta a alguien por 5",
-                      "imagen": "duelo",
-                      "minijuego": "DUELO"
+    "posicion": 54,
+    "nombre": "Trabalenguas",
+    "descripcion": "Recita un trabalenguas, tienes dos oportunidades. Despues los demas tendran que decir el mismo a la primera. El primero que falle bebe 3",
+    "imagen": "lengua",
+    "minijuego": null
   },
   {
-                      "posicion": 56,
-                      "nombre": "Patinazo",
-                      "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 30...",
-                      "imagen": "patin",
-                      "minijuego": null
+    "posicion": 55,
+    "nombre": "Duelox5",
+    "descripcion": "Reta a alguien por 5",
+    "imagen": "duelo",
+    "minijuego": "DUELO"
   },
   {
-                      "posicion": 57,
-                      "nombre": "Minijuego",
-                      "descripcion": "Juega al juego de mimica",
-                      "imagen": "minijuego",
-                      "minijuego": "MIMICA"
+    "posicion": 56,
+    "nombre": "Patinazo",
+    "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 30...",
+    "imagen": "patin",
+    "minijuego": null
   },
   {
-                      "posicion": 58,
-                      "nombre": "Reglas puñeteras",
-                      "descripcion": "Pon una regla que os afecte a todos. Quien la incumpla bebe.",
-                      "imagen": "regla",
-                      "minijuego": null
+    "posicion": 57,
+    "nombre": "Minijuego",
+    "descripcion": "Juega al juego de mimica",
+    "imagen": "minijuego",
+    "minijuego": "MIMICA"
   },
   {
-                      "posicion": 59,
-                      "nombre": "Muerte",
-                      "descripcion": "Si no eres inmune, ahora si que la has jodido. Mueres y vuelves al principio",
-                      "imagen": "muerte",
-                      "minijuego": null
+    "posicion": 58,
+    "nombre": "Reglas puñeteras",
+    "descripcion": "Pon una regla que os afecte a todos. Quien la incumpla bebe.",
+    "imagen": "regla",
+    "minijuego": null
   },
   {
-                      "posicion": 60,
-                      "nombre": "Triple duelo",
-                      "descripcion": "Reta a dos compañeros por la cantidad que desees, quien pierda se lo bebe",
-                      "imagen": "duelotres",
-                      "minijuego": "DUELOTRES"
+    "posicion": 59,
+    "nombre": "Muerte",
+    "descripcion": "Si no eres inmune, ahora si que la has jodido. Mueres y vuelves al principio",
+    "imagen": "muerte",
+    "minijuego": null
   },
   {
-                      "posicion": 61,
-                      "nombre": "Zona cultural",
-                      "descripcion": "Quien caiga aqui hace una pregunta de respuesta multiple, el primero que falle bebe",
-                      "imagen": "zona",
-                      "minijuego": null
+    "posicion": 60,
+    "nombre": "Triple duelo",
+    "descripcion": "Reta a dos compañeros por la cantidad que desees, quien pierda se lo bebe",
+    "imagen": "duelotres",
+    "minijuego": "DUELOTRES"
   },
   {
-                      "posicion": 62,
-                      "nombre": "VICTORIA",
-                      "descripcion": "DIOS MIO, HAS GANADO LA PARTIDA POR FIN! COMO RECOMPENSA MANDA A TODOS ACABARSE SUS RESPECTIVOS VASOS",
-                      "imagen": "ganas",
-                      "minijuego": null
+    "posicion": 61,
+    "nombre": "Zona cultural",
+    "descripcion": "Quien caiga aqui hace una pregunta de respuesta multiple, el primero que falle bebe",
+    "imagen": "zona",
+    "minijuego": null
   },
-
-
+  {
+    "posicion": 62,
+    "nombre": "VICTORIA",
+    "descripcion": "DIOS MIO, HAS GANADO LA PARTIDA POR FIN! COMO RECOMPENSA MANDA A TODOS ACABARSE SUS RESPECTIVOS VASOS",
+    "imagen": "ganas",
+    "minijuego": null
+  }
 ]
