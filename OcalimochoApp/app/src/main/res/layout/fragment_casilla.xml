@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:gravity="center">
 
+
     <TextView
         android:id="@+id/nombreCasilla"
         style="?android:textAppearanceLarge"
@@ -12,7 +13,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="POLLAS"/>
+        android:text="Nombre"/>
+
+
+ <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+    <ImageView
+         android:id="@+id/imagen"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="left"/>
+
+   <TextView
+
+       android:id = "@+id/descripcion"
+       style="?android:textAppearanceLarge"
+       android:textStyle="bold"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:text="descripcion"/>
+    <Button
+         android:id="@+id/accion"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="right"
+         android:text="iniciar"/>
+        />
+ </LinearLayout>
 
     <TextView
         android:id="@+id/listaJugadores"
@@ -22,6 +54,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Jugadores:"/>
+
+
 
 
 </LinearLayout>

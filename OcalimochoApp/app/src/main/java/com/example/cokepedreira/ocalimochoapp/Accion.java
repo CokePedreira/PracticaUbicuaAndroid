@@ -14,7 +14,8 @@ public enum Accion {
     DUELOTRES(MainActivity.class),
     CARCEL(MainActivity.class),
     LABERINTO(null),
-    PATINAZO(null);
+    PATINAZO(null),
+    NONE(null);
 
 
 
