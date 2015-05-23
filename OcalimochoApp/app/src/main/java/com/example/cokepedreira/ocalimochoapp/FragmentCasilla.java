@@ -2,7 +2,6 @@ package com.example.cokepedreira.ocalimochoapp;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -29,6 +28,7 @@ public class FragmentCasilla extends Fragment {
     private ImageView imagen;
     private Button accion;
 
+
     public static FragmentCasilla newInstance(Casilla casilla) {
         FragmentCasilla fragmentCasilla = new FragmentCasilla();
         Bundle args = new Bundle();
@@ -36,20 +36,21 @@ public class FragmentCasilla extends Fragment {
         fragmentCasilla.setArguments(args);
         return fragmentCasilla;
     }
+
     public FragmentCasilla() {
     }
     public Bitmap urlImageToBitmap(String urlImage) {
-            Bitmap mIcon1 = null;
-            String imag = "R.drawable."+ urlImage;
-            try {
-                URL url_value = new URL(urlImage);
-                if (url_value != null) {
-                    mIcon1 = BitmapFactory.decodeStream(url_value.openConnection().getInputStream());
-                }
-            }catch(Exception e){
-                System.out.print("Error");
-
+        Bitmap mIcon1 = null;
+        String imag = "R.drawable."+ urlImage;
+        try {
+            URL url_value = new URL(urlImage);
+            if (url_value != null) {
+                mIcon1 = BitmapFactory.decodeStream(url_value.openConnection().getInputStream());
             }
+        }catch(Exception e){
+            System.out.print("Error");
+
+        }
         return mIcon1;
     }
 
@@ -65,12 +66,11 @@ public class FragmentCasilla extends Fragment {
 
         nombreCasilla = (TextView) view.findViewById(R.id.nombreCasilla);
         nombreCasilla.setText(this.casilla.getPosicion() + ": " +this.casilla.getNombre());
-
         descripcion = (TextView) view.findViewById(R.id.descripcion);
         descripcion.setText(this.casilla.getDescripcion());
 
         imagen = (ImageView) view.findViewById(R.id.imagen);
-       // imagen.setImageBitmap(urlImageToBitmap(this.casilla.getImagen()));
+         imagen.setImageBitmap(urlImageToBitmap(this.casilla.getImagen()));
 
         accion =(Button) view.findViewById(R.id.accion);
         if(this.casilla.getAccion()==null) {
@@ -79,9 +79,6 @@ public class FragmentCasilla extends Fragment {
         else{
             accion.setEnabled(true);
         }
-
-
-
         listaJugadores = (TextView) view.findViewById(R.id.listaJugadores);
         String nombresJugadores = "";
         for (Jugador jugador : casilla.getJugadoresEnLaCasilla()) {

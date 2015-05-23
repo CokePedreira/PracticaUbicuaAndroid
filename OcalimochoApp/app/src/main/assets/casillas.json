@@ -141,7 +141,7 @@
   },
   {
     "posicion": 20,
-    "nombre": "Minijuego",
+    "nombre": "Minijueg",
     "descripcion": "Juega al juego de la ruleta",
     "imagen": "minijuego",
     "accion": "RULETA"
@@ -219,7 +219,7 @@
   {
     "posicion": 31,
     "nombre": "Suerte",
-    "descripcion": "Bebe 4 ",
+    "descripcion": "Bebe 4 o retrocede 3 casillas",
     "imagen": "suerte",
     "accion": null
   },
@@ -268,7 +268,7 @@
   {
     "posicion": 38,
     "nombre": "Suerte",
-    "descripcion": "reparte 3 vasos",
+    "descripcion": "Avanza 3 casillas",
     "imagen": "suerte",
     "accion": null
   },
@@ -345,7 +345,7 @@
   {
     "posicion": 49,
     "nombre": "Suerte",
-    "descripcion": "¿Aun no vas ciego? Bebe 3 para solucionarlo",
+    "descripcion": "Retrocedes 3 casillas",
     "imagen": "suerte",
     "accion": null
   },
