@@ -94,7 +94,7 @@
     "posicion": 13,
     "nombre": "Impares",
     "descripcion": "Beben 1 todos los que hayan nacido en año impar",
-    "imagen": "impar",
+    "imagen": "impares",
     "accion": null
   },
   {
@@ -141,7 +141,7 @@
   },
   {
     "posicion": 20,
-    "nombre": "Minijueg",
+    "nombre": "Minijuego",
     "descripcion": "Juega al juego de la ruleta",
     "imagen": "minijuego",
     "accion": "RULETA"
@@ -191,8 +191,8 @@
   {
     "posicion": 27,
     "nombre": "Minijuego",
-    "descripcion": "Yo Nunca",
-    "imagen": "Juega una ronda de yo nunca ",
+    "descripcion": "Juega una ronda de yo nunca",
+    "imagen": "minijuego ",
     "accion": "YO_NUNCA"
   },
   {
@@ -213,7 +213,7 @@
     "posicion": 30,
     "nombre": "Duelox3",
     "descripcion": "Reta a un compañero por 3",
-    "imagen": "duelo",
+    "imagen": "duelotres",
     "accion": "DUELO"
   },
   {
@@ -241,7 +241,7 @@
     "posicion": 34,
     "nombre": "Triple duelo",
     "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, el que pierda se lo bebe ",
-    "imagen": "duelo",
+    "imagen": "duelotres",
     "accion": "DUELOTRES"
   },
   {

@@ -1,50 +1,39 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:layout_alignParentTop="true">
 
 
     <TextView
         android:id="@+id/nombreCasilla"
         style="?android:textAppearanceLarge"
         android:textStyle="bold"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Nombre"/>
 
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center">
         <ImageView
             android:id="@+id/imagen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="left"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="start"
+            android:contentDescription="Imagen de la casilla" />
 
         <TextView
 
             android:id = "@+id/descripcion"
             style="?android:textAppearanceLarge"
             android:textStyle="bold"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="descripcion"/>
-        <Button
-            android:id="@+id/accion"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="right"
-            android:text="iniciar"/>
-        />
-    </LinearLayout>
+
 
     <TextView
         android:id="@+id/listaJugadores"
@@ -54,6 +43,15 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Jugadores:"/>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/accion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="iniciar"/>
 
 
 
