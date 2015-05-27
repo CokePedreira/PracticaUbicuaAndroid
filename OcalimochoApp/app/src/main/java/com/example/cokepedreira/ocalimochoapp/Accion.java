@@ -4,7 +4,7 @@ package com.example.cokepedreira.ocalimochoapp;
  * Created by cokepedreira on 19/5/15.
  */
 public enum Accion {
-    MIMICA(MainActivity.class),
+    MIMICA(MimicaActivity.class),
     PALABRA_TABU(MainActivity.class),
     YO_NUNCA(MainActivity.class),
     CARTA_ALTA(MainActivity.class),

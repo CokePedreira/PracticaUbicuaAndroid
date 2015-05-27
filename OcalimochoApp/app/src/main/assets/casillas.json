@@ -233,7 +233,7 @@
   {
     "posicion": 33,
     "nombre": "MINIJUEGO",
-    "descripcion": "Juega al juego de mimica",
+    "descripcion": "Juega al juego de mimica. Quien acierte la pelicula manda beber, si nadie la acierta mandas dos a quien quieras.",
     "imagen": "minijuego",
     "accion": "MIMICA"
   },

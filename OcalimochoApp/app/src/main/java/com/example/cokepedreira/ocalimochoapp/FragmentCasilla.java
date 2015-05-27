@@ -1,5 +1,6 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -167,6 +168,13 @@ public class FragmentCasilla extends Fragment {
                 accion.setVisibility(View.GONE);
             } else {
                 accion.setVisibility(View.VISIBLE);
+                accion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(FragmentCasilla.this.getActivity(), casilla.getAccion().getActivityClass());
+                        startActivity(intent);
+                    }
+                });
             }
         }
 
