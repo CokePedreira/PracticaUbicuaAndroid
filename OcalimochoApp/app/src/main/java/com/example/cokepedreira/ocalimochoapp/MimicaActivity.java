@@ -41,7 +41,7 @@ public class MimicaActivity extends ActionBarActivity {
         peliculas = new ArrayList<>();
         añadirPeliculas();
         Random rand = new Random();
-        int tirada = rand.nextInt(20);
+        int tirada = rand.nextInt(32);
         listaPelicula.setText(peliculas.get(tirada));
 
 
@@ -65,7 +65,7 @@ public class MimicaActivity extends ActionBarActivity {
         peliculas.add("El señor de los anillos");
         peliculas.add("300");
         peliculas.add("Saw");
-        peliculas.add("Screqm");
+        peliculas.add("Scream");
         peliculas.add("Resacon en las vegas");
         peliculas.add("Star Wars");
         peliculas.add("Jurasic Park");
@@ -83,7 +83,14 @@ public class MimicaActivity extends ActionBarActivity {
         peliculas.add("Iron man");
         peliculas.add("Matrix");
         peliculas.add("Zombieland");
-
+        peliculas.add("Eduardo manos tijeras");
+        peliculas.add("El exorcista");
+        peliculas.add("James Bond");
+        peliculas.add("El club de los poetas muertos");
+        peliculas.add("El pianista");
+        peliculas.add("King Kong");
+        peliculas.add("ET");
+        peliculas.add("Pinocho");
     }
 
 

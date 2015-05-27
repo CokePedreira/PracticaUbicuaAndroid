@@ -5,8 +5,8 @@ package com.example.cokepedreira.ocalimochoapp;
  */
 public enum Accion {
     MIMICA(MimicaActivity.class),
-    PALABRA_TABU(MainActivity.class),
-    YO_NUNCA(MainActivity.class),
+    PALABRA_TABU(TabuActivity.class),
+    YO_NUNCA(YoNuncaActivity.class),
     CARTA_ALTA(MainActivity.class),
     RULETA(MainActivity.class),
     MINI_CARRERA(MainActivity.class),

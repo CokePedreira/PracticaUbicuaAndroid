@@ -37,7 +37,7 @@
   {
     "posicion": 5,
     "nombre": "Minijuego",
-    "descripcion": "Juega a la palabra Tabu.",
+    "descripcion": "Juega a la palabra Tabu. Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU"
   },
@@ -191,7 +191,7 @@
   {
     "posicion": 27,
     "nombre": "Minijuego",
-    "descripcion": "Juega una ronda de yo nunca",
+    "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego ",
     "accion": "YO_NUNCA"
   },
