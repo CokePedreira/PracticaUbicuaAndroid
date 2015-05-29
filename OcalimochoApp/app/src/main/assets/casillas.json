@@ -192,13 +192,13 @@
     "posicion": 27,
     "nombre": "Minijuego",
     "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
-    "imagen": "minijuego ",
+    "imagen": "minijuego",
     "accion": "YO_NUNCA"
   },
   {
     "posicion": 28,
     "nombre": "Patinazo",
-    "descripcion": "Te has columpiado y vuelves a la casilla 15",
+    "descripcion": "Te has columpiado y vuelves a la casilla 13",
     "imagen": "patin",
     "accion": "PATINAZO"
   },
@@ -213,7 +213,7 @@
     "posicion": 30,
     "nombre": "Duelox3",
     "descripcion": "Reta a un compañero por 3",
-    "imagen": "duelotres",
+    "imagen": "duelo",
     "accion": "DUELO"
   },
   {
@@ -366,7 +366,7 @@
   {
     "posicion": 52,
     "nombre": "Suerte",
-    "descripcion": "ES tu momento, reparte el bote como quieras",
+    "descripcion": "Es tu momento, reparte el bote como quieras",
     "imagen": "suerte",
     "accion": null
   },
@@ -394,7 +394,7 @@
   {
     "posicion": 56,
     "nombre": "Patinazo",
-    "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 30...",
+    "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 41...",
     "imagen": "patin",
     "accion": "PATINAZO"
   },

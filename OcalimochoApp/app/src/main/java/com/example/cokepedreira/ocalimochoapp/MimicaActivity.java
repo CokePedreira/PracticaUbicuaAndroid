@@ -38,6 +38,9 @@ public class MimicaActivity extends ActionBarActivity {
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPelicula = (TextView) findViewById(R.id.pelicula);
         continuar = (Button) findViewById(R.id.continuar);
+        imageMimica = (ImageView) findViewById(R.id.imagenimica);
+        imageMimica.setImageResource(R.drawable.mimica);
+
         peliculas = new ArrayList<>();
         añadirPeliculas();
         Random rand = new Random();

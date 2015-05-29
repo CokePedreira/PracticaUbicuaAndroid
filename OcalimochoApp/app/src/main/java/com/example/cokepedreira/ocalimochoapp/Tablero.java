@@ -78,6 +78,8 @@ public class Tablero extends FragmentActivity {
                 casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
                 pagerAdapter.notifyDataSetChanged();
                 viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+
             }
         });
 

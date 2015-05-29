@@ -35,6 +35,7 @@
             android:layout_marginStart="10dp"
             android:text="Siguiente jugador"/>
 
+
     </LinearLayout>
 
     <android.support.v4.view.ViewPager

@@ -34,6 +34,7 @@ public class FragmentCasilla extends Fragment {
     private TextView descripcion;
     private ImageView imagen;
     private Button accion;
+    private  Jugador jugador;
 
     private class Imagen {
         int resourceID;
@@ -164,8 +165,12 @@ public class FragmentCasilla extends Fragment {
         if(this.casilla.getAccion()==null) {
             accion.setVisibility(View.GONE);
         } else {
+
             if(this.casilla.getAccion().getActivityClass() == null) {
                 accion.setVisibility(View.GONE);
+
+
+
             } else {
                 accion.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {

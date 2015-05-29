@@ -33,6 +33,10 @@ public class YoNuncaActivity extends ActionBarActivity {
         titulo = (TextView) findViewById(R.id.titulo);
         listaYoNunca = (TextView) findViewById(R.id.yoNunca);
         continuar = (Button) findViewById(R.id.continuar);
+
+        imageYoNunca = (ImageView) findViewById(R.id.imagenYoNunca);
+        imageYoNunca.setImageResource(R.drawable.yo_nunca);
+
         yoNunca = new ArrayList<>();
         añadirYoNunca();
         Random rand = new Random();

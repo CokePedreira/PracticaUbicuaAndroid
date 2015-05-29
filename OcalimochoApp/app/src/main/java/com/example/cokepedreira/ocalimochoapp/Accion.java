@@ -10,9 +10,9 @@ public enum Accion {
     CARTA_ALTA(MainActivity.class),
     RULETA(MainActivity.class),
     MINI_CARRERA(MainActivity.class),
-    DUELO(MainActivity.class),
-    DUELOTRES(MainActivity.class),
-    CARCEL(MainActivity.class),
+    DUELO(DueloActivity.class),
+    DUELOTRES(DueloTresActivity.class),
+    CARCEL(CarcelActivity.class),
     LABERINTO(null),
     PATINAZO(null);
 

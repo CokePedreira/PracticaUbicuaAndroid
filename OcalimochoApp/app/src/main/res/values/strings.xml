@@ -14,5 +14,8 @@
     <string name="title_activity_mimica">MimicaActivity</string>
     <string name="title_activity_yo_nunca">YoNuncaActivity</string>
     <string name="title_activity_tabu">TabuActivity</string>
+    <string name="title_activity_duelo">DueloActivity</string>
+    <string name="title_activity_duelo_tres">DueloTresActivity</string>
+    <string name="title_activity_carcel">CarcelActivity</string>
 
 </resources>

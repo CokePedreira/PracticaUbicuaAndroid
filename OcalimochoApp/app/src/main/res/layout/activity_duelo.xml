@@ -9,37 +9,20 @@
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
     <TextView
-        android:layout_width="180dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:textSize="22dp"
         android:textStyle="bold"
         android:textColor="#000000"
         android:id="@+id/titulo"
-        android:text="PALABRA TABU"/>
+        android:text="DUELO"/>
     <ImageView
-        android:id="@+id/imagenTABU"
+        android:id="@+id/imagenduelo"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:gravity="start"
-        android:contentDescription="Imagen de tabu"/>
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="25dp"
-        android:textColor="#000000"
-        android:id="@+id/personaje"
-        android:text=" "/>
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="22dp"
-        android:textColor="#000000"
-        android:id="@+id/AvisoTabu"
-        android:text="Las palabras tabu son: "/>
+        android:contentDescription="Imagen de duelo"/>
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -48,44 +31,52 @@
         android:gravity="center"
         android:layout_alignParentTop="true">
 
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/dado1"
+            android:textSize="22dp"
+            android:onClick="tirardado1"
+            android:textColor="#000000"
+            android:text="dado1"/>
         <TextView
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:id="@+id/palabra1"
+            android:id="@+id/resultado1"
             android:textSize="22dp"
-            android:textColor="#000000"
-            android:text="norma1"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:id="@+id/palabra2"
-            android:textSize="22dp"
-            android:textColor="#000000"
-            android:text="norma2"/>
-        </LinearLayout>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_alignParentTop="true">
+            android:textColor="#000000"/>
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:id="@+id/palabra3"
-            android:textSize="22dp"
-            android:textColor="#000000"
-            android:text="norma3"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:id="@+id/palabra4"
-            android:textSize="22dp"
-            android:textColor="#000000"
-            android:text="norma4"/>
     </LinearLayout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentTop="true">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/dado2"
+            android:textSize="22dp"
+            android:onClick="tirardado2"
+            android:textColor="#000000"
+            android:text="dado2"/>
+
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/resultado2"
+            android:textSize="22dp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+
+
+
+
+
 
     <Button
         android:layout_width="120dp"

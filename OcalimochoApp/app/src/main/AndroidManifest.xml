@@ -40,6 +40,18 @@
             android:name=".TabuActivity"
             android:label="@string/title_activity_tabu" >
         </activity>
+        <activity
+            android:name=".DueloActivity"
+            android:label="@string/title_activity_duelo" >
+        </activity>
+        <activity
+            android:name=".DueloTresActivity"
+            android:label="@string/title_activity_duelo_tres" >
+        </activity>
+        <activity
+            android:name=".CarcelActivity"
+            android:label="@string/title_activity_carcel" >
+        </activity>
     </application>
 
 </manifest>
