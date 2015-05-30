@@ -68,64 +68,84 @@ public class Tablero extends ActionBarActivity {
             public void onClick(View v) {
                 tirarDado.setEnabled(false);
 
-                // Quitar al jugador de la casilla actual
-                casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
-
                 // Tirar el dado
                 Random rand = new Random();
                 int tirada = rand.nextInt(6) + 1;
                 Toast.makeText(Tablero.this, "Tirada: " + tirada, Toast.LENGTH_SHORT).show();
-                if((jugadorActual.getCasillaActual() + tirada) >= casillas.size()) {
-                    tirada -= (casillas.size() - jugadorActual.getCasillaActual());
-                    tirada = -tirada;
-                }
-
-                // Mover jugador e interfaz
-                jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() + tirada);
-                casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
-                pagerAdapter.notifyDataSetChanged();
-                viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
-
-                if(casillas.get(jugadorActual.getCasillaActual()).getAccion() != null) {
-                    switch (casillas.get(jugadorActual.getCasillaActual()).getAccion()) {
-                        case PATINAZO:
 
 
-                            new Handler().postDelayed(new Runnable()
-                            {
-                                @Override
-                                public void run()
-                                {
-                                    jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 15);
-                                    pagerAdapter.notifyDataSetChanged();
-                                    viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+                if(jugadorActual.puedoSalir()) {
 
-                                    Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
-                                }
-                            }, 5000/* 1sec delay */);
+                    // Quitar al jugador de la casilla actual
+                    casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
+
+                    if ((jugadorActual.getCasillaActual() + tirada) >= casillas.size()) {
+                        tirada -= (casillas.size() - jugadorActual.getCasillaActual());
+                        tirada = -tirada;
+                    }
+
+                    // Mover jugador e interfaz
+                    jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() + tirada);
+                    casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
+                    pagerAdapter.notifyDataSetChanged();
+                    viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+                    if (casillas.get(jugadorActual.getCasillaActual()).getAccion() != null) {
+                        switch (casillas.get(jugadorActual.getCasillaActual()).getAccion()) {
+
+                            case LABERINTO:
+                                jugadorActual.setAtrapado(true);
+
+                                break;
 
 
-                            break;
+                            case PATINAZO:
 
-                        case INMUNE:
-                            jugadorActual.setInmune(true);
-                            break;
-
-                        case MUERTE:
-                            if(!jugadorActual.isInmune()) {
-                                new Handler().postDelayed(new Runnable()
-                                {
+                                new Handler().postDelayed(new Runnable() {
                                     @Override
-                                    public void run()
-                                    {
-                                        jugadorActual.setCasillaActual(0);
+                                    public void run() {
+                                        casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
+                                        jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 15);
+                                        casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
                                         pagerAdapter.notifyDataSetChanged();
                                         viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
-                                        Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
                                     }
                                 }, 5000/* 1sec delay */);
-                            }
+
+                                break;
+
+                            case INMUNE:
+                                jugadorActual.setInmune(true);
+                                break;
+
+                            case MUERTE:
+                                if (!jugadorActual.isInmune()) {
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
+                                            jugadorActual.setCasillaActual(0);
+                                            casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
+                                            pagerAdapter.notifyDataSetChanged();
+                                            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+                                            Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
+                                        }
+                                    }, 5000/* 1sec delay */);
+                                }
+                        }
+                    }
+                } else {
+
+                    if(tirada == 5 || tirada == 6) {
+                        jugadorActual.setAtrapado(false);
+                        Toast.makeText(Tablero.this, "Sales del laberinto, vuelve a tirar para avanzar.", Toast.LENGTH_LONG).show();
+                        tirarDado.setEnabled(true);
+                    } else {
+                        Toast.makeText(Tablero.this, "Sigues atrapado gilipollas. Bebes " + tirada, Toast.LENGTH_SHORT).show();
+                        tirarDado.setEnabled(false);
                     }
                 }
 

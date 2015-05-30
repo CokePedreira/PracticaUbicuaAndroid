@@ -12,6 +12,7 @@ public class Jugador implements Serializable {
     @Expose private final String nombre;
     @Expose private int casillaActual;
     private boolean inmune;
+    private boolean atrapado;
 
     public Jugador(String nombre) {
         this.nombre = nombre;
@@ -37,5 +38,13 @@ public class Jugador implements Serializable {
 
     public void setInmune(boolean inmune) {
         this.inmune = inmune;
+    }
+
+    public boolean puedoSalir() {
+        return !atrapado;
+    }
+
+    public void setAtrapado(boolean atrapado) {
+        this.atrapado = atrapado;
     }
 }

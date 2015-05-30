@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -20,6 +22,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by cokepedreira on 21/5/15.
@@ -170,6 +173,8 @@ public class FragmentCasilla extends Fragment {
                 accion.setVisibility(View.GONE);
             } else {
                 accion.setVisibility(View.VISIBLE);
+                accion.setText("Iniciar");
+
                 if(this.casilla.getAccion() == Accion.CASILLA_FINAL) {
                     accion.setText("Nueva partida");
                 }
