@@ -46,9 +46,9 @@ public class TabuActivity extends ActionBarActivity {
         norma4 = (TextView) findViewById(R.id.palabra4);
 
         personajes = new ArrayList<>();
-        añadirPersonaje();
+        añadirPersonajes();
         Random rand = new Random();
-        int tirada = rand.nextInt(37);
+        int tirada = rand.nextInt(personajes.size());
         listaPersoanjes.setText(personajes.get(tirada));
         String normas = (String)listaPersoanjes.getText();
         ponerNorma(normas);
@@ -65,8 +65,8 @@ public class TabuActivity extends ActionBarActivity {
                 norma2.setText("Revolucion");
                 norma3.setText("Militar");
                 norma4.setText("Guerra");
-            };
-                break;
+            }
+            break;
             case "Hitler" :{
                 norma1.setText("Aleman");
                 norma2.setText("Nazi");
@@ -291,7 +291,7 @@ public class TabuActivity extends ActionBarActivity {
                 norma4.setText("Bolson");
             };
             break;
-            case "Pichachu" :{
+            case "Pikachu" :{
 
                 norma1.setText("Pokemon");
                 norma2.setText("Amarillo");
@@ -326,7 +326,7 @@ public class TabuActivity extends ActionBarActivity {
         finish();
     }
 
-    public void añadirPersonaje(){
+    public void añadirPersonajes(){
 
 
         personajes.add("Napoleon");
@@ -363,35 +363,8 @@ public class TabuActivity extends ActionBarActivity {
         personajes.add("Oliver Atom");
         personajes.add("Tyrion Lannister");
         personajes.add("Frodo");
-        personajes.add("Picachu");
+        personajes.add("Pikachu");
         personajes.add("Barney Stinson");
         personajes.add("Sheldon Cooper");
-
-
-
-
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_tabu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
