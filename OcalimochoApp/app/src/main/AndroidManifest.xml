@@ -52,6 +52,14 @@
             android:name=".CarcelActivity"
             android:label="@string/title_activity_carcel" >
         </activity>
+        <activity
+            android:name=".PaswordActivity"
+            android:label="@string/title_activity_pasword" >
+        </activity>
+        <activity
+            android:name=".PreguntaActivity"
+            android:label="@string/title_activity_pregunta" >
+        </activity>
     </application>
 
 </manifest>

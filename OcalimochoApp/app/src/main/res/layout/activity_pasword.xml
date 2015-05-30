@@ -16,13 +16,13 @@
         android:textStyle="bold"
         android:textColor="#000000"
         android:id="@+id/titulo"
-        android:text="MIMICA"/>
+        android:text="PASSWORD"/>
     <ImageView
-        android:id="@+id/imagenmimica"
+        android:id="@+id/imagenpassword"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:gravity="start"
-        android:contentDescription="Imagen de mimica"/>
+        android:contentDescription="Imagen de password"/>
 
 
     <TextView
@@ -32,7 +32,7 @@
         android:textSize="22dp"
         android:textColor="#000000"
         android:id="@+id/instrucciones"
-        android:text="La pelicula que te ha tocado es: "/>
+        android:text="La palabra que te ha tocado es: "/>
 
     <TextView
         android:layout_width="300dp"
@@ -40,7 +40,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="25dp"
         android:textColor="#000000"
-        android:id="@+id/pelicula"
+        android:id="@+id/palabra"
         android:text=" "/>
     <Button
         android:layout_width="120dp"

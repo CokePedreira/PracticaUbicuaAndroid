@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:id="@+id/titulo"
+        android:text="PREGUNTA"/>
+    <ImageView
+        android:id="@+id/imagenPregunta"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="start"
+        android:contentDescription="Imagen de pregunta"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:id="@+id/pregunta"
+        android:text=" "/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="22dp"
+        android:textColor="#000000"
+        android:id="@+id/AvisoTabu"
+        android:text="Las posibles respuestas son: "/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/respuesta1"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="respuesta1"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/respuesta2"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="respuesta2"/>
+    </LinearLayout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/respuesta3"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="respuesta3"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/respuesta4"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="respuesta4"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:id="@+id/continuar"
+        android:onClick="volverTablero"
+        android:text="Continuar"/>
+
+
+</LinearLayout>

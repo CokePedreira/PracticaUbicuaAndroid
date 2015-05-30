@@ -17,5 +17,7 @@
     <string name="title_activity_duelo">DueloActivity</string>
     <string name="title_activity_duelo_tres">DueloTresActivity</string>
     <string name="title_activity_carcel">CarcelActivity</string>
+    <string name="title_activity_pasword">PaswordActivity</string>
+    <string name="title_activity_pregunta">PreguntaActivity</string>
 
 </resources>

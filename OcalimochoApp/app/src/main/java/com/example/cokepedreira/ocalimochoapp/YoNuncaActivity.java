@@ -40,7 +40,7 @@ public class YoNuncaActivity extends ActionBarActivity {
         yoNunca = new ArrayList<>();
         añadirYoNunca();
         Random rand = new Random();
-        int tirada = rand.nextInt(30);
+        int tirada = rand.nextInt(yoNunca.size());
         listaYoNunca.setText(yoNunca.get(tirada));
     }
 

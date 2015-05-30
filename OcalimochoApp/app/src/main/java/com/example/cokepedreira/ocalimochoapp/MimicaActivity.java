@@ -38,13 +38,13 @@ public class MimicaActivity extends ActionBarActivity {
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPelicula = (TextView) findViewById(R.id.pelicula);
         continuar = (Button) findViewById(R.id.continuar);
-        imageMimica = (ImageView) findViewById(R.id.imagenimica);
+        imageMimica = (ImageView) findViewById(R.id.imagenmimica);
         imageMimica.setImageResource(R.drawable.mimica);
 
         peliculas = new ArrayList<>();
         añadirPeliculas();
         Random rand = new Random();
-        int tirada = rand.nextInt(32);
+        int tirada = rand.nextInt(peliculas.size());
         listaPelicula.setText(peliculas.get(tirada));
 
 
@@ -94,6 +94,10 @@ public class MimicaActivity extends ActionBarActivity {
         peliculas.add("King Kong");
         peliculas.add("ET");
         peliculas.add("Pinocho");
+        peliculas.add("Jumanji");
+        peliculas.add("La guerra de los mundos");
+        peliculas.add("La momia");
+
     }
 
 }

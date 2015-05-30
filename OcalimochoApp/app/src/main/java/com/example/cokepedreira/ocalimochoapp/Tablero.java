@@ -112,7 +112,7 @@ public class Tablero extends ActionBarActivity {
 
                                         Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
                                     }
-                                }, 5000/* 1sec delay */);
+                                }, 4000/* 1sec delay */);
 
                                 break;
 
@@ -133,7 +133,7 @@ public class Tablero extends ActionBarActivity {
 
                                             Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
                                         }
-                                    }, 5000/* 1sec delay */);
+                                    }, 4000/* 1sec delay */);
                                 }
                         }
                     }

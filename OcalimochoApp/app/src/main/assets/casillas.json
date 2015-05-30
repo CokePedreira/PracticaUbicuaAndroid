@@ -79,7 +79,7 @@
   {
     "posicion": 11,
     "nombre": "Pobres",
-    "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1por cada 2€ de menos",
+    "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1 por cada 2€ de menos",
     "imagen": "pobres",
     "accion": null
   },
@@ -100,9 +100,9 @@
   {
     "posicion": 14,
     "nombre": "Minijuego",
-    "descripcion": "Juega al juego de la carta mas alta",
+    "descripcion": "Juega a Password con un compañero. Usando solo una palabra tu compañero tiene que adivinar la palabra que te ha tocado, si la acierta mandais 1 cada uno, si la falla bebeis los dos",
     "imagen": "minijuego",
-    "accion": "CARTA_ALTA"
+    "accion": "PASSWORD"
   },
   {
     "posicion": 15,
@@ -142,9 +142,9 @@
   {
     "posicion": 20,
     "nombre": "Minijuego",
-    "descripcion": "Juega al juego de la ruleta",
+    "descripcion": "Tienes 8 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
     "imagen": "minijuego",
-    "accion": "RULETA"
+    "accion": "PREGUNTA"
   },
   {
     "posicion": 21,
@@ -177,7 +177,7 @@
   {
     "posicion": 25,
     "nombre": "Fumadores",
-    "descripcion": "Todas aquellas personas que esten fumando en ete momento beben 3",
+    "descripcion": "Todas aquellas personas que esten fumando en este momento beben 3",
     "imagen": "piti",
     "accion": null
   },
@@ -219,7 +219,7 @@
   {
     "posicion": 31,
     "nombre": "Suerte",
-    "descripcion": "Bebe 4 o retrocede 3 casillas",
+    "descripcion": "Bebe 4",
     "imagen": "suerte",
     "accion": null
   },
@@ -233,7 +233,7 @@
   {
     "posicion": 33,
     "nombre": "MINIJUEGO",
-    "descripcion": "Juega al juego de mimica. Quien acierte la pelicula manda beber, si nadie la acierta mandas dos a quien quieras.",
+    "descripcion": "Juega al juego de mimica. Quien acierte la pelicula y tu mandais beber(una cada uno), si nadie la acierta bebes dos.",
     "imagen": "minijuego",
     "accion": "MIMICA"
   },
@@ -268,7 +268,7 @@
   {
     "posicion": 38,
     "nombre": "Suerte",
-    "descripcion": "Avanza 3 casillas",
+    "descripcion": " Manda 3 a tu gusto ",
     "imagen": "suerte",
     "accion": null
   },
@@ -317,9 +317,9 @@
   {
     "posicion": 45,
     "nombre": "Minijuego",
-    "descripcion": "Reta a alguien a una carrera por la cantidad que decidas, el que pierda se lo bebe",
+    "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
-    "accion": "MINI_CARRERA"
+    "accion": "YO_NUNCA"
   },
   {
     "posicion": 46,
@@ -331,7 +331,7 @@
   {
     "posicion": 47,
     "nombre": "Duelox4",
-    "descripcion": "Reta a aquien quieras a un duelo por 4",
+    "descripcion": "Reta a quien quieras a un duelo por 4",
     "imagen": "duelo",
     "accion": "DUELO"
   },
@@ -345,7 +345,7 @@
   {
     "posicion": 49,
     "nombre": "Suerte",
-    "descripcion": "Retrocedes 3 casillas",
+    "descripcion": "Bebes 3, que vas muy sobrio",
     "imagen": "suerte",
     "accion": null
   },
@@ -366,7 +366,7 @@
   {
     "posicion": 52,
     "nombre": "Suerte",
-    "descripcion": "Es tu momento, reparte el bote como quieras",
+    "descripcion": "Es tu momento, reparte 5 como quieras",
     "imagen": "suerte",
     "accion": null
   },
