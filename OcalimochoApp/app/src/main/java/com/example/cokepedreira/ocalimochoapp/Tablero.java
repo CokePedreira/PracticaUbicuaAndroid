@@ -2,6 +2,7 @@ package com.example.cokepedreira.ocalimochoapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -45,7 +46,7 @@ public class Tablero extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablero);
         setTitle("Ocalimocho");
-        
+
         jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>(){}.getType());
 
         cargarTablero(jugadores);
@@ -85,6 +86,28 @@ public class Tablero extends ActionBarActivity {
                 pagerAdapter.notifyDataSetChanged();
                 viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
+                if(casillas.get(jugadorActual.getCasillaActual()).getAccion() != null) {
+                    switch (casillas.get(jugadorActual.getCasillaActual()).getAccion()) {
+                        case PATINAZO:
+
+
+                            new Handler().postDelayed(new Runnable()
+                            {
+                                @Override
+                                public void run()
+                                {
+                                    jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 15);
+                                    pagerAdapter.notifyDataSetChanged();
+                                    viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+                                    Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
+                                }
+                            }, 5000/* 1sec delay */);
+
+
+                            break;
+                    }
+                }
 
             }
         });
