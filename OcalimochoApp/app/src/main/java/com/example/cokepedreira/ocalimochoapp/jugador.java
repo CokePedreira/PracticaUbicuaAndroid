@@ -11,10 +11,12 @@ public class Jugador implements Serializable {
 
     @Expose private final String nombre;
     @Expose private int casillaActual;
+    private boolean inmune;
 
     public Jugador(String nombre) {
         this.nombre = nombre;
         this.casillaActual = 0;
+        this.inmune = false;
     }
 
     public String getNombre() {
@@ -27,5 +29,13 @@ public class Jugador implements Serializable {
 
     public void setCasillaActual(int casillaActual) {
         this.casillaActual = casillaActual;
+    }
+
+    public boolean isInmune() {
+        return inmune;
+    }
+
+    public void setInmune(boolean inmune) {
+        this.inmune = inmune;
     }
 }

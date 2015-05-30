@@ -354,7 +354,7 @@
     "nombre": "INMUNE",
     "descripcion": "Ahora eres inmune, la casilla de muerte no te afectara",
     "imagen": "inmune",
-    "accion": null
+    "accion": "INMUNE"
   },
   {
     "posicion": 51,
@@ -417,7 +417,7 @@
     "nombre": "Muerte",
     "descripcion": "Si no eres inmune, ahora si que la has jodido. Mueres y vuelves al principio",
     "imagen": "muerte",
-    "accion": null
+    "accion": "MUERTE"
   },
   {
     "posicion": 60,

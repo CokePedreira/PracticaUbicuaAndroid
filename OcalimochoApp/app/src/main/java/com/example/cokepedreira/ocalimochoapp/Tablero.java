@@ -106,6 +106,26 @@ public class Tablero extends ActionBarActivity {
 
 
                             break;
+
+                        case INMUNE:
+                            jugadorActual.setInmune(true);
+                            break;
+
+                        case MUERTE:
+                            if(!jugadorActual.isInmune()) {
+                                new Handler().postDelayed(new Runnable()
+                                {
+                                    @Override
+                                    public void run()
+                                    {
+                                        jugadorActual.setCasillaActual(0);
+                                        pagerAdapter.notifyDataSetChanged();
+                                        viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+                                        Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
+                                    }
+                                }, 5000/* 1sec delay */);
+                            }
                     }
                 }
 
