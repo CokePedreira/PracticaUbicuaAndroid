@@ -70,7 +70,8 @@ public class Tablero extends FragmentActivity {
                 int tirada = rand.nextInt(6) + 1;
                 Toast.makeText(Tablero.this, "Tirada: " + tirada, Toast.LENGTH_SHORT).show();
                 if((jugadorActual.getCasillaActual() + tirada) >= casillas.size()) {
-                    tirada -= 2*(casillas.size() - 1 - jugadorActual.getCasillaActual());
+                    tirada -= (casillas.size() - jugadorActual.getCasillaActual());
+                    tirada = -tirada;
                 }
 
                 // Mover jugador e interfaz
