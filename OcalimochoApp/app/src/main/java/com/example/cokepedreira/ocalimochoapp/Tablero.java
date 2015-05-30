@@ -1,9 +1,13 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,7 +26,7 @@ import java.util.Random;
 /**
  * Created by cokepedreira on 19/5/15.
  */
-public class Tablero extends FragmentActivity {
+public class Tablero extends ActionBarActivity {
 
     private List<Jugador> jugadores;
     private Jugador jugadorActual;
@@ -40,7 +44,8 @@ public class Tablero extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablero);
-
+        setTitle("Ocalimocho");
+        
         jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>(){}.getType());
 
         cargarTablero(jugadores);
@@ -111,5 +116,31 @@ public class Tablero extends FragmentActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.new_game) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

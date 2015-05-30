@@ -168,15 +168,18 @@ public class FragmentCasilla extends Fragment {
 
             if(this.casilla.getAccion().getActivityClass() == null) {
                 accion.setVisibility(View.GONE);
-
-
-
             } else {
                 accion.setVisibility(View.VISIBLE);
+                if(this.casilla.getAccion() == Accion.CASILLA_FINAL) {
+                    accion.setText("Nueva partida");
+                }
                 accion.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(FragmentCasilla.this.getActivity(), casilla.getAccion().getActivityClass());
+                        if(casilla.getAccion() == Accion.CASILLA_FINAL) {
+                            getActivity().finish();
+                        }
                         startActivity(intent);
                     }
                 });

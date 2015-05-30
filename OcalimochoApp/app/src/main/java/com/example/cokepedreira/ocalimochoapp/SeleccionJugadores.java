@@ -55,6 +55,7 @@ public class SeleccionJugadores extends ActionBarActivity {
                 Intent intent = new Intent(SeleccionJugadores.this, Tablero.class);
                 intent.putExtra("jugadores", new Gson().toJson(jugadores, new TypeToken<ArrayList<Jugador>>(){}.getType()));
                 startActivity(intent);
+                finish();
             }
         });
         rootView.addView(button);

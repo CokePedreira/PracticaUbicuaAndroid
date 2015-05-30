@@ -438,6 +438,6 @@
     "nombre": "VICTORIA",
     "descripcion": "DIOS MIO, HAS GANADO LA PARTIDA POR FIN! COMO RECOMPENSA MANDA A TODOS ACABARSE SUS RESPECTIVOS VASOS",
     "imagen": "ganas",
-    "accion": null
+    "accion": "CASILLA_FINAL"
   }
 ]

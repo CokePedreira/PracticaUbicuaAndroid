@@ -39,6 +39,7 @@ public class MainActivity extends ActionBarActivity {
                 Intent myIntent = new Intent(this, SeleccionJugadores.class);
                 myIntent.putExtra("key", numJugadores); //Optional parameters
                 startActivity(myIntent);
+                finish();
             } else {
                 Toast toast = Toast.makeText(context, "introduce entre 2 y 8 jugadores", Toast.LENGTH_SHORT);
                 toast.show();
