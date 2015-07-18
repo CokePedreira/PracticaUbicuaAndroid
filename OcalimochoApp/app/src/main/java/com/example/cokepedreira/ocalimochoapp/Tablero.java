@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,7 +28,7 @@ import java.util.Random;
 /**
  * Created by cokepedreira on 19/5/15.
  */
-public class Tablero extends ActionBarActivity {
+public class Tablero extends AppCompatActivity {
 
     private List<Jugador> jugadores;
     private Jugador jugadorActual;
@@ -37,29 +38,26 @@ public class Tablero extends ActionBarActivity {
     private ViewPager viewPager;
     private PagerAdapter pagerAdapter;
 
-    private TextView jugadorActualTextView;
     private Button tirarDado;
-    private Button siguienteJugador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablero);
-        setTitle("Ocalimocho");
 
         jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>(){}.getType());
 
         cargarTablero(jugadores);
         setTitle(casillas.get(0).getNombre());
 
-        jugadorActualTextView = (TextView) findViewById(R.id.jugadorActual);
         viewPager = (ViewPager) findViewById(R.id.tablero_viewPager);
         pagerAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
         viewPager.setAdapter(pagerAdapter);
+        viewPager.setPageMargin(30);
 
         // Configurar turno inicial
         this.jugadorActual = jugadores.get(0);
-        jugadorActualTextView.setText(jugadorActual.getNombre());
+        setTitle(jugadorActual.getNombre());
 
         // Configurar botones
         tirarDado = (Button) findViewById(R.id.tirarDado);
@@ -151,21 +149,6 @@ public class Tablero extends ActionBarActivity {
 
             }
         });
-
-
-        siguienteJugador = (Button) findViewById(R.id.siguienteJugador);
-        siguienteJugador.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tirarDado.setEnabled(true);
-
-                // Cambiar de jugador
-                jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
-                jugadorActualTextView.setText(jugadorActual.getNombre());
-                pagerAdapter.notifyDataSetChanged();
-                viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
-            }
-        });
     }
 
     public void cargarTablero(List<Jugador> jugadores) {
@@ -202,6 +185,14 @@ public class Tablero extends ActionBarActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
+        } else if (id == R.id.next_player) {
+            tirarDado.setEnabled(true);
+
+            // Cambiar de jugador
+            jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
+            setTitle(jugadorActual.getNombre());
+            pagerAdapter.notifyDataSetChanged();
+            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
         }
 
         return super.onOptionsItemSelected(item);
