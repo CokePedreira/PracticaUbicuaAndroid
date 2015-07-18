@@ -92,7 +92,7 @@ public class PreguntaActivity extends ActionBarActivity {
                 }
 
             }
-        }, 8000/* 1sec delay */);
+        }, 10000/* 10sec delay */);
     }
 
 

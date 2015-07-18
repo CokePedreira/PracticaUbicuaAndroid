@@ -1,5 +1,6 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,7 +22,7 @@ public class TabuActivity extends ActionBarActivity {
 
     TextView titulo;
     ImageView imagenTabu;
-    TextView instrucciones;
+    TextView avisoTabu;
     TextView listaPersoanjes;
     Button continuar;
     TextView norma1;
@@ -35,7 +36,7 @@ public class TabuActivity extends ActionBarActivity {
         setContentView(R.layout.activity_tabu);
 
         titulo = (TextView) findViewById(R.id.titulo);
-        instrucciones = (TextView) findViewById(R.id.instrucciones);
+        avisoTabu = (TextView) findViewById(R.id.AvisoTabu);
         listaPersoanjes = (TextView) findViewById(R.id.personaje);
         continuar = (Button) findViewById(R.id.continuar);
         imagenTabu = (ImageView) findViewById(R.id.imagenTABU);
@@ -52,6 +53,18 @@ public class TabuActivity extends ActionBarActivity {
         listaPersoanjes.setText(personajes.get(tirada));
         String normas = (String)listaPersoanjes.getText();
         ponerNorma(normas);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                listaPersoanjes.setText("Se ha acabado el tiempo");
+                norma1.setVisibility(View.GONE);
+                norma2.setVisibility(View.GONE);
+                norma3.setVisibility(View.GONE);
+                norma4.setVisibility(View.GONE);
+                avisoTabu.setVisibility(View.GONE);
+
+            }
+        }, 30000/* 30sec delay */);
 
 
     }

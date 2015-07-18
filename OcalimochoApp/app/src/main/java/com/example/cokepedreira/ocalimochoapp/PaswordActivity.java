@@ -1,5 +1,6 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -43,6 +44,14 @@ public class PaswordActivity extends ActionBarActivity {
         Random rand = new Random();
         int tirada = rand.nextInt(palabras.size());
         listaPalabras.setText(palabras.get(tirada));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                listaPalabras.setText("Se te ha terminado el tiempo");
+                instrucciones.setVisibility(View.GONE);
+
+            }
+        }, 15000/* 15sec delay */);
 
     }
     public void volverTablero(View view){
@@ -69,7 +78,7 @@ public class PaswordActivity extends ActionBarActivity {
         palabras.add("Enfado");
         palabras.add("Insulto");
         palabras.add("Burrito");
-        palabras.add("Baca");
+        palabras.add("Vaca");
         palabras.add("Votar");
         palabras.add("Juego");
         palabras.add("Programa");
@@ -84,6 +93,13 @@ public class PaswordActivity extends ActionBarActivity {
         palabras.add("Laser");
         palabras.add("Fiesta");
         palabras.add("Cerveza");
+        palabras.add("Movil");
+        palabras.add("Mechero");
+        palabras.add("Correo");
+        palabras.add("Hembra");
+        palabras.add("Rezar");
+
+
 
     }
 }

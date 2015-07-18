@@ -1,6 +1,7 @@
 package com.example.cokepedreira.ocalimochoapp;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -47,11 +48,14 @@ public class MimicaActivity extends ActionBarActivity {
         int tirada = rand.nextInt(peliculas.size());
         listaPelicula.setText(peliculas.get(tirada));
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                listaPelicula.setText("Se te ha terminado el tiempo");
+                instrucciones.setVisibility(View.GONE);
 
-
-
-
-
+            }
+        }, 30000/* 30sec delay */);
 
     }
 
@@ -97,6 +101,16 @@ public class MimicaActivity extends ActionBarActivity {
         peliculas.add("Jumanji");
         peliculas.add("La guerra de los mundos");
         peliculas.add("La momia");
+        peliculas.add("Indiana Jones");
+        peliculas.add("Juego de Tronos");
+        peliculas.add("Los Simpsons");
+        peliculas.add("Fast and Furious");
+        peliculas.add("Los Vengadores");
+        peliculas.add("Dragon Ball");
+        peliculas.add("Pokemon");
+        peliculas.add("X-Men");
+        peliculas.add("Malditos Bastardos");
+
 
     }
 

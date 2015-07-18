@@ -76,6 +76,38 @@ public class YoNuncaActivity extends ActionBarActivity {
         yoNunca.add("Yo nunca he llorado borracho(o fumado) asi porque si");
         yoNunca.add("Yo nunca he roto algo y echado la culpa a otro");
         yoNunca.add("A mi nunca me han dejado a medias");
+        yoNunca.add("Yo nunca he fardado de algo que no he hecho");
+        yoNunca.add("Yo nunca he conducido borracho");
+        yoNunca.add("Yo nunca he robado ago con valor superior a 10€");
+        yoNunca.add("Yo nunca le he mirado las tetas a una amiga");
+        yoNunca.add("Yo nunca he ligado a traves de internet");
+        yoNunca.add("Yo nunca he jugado al Streap Poker");
+        yoNunca.add("Yo nunca me he imaginado como seria follar con alguien de los que estan jugando ahora");
+        yoNunca.add("Yo nunca negue un beso");
+        yoNunca.add("Yo nunca he sentido asco al follar con alguien");
+        yoNunca.add("Yo nunca me he olvidado de haber follado con alguen");
+        yoNunca.add("Yo nunca me he masturbado mas de 3 veces en un mismo dia");
+        yoNunca.add("Yo nunca me he grabado haciendolo");
+        yoNunca.add("Yo nunca he besado a alguien del mismo sexo");
+        yoNunca.add("Yo nunca me acostaria con alguien por 1000€");
+        yoNunca.add("Yo nunca me he despertado aun borracho al dia siguiente");
+        yoNunca.add("Yo nunca he dado sexo oral");
+        yoNunca.add("Yo nunca he ido a un puti");
+        yoNunca.add("Yo nunca he hecho un 69");
+        yoNunca.add("Yo nunca he estado con el/la ex de un amigo/a");
+        yoNunca.add("Yo nunca me he chocado con un cristal");
+        yoNunca.add("Yo nunca he esposado a mi pareja a la cama");
+        yoNunca.add("Yo nunca he follado en la ducha");
+        yoNunca.add("Yo nunca he vacilado a un policia etando borracho");
+        yoNunca.add("Yo nunca he dicho a una chica 'las damas primero' solo la mirarle el culo ");
+        yoNunca.add("Yo nunca he buscado mi nombre en google");
+        yoNunca.add("Yo nunca he follado en el cine");
+        yoNunca.add("Yo nunca he hecho un striptease");
+        yoNunca.add("Yo nunca me he colado en una fiesta");
+        yoNunca.add("A mi nunca me ha entrado un virus en internet por descargar porno");
+        yoNunca.add("Yo nunca me liaria con ninguno de los que esta jugando(si es pareja no vale)");
+
+
 
 
     }

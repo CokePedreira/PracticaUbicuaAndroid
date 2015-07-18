@@ -37,7 +37,7 @@
   {
     "posicion": 5,
     "nombre": "Minijuego",
-    "descripcion": "Juega a la palabra Tabu. Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
+    "descripcion": "Juega a la palabra Tabu. Tienes 30 segundos.Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU"
   },
@@ -100,7 +100,7 @@
   {
     "posicion": 14,
     "nombre": "Minijuego",
-    "descripcion": "Juega a Password con un compañero. Usando solo una palabra tu compañero tiene que adivinar la palabra que te ha tocado, si la acierta mandais 1 cada uno, si la falla bebeis los dos",
+    "descripcion": "Juega a Password con un compañero por una cantidad. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado cada uno, si falla os lo bebeis los dos",
     "imagen": "minijuego",
     "accion": "PASSWORD"
   },
@@ -142,7 +142,7 @@
   {
     "posicion": 20,
     "nombre": "Minijuego",
-    "descripcion": "Tienes 8 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
+    "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
     "imagen": "minijuego",
     "accion": "PREGUNTA"
   },
@@ -233,14 +233,14 @@
   {
     "posicion": 33,
     "nombre": "MINIJUEGO",
-    "descripcion": "Juega al juego de mimica. Quien acierte la pelicula y tu mandais beber(una cada uno), si nadie la acierta bebes dos.",
+    "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA"
   },
   {
     "posicion": 34,
     "nombre": "Triple duelo",
-    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, el que pierda se lo bebe ",
+    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, los que pierdan se lo beben ",
     "imagen": "duelotres",
     "accion": "DUELOTRES"
   },
@@ -401,7 +401,7 @@
   {
     "posicion": 57,
     "nombre": "Minijuego",
-    "descripcion": "Juega al juego de mimica",
+    "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA"
   },
@@ -422,7 +422,7 @@
   {
     "posicion": 60,
     "nombre": "Triple duelo",
-    "descripcion": "Reta a dos compañeros por la cantidad que desees, quien pierda se lo bebe",
+    "descripcion": "Reta a dos compañeros por la cantidad que desees, quienes pierdan se lo beben",
     "imagen": "duelotres",
     "accion": "DUELOTRES"
   },
