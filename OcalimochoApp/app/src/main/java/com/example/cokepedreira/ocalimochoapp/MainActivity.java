@@ -32,15 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(etNumJugadores.getText())) {
             numJugadores = Integer.parseInt(etNumJugadores.getText().toString());
-            if (numJugadores <= 8 && numJugadores >= 2) {
-                Toast toast = Toast.makeText(context, "ok", Toast.LENGTH_SHORT);
-                toast.show();
+            if (numJugadores >= 2) {
                 Intent myIntent = new Intent(this, SeleccionJugadores.class);
-                myIntent.putExtra("key", numJugadores); //Optional parameters
+                myIntent.putExtra("key", numJugadores);
                 startActivity(myIntent);
                 finish();
             } else {
-                Toast toast = Toast.makeText(context, "introduce entre 2 y 8 jugadores", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(context, "introduce al menos 2 jugadores", Toast.LENGTH_SHORT);
                 toast.show();
             }
         }

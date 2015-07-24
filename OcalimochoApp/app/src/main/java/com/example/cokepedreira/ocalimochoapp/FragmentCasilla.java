@@ -5,11 +5,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.CardView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +44,7 @@ public class FragmentCasilla extends Fragment {
     private TextView descripcion;
     private ImageView imagen;
     private Button accion;
-    private  Jugador jugador;
+    private Jugador jugador;
 
     private class Imagen {
         int resourceID;
@@ -157,6 +159,8 @@ public class FragmentCasilla extends Fragment {
         descripcion = (TextView) view.findViewById(R.id.descripcion);
         descripcion.setText(this.casilla.getDescripcion());
 
+        view.findViewById(R.id.card_view_linear_layout).setBackgroundColor(Color.parseColor(this.casilla.getColor()));
+
         imagen = (ImageView) view.findViewById(R.id.imagen);
 //        imagen.setImageBitmap(urlImageToBitmap(this.casilla.getImagen()));
         File file = new File(Environment.getExternalStorageDirectory()+File.separator + "alante.png"); //your image file path
@@ -201,7 +205,7 @@ public class FragmentCasilla extends Fragment {
         listaJugadores = (TextView) view.findViewById(R.id.listaJugadores);
         String nombresJugadores = "";
         for (Jugador jugador : casilla.getJugadoresEnLaCasilla()) {
-            nombresJugadores += jugador.getNombre() + " ";
+            nombresJugadores += jugador.getNombre() + "\n";
         }
 
         if(nombresJugadores.isEmpty()) {

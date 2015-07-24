@@ -24,6 +24,9 @@ import com.google.gson.stream.JsonReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -196,10 +199,31 @@ public class Tablero extends AppCompatActivity {
             pagerAdapter.notifyDataSetChanged();
             viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
         }
+        else if (id == R.id.show_ranking){
+
+            Intent intent = new Intent(this, RankingActivity.class);
+
+            ArrayList<String> ranking = new ArrayList<>();
+            ArrayList<Jugador> copiaListaJugadores = new ArrayList<>(this.jugadores);
+            Collections.sort(copiaListaJugadores, new RankingComparator());
+
+            for (Jugador jugador : copiaListaJugadores) {
+                ranking.add(jugador.getNombre() + " (" + jugador.getCasillaActual() + ")");
+            }
+
+            intent.putExtra("ranking", new Gson().toJson(ranking, new TypeToken<ArrayList<String>>(){}.getType()));
+
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
 
+    public class RankingComparator implements Comparator<Jugador> {
+        public int compare(Jugador object1, Jugador object2) {
+            return object2.getCasillaActual() - object1.getCasillaActual();
+        }
+    }
 
     @Override
     public void onBackPressed() {

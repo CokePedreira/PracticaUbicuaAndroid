@@ -16,6 +16,7 @@ public class Casilla {
     @Expose private String imagen;
     @Expose private String descripcion;
     @Expose private Accion accion;
+    @Expose private String color;
     private List<Jugador> jugadoresEnLaCasilla = new ArrayList<>();
 
     public String getNombre() {
@@ -40,5 +41,9 @@ public class Casilla {
 
     public List<Jugador> getJugadoresEnLaCasilla() {
         return jugadoresEnLaCasilla;
+    }
+
+    public String getColor() {
+        return color;
     }
 }
