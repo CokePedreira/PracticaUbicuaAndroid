@@ -17,6 +17,8 @@
         android:textColor="#000000"
         android:id="@+id/titulo"
         android:text="PALABRA TABU"/>
+
+
     <ImageView
         android:id="@+id/imagenTABU"
         android:layout_width="100dp"

@@ -1,5 +1,7 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -7,6 +9,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +37,7 @@ public class FragmentCasilla extends Fragment {
     private Casilla casilla;
 
     private TextView nombreCasilla;
+    private TextView posicionCasilla;
     private TextView listaJugadores;
     private TextView descripcion;
     private ImageView imagen;
@@ -146,7 +151,9 @@ public class FragmentCasilla extends Fragment {
         View view = inflater.inflate(R.layout.fragment_casilla, container, false);
 
         nombreCasilla = (TextView) view.findViewById(R.id.nombreCasilla);
-        nombreCasilla.setText(this.casilla.getPosicion() + ": " +this.casilla.getNombre());
+        nombreCasilla.setText(this.casilla.getNombre());
+        posicionCasilla = (TextView) view.findViewById(R.id.posicionCasilla);
+        posicionCasilla.setText(this.casilla.getPosicion());
         descripcion = (TextView) view.findViewById(R.id.descripcion);
         descripcion.setText(this.casilla.getDescripcion());
 
@@ -201,7 +208,7 @@ public class FragmentCasilla extends Fragment {
             listaJugadores.setVisibility(View.GONE);
         } else {
             listaJugadores.setVisibility(View.VISIBLE);
-            listaJugadores.setText("Jugadores: " + nombresJugadores);
+            listaJugadores.setText(nombresJugadores);
         }
 
         return view;

@@ -36,7 +36,7 @@
   },
   {
     "posicion": 5,
-    "nombre": "Minijuego",
+    "nombre": "Palabra Tabu",
     "descripcion": "Juega a la palabra Tabu. Tienes 30 segundos.Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU"
@@ -99,7 +99,7 @@
   },
   {
     "posicion": 14,
-    "nombre": "Minijuego",
+    "nombre": "Password",
     "descripcion": "Juega a Password con un compañero por una cantidad. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado cada uno, si falla os lo bebeis los dos",
     "imagen": "minijuego",
     "accion": "PASSWORD"
@@ -141,7 +141,7 @@
   },
   {
     "posicion": 20,
-    "nombre": "Minijuego",
+    "nombre": "Pregunta",
     "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
     "imagen": "minijuego",
     "accion": "PREGUNTA"
@@ -190,7 +190,7 @@
   },
   {
     "posicion": 27,
-    "nombre": "Minijuego",
+    "nombre": "Yo nunca",
     "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
     "accion": "YO_NUNCA"
@@ -232,7 +232,7 @@
   },
   {
     "posicion": 33,
-    "nombre": "MINIJUEGO",
+    "nombre": "Mimica",
     "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA"
@@ -316,7 +316,7 @@
   },
   {
     "posicion": 45,
-    "nombre": "Minijuego",
+    "nombre": "Yo nunca",
     "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
     "accion": "YO_NUNCA"
@@ -351,7 +351,7 @@
   },
   {
     "posicion": 50,
-    "nombre": "INMUNE",
+    "nombre": "Inmune",
     "descripcion": "Ahora eres inmune, la casilla de muerte no te afectara",
     "imagen": "inmune",
     "accion": "INMUNE"
@@ -400,7 +400,7 @@
   },
   {
     "posicion": 57,
-    "nombre": "Minijuego",
+    "nombre": "Mimica",
     "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA"

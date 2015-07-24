@@ -1,12 +1,23 @@
 <!-- A CardView that contains a TextView -->
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="vertical">
+
+
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    card_view:cardCornerRadius="4dp">
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="8dp"
+    android:nestedScrollingEnabled="false">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +25,41 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="left">
+
+            <TextView
+                android:id="@+id/nombreCasilla"
+                style="?android:textAppearanceLarge"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|end"
+                android:text="Nombre"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/posicionCasilla"
+                style="?android:textAppearanceLarge"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|end"
+                android:text="posicion"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/black"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,50 +75,50 @@
                 android:gravity="start"
                 android:contentDescription="Imagen de la casilla"
                 android:layout_weight="0"/>
-
-            <TextView
-                android:id="@+id/nombreCasilla"
-                style="?android:textAppearanceLarge"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="end"
-                android:text="Nombre"
-                android:layout_weight="1"/>
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/accion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="iniciar"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
 
         </LinearLayout>
+
 
         <TextView
             android:id = "@+id/descripcion"
             style="?android:textAppearanceLarge"
-            android:textStyle="bold"
+            android:textSize="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:padding="15dp"
             android:text="descripcion"/>
 
-
         <TextView
             android:id="@+id/listaJugadores"
+            android:hint="kaljsdf"
             style="?android:textAppearanceLarge"
-            android:textStyle="bold"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="start"
             android:padding="15dp"
-            android:text="Jugadores:"/>
-
-
-        <Button
-            android:layout_marginTop="20dp"
-            android:id="@+id/accion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="iniciar"/>
+            android:textSize="16dp"/>
 
 
 
     </LinearLayout>
 
 </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
