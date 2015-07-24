@@ -11,5 +11,13 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_mimica">MimicaActivity</string>
+    <string name="title_activity_yo_nunca">YoNuncaActivity</string>
+    <string name="title_activity_tabu">TabuActivity</string>
+    <string name="title_activity_duelo">DueloActivity</string>
+    <string name="title_activity_duelo_tres">DueloTresActivity</string>
+    <string name="title_activity_carcel">CarcelActivity</string>
+    <string name="title_activity_pasword">PaswordActivity</string>
+    <string name="title_activity_pregunta">PreguntaActivity</string>
 
 </resources>

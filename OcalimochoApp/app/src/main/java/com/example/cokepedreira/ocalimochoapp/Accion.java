@@ -4,16 +4,18 @@ package com.example.cokepedreira.ocalimochoapp;
  * Created by cokepedreira on 19/5/15.
  */
 public enum Accion {
-    MIMICA(MainActivity.class),
-    PALABRA_TABU(MainActivity.class),
-    YO_NUNCA(MainActivity.class),
-    CARTA_ALTA(MainActivity.class),
-    RULETA(MainActivity.class),
-    MINI_CARRERA(MainActivity.class),
-    DUELO(MainActivity.class),
-    DUELOTRES(MainActivity.class),
-    CARCEL(MainActivity.class),
+    CASILLA_FINAL(MainActivity.class),
+    MIMICA(MimicaActivity.class),
+    PALABRA_TABU(TabuActivity.class),
+    YO_NUNCA(YoNuncaActivity.class),
+    PASSWORD(PaswordActivity.class),
+    PREGUNTA(PreguntaActivity.class),
+    DUELO(DueloActivity.class),
+    DUELOTRES(DueloTresActivity.class),
+    CARCEL(CarcelActivity.class),
     LABERINTO(null),
+    INMUNE(null),
+    MUERTE(null),
     PATINAZO(null);
 
 

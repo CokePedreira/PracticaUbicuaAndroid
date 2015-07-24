@@ -1,9 +1,15 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,7 +28,7 @@ import java.util.Random;
 /**
  * Created by cokepedreira on 19/5/15.
  */
-public class Tablero extends FragmentActivity {
+public class Tablero extends AppCompatActivity {
 
     private List<Jugador> jugadores;
     private Jugador jugadorActual;
@@ -32,9 +38,7 @@ public class Tablero extends FragmentActivity {
     private ViewPager viewPager;
     private PagerAdapter pagerAdapter;
 
-    private TextView jugadorActualTextView;
     private Button tirarDado;
-    private Button siguienteJugador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +50,14 @@ public class Tablero extends FragmentActivity {
         cargarTablero(jugadores);
         setTitle(casillas.get(0).getNombre());
 
-        jugadorActualTextView = (TextView) findViewById(R.id.jugadorActual);
         viewPager = (ViewPager) findViewById(R.id.tablero_viewPager);
         pagerAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
         viewPager.setAdapter(pagerAdapter);
+        viewPager.setPageMargin(30);
 
         // Configurar turno inicial
         this.jugadorActual = jugadores.get(0);
-        jugadorActualTextView.setText(jugadorActual.getNombre());
+        setTitle(jugadorActual.getNombre());
 
         // Configurar botones
         tirarDado = (Button) findViewById(R.id.tirarDado);
@@ -62,37 +66,87 @@ public class Tablero extends FragmentActivity {
             public void onClick(View v) {
                 tirarDado.setEnabled(false);
 
-                // Quitar al jugador de la casilla actual
-                casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
-
                 // Tirar el dado
                 Random rand = new Random();
                 int tirada = rand.nextInt(6) + 1;
                 Toast.makeText(Tablero.this, "Tirada: " + tirada, Toast.LENGTH_SHORT).show();
-                if((jugadorActual.getCasillaActual() + tirada) >= casillas.size()) {
-                    tirada -= 2*(casillas.size() - 1 - jugadorActual.getCasillaActual());
+
+
+                if(jugadorActual.puedoSalir()) {
+
+                    // Quitar al jugador de la casilla actual
+                    casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
+
+                    if ((jugadorActual.getCasillaActual() + tirada) >= casillas.size()) {
+                        tirada -= (casillas.size() - jugadorActual.getCasillaActual());
+                        tirada = -tirada;
+                    }
+
+                    // Mover jugador e interfaz
+                    jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() + tirada);
+                    casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
+                    pagerAdapter.notifyDataSetChanged();
+                    viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+                    if (casillas.get(jugadorActual.getCasillaActual()).getAccion() != null) {
+                        switch (casillas.get(jugadorActual.getCasillaActual()).getAccion()) {
+
+                            case LABERINTO:
+                                jugadorActual.setAtrapado(true);
+
+                                break;
+
+
+                            case PATINAZO:
+
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
+                                        jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 15);
+                                        casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
+                                        pagerAdapter.notifyDataSetChanged();
+                                        viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+                                        Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
+                                    }
+                                }, 4000/* 1sec delay */);
+
+                                break;
+
+                            case INMUNE:
+                                jugadorActual.setInmune(true);
+                                break;
+
+                            case MUERTE:
+                                if (!jugadorActual.isInmune()) {
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
+                                            jugadorActual.setCasillaActual(0);
+                                            casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
+                                            pagerAdapter.notifyDataSetChanged();
+                                            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+                                            Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
+                                        }
+                                    }, 4000/* 1sec delay */);
+                                }
+                        }
+                    }
+                } else {
+
+                    if(tirada == 5 || tirada == 6) {
+                        jugadorActual.setAtrapado(false);
+                        Toast.makeText(Tablero.this, "Sales del laberinto, vuelve a tirar para avanzar.", Toast.LENGTH_LONG).show();
+                        tirarDado.setEnabled(true);
+                    } else {
+                        Toast.makeText(Tablero.this, "Sigues atrapado gilipollas. Bebes " + tirada, Toast.LENGTH_SHORT).show();
+                        tirarDado.setEnabled(false);
+                    }
                 }
 
-                // Mover jugador e interfaz
-                jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() + tirada);
-                casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
-                pagerAdapter.notifyDataSetChanged();
-                viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
-            }
-        });
-
-
-        siguienteJugador = (Button) findViewById(R.id.siguienteJugador);
-        siguienteJugador.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tirarDado.setEnabled(true);
-
-                // Cambiar de jugador
-                jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
-                jugadorActualTextView.setText(jugadorActual.getNombre());
-                pagerAdapter.notifyDataSetChanged();
-                viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
             }
         });
     }
@@ -108,5 +162,39 @@ public class Tablero extends FragmentActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.new_game) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.next_player) {
+            tirarDado.setEnabled(true);
+
+            // Cambiar de jugador
+            jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
+            setTitle(jugadorActual.getNombre());
+            pagerAdapter.notifyDataSetChanged();
+            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

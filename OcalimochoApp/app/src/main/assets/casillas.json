@@ -36,8 +36,8 @@
   },
   {
     "posicion": 5,
-    "nombre": "Minijuego",
-    "descripcion": "Juega a la palabra Tabu.",
+    "nombre": "Palabra Tabu",
+    "descripcion": "Juega a la palabra Tabu. Tienes 30 segundos.Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU"
   },
@@ -79,7 +79,7 @@
   {
     "posicion": 11,
     "nombre": "Pobres",
-    "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1por cada 2€ de menos",
+    "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1 por cada 2€ de menos",
     "imagen": "pobres",
     "accion": null
   },
@@ -94,15 +94,15 @@
     "posicion": 13,
     "nombre": "Impares",
     "descripcion": "Beben 1 todos los que hayan nacido en año impar",
-    "imagen": "impar",
+    "imagen": "impares",
     "accion": null
   },
   {
     "posicion": 14,
-    "nombre": "Minijuego",
-    "descripcion": "Juega al juego de la carta mas alta",
+    "nombre": "Password",
+    "descripcion": "Juega a Password con un compañero por una cantidad. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado cada uno, si falla os lo bebeis los dos",
     "imagen": "minijuego",
-    "accion": "CARTA_ALTA"
+    "accion": "PASSWORD"
   },
   {
     "posicion": 15,
@@ -141,10 +141,10 @@
   },
   {
     "posicion": 20,
-    "nombre": "Minijueg",
-    "descripcion": "Juega al juego de la ruleta",
+    "nombre": "Pregunta",
+    "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
     "imagen": "minijuego",
-    "accion": "RULETA"
+    "accion": "PREGUNTA"
   },
   {
     "posicion": 21,
@@ -177,7 +177,7 @@
   {
     "posicion": 25,
     "nombre": "Fumadores",
-    "descripcion": "Todas aquellas personas que esten fumando en ete momento beben 3",
+    "descripcion": "Todas aquellas personas que esten fumando en este momento beben 3",
     "imagen": "piti",
     "accion": null
   },
@@ -190,15 +190,15 @@
   },
   {
     "posicion": 27,
-    "nombre": "Minijuego",
-    "descripcion": "Yo Nunca",
-    "imagen": "Juega una ronda de yo nunca ",
+    "nombre": "Yo nunca",
+    "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
+    "imagen": "minijuego",
     "accion": "YO_NUNCA"
   },
   {
     "posicion": 28,
     "nombre": "Patinazo",
-    "descripcion": "Te has columpiado y vuelves a la casilla 15",
+    "descripcion": "Te has columpiado y vuelves a la casilla 13",
     "imagen": "patin",
     "accion": "PATINAZO"
   },
@@ -219,7 +219,7 @@
   {
     "posicion": 31,
     "nombre": "Suerte",
-    "descripcion": "Bebe 4 o retrocede 3 casillas",
+    "descripcion": "Bebe 4",
     "imagen": "suerte",
     "accion": null
   },
@@ -232,16 +232,16 @@
   },
   {
     "posicion": 33,
-    "nombre": "MINIJUEGO",
-    "descripcion": "Juega al juego de mimica",
+    "nombre": "Mimica",
+    "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA"
   },
   {
     "posicion": 34,
     "nombre": "Triple duelo",
-    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, el que pierda se lo bebe ",
-    "imagen": "duelo",
+    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, los que pierdan se lo beben ",
+    "imagen": "duelotres",
     "accion": "DUELOTRES"
   },
   {
@@ -268,7 +268,7 @@
   {
     "posicion": 38,
     "nombre": "Suerte",
-    "descripcion": "Avanza 3 casillas",
+    "descripcion": " Manda 3 a tu gusto ",
     "imagen": "suerte",
     "accion": null
   },
@@ -316,10 +316,10 @@
   },
   {
     "posicion": 45,
-    "nombre": "Minijuego",
-    "descripcion": "Reta a alguien a una carrera por la cantidad que decidas, el que pierda se lo bebe",
+    "nombre": "Yo nunca",
+    "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
-    "accion": "MINI_CARRERA"
+    "accion": "YO_NUNCA"
   },
   {
     "posicion": 46,
@@ -331,7 +331,7 @@
   {
     "posicion": 47,
     "nombre": "Duelox4",
-    "descripcion": "Reta a aquien quieras a un duelo por 4",
+    "descripcion": "Reta a quien quieras a un duelo por 4",
     "imagen": "duelo",
     "accion": "DUELO"
   },
@@ -345,16 +345,16 @@
   {
     "posicion": 49,
     "nombre": "Suerte",
-    "descripcion": "Retrocedes 3 casillas",
+    "descripcion": "Bebes 3, que vas muy sobrio",
     "imagen": "suerte",
     "accion": null
   },
   {
     "posicion": 50,
-    "nombre": "INMUNE",
+    "nombre": "Inmune",
     "descripcion": "Ahora eres inmune, la casilla de muerte no te afectara",
     "imagen": "inmune",
-    "accion": null
+    "accion": "INMUNE"
   },
   {
     "posicion": 51,
@@ -366,7 +366,7 @@
   {
     "posicion": 52,
     "nombre": "Suerte",
-    "descripcion": "ES tu momento, reparte el bote como quieras",
+    "descripcion": "Es tu momento, reparte 5 como quieras",
     "imagen": "suerte",
     "accion": null
   },
@@ -394,14 +394,14 @@
   {
     "posicion": 56,
     "nombre": "Patinazo",
-    "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 30...",
+    "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 41...",
     "imagen": "patin",
     "accion": "PATINAZO"
   },
   {
     "posicion": 57,
-    "nombre": "Minijuego",
-    "descripcion": "Juega al juego de mimica",
+    "nombre": "Mimica",
+    "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA"
   },
@@ -417,12 +417,12 @@
     "nombre": "Muerte",
     "descripcion": "Si no eres inmune, ahora si que la has jodido. Mueres y vuelves al principio",
     "imagen": "muerte",
-    "accion": null
+    "accion": "MUERTE"
   },
   {
     "posicion": 60,
     "nombre": "Triple duelo",
-    "descripcion": "Reta a dos compañeros por la cantidad que desees, quien pierda se lo bebe",
+    "descripcion": "Reta a dos compañeros por la cantidad que desees, quienes pierdan se lo beben",
     "imagen": "duelotres",
     "accion": "DUELOTRES"
   },
@@ -438,6 +438,6 @@
     "nombre": "VICTORIA",
     "descripcion": "DIOS MIO, HAS GANADO LA PARTIDA POR FIN! COMO RECOMPENSA MANDA A TODOS ACABARSE SUS RESPECTIVOS VASOS",
     "imagen": "ganas",
-    "accion": null
+    "accion": "CASILLA_FINAL"
   }
 ]

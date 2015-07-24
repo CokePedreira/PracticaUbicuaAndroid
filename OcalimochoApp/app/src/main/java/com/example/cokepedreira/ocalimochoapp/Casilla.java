@@ -12,7 +12,7 @@ import java.util.List;
 public class Casilla {
 
     @Expose private String nombre;
-    @Expose private int posicion;
+    @Expose private String posicion;
     @Expose private String imagen;
     @Expose private String descripcion;
     @Expose private Accion accion;
@@ -22,7 +22,7 @@ public class Casilla {
         return nombre;
     }
 
-    public int getPosicion() {
+    public String getPosicion() {
         return posicion;
     }
 
