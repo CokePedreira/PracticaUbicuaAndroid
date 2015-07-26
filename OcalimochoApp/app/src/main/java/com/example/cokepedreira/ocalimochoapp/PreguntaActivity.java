@@ -63,29 +63,29 @@ public class PreguntaActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                respuesta1.setVisibility(View.GONE);
-                respuesta2.setVisibility(View.GONE);
-                respuesta3.setVisibility(View.GONE);
-                respuesta4.setVisibility(View.GONE);
+                respuesta1.setEnabled(false);
+                respuesta2.setEnabled(false);
+                respuesta3.setEnabled(false);
+                respuesta4.setEnabled(false);
 
                 switch (respuestaCorrecta) {
                     case 1:
-                        respuesta1.setVisibility(View.VISIBLE);
+                        respuesta1.setEnabled(true);
                         respuesta1.setTextColor(Color.rgb(87, 166, 57));
                         break;
 
                     case 2:
-                        respuesta2.setVisibility(View.VISIBLE);
+                        respuesta2.setEnabled(true);
                         respuesta2.setTextColor(Color.rgb(87,166,57));
                         break;
 
                     case 3:
-                        respuesta3.setVisibility(View.VISIBLE);
+                        respuesta3.setEnabled(true);
                         respuesta3.setTextColor(Color.rgb(87,166,57));
                         break;
 
                     case 4:
-                        respuesta4.setVisibility(View.VISIBLE);
+                        respuesta4.setEnabled(true);
                         respuesta4.setTextColor(Color.rgb(87,166,57));
                         break;
                 }
@@ -96,46 +96,54 @@ public class PreguntaActivity extends AppCompatActivity {
 
     public void respuesta1 (View view){
         if(respuestaCorrecta == 1){
-            respuesta1.setVisibility(View.VISIBLE);
+            respuesta1.setEnabled(true);
+            respuesta2.setEnabled(false);
+            respuesta3.setEnabled(false);
+            respuesta4.setEnabled(false);
             respuesta1.setTextColor(Color.rgb(87, 166, 57));
         } else {
-            respuesta1.setVisibility(View.VISIBLE);
+            respuesta1.setEnabled(false);
             respuesta1.setTextColor(Color.rgb(255, 0, 0));
         }
     }
 
     public void respuesta2 (View view){
         if(respuestaCorrecta == 2){
-            respuesta2.setVisibility(View.VISIBLE);
+            respuesta1.setEnabled(false);
+            respuesta2.setEnabled(true);
+            respuesta3.setEnabled(false);
+            respuesta4.setEnabled(false);
             respuesta2.setTextColor(Color.rgb(87, 166, 57));
         } else {
-            respuesta2.setVisibility(View.VISIBLE);
+            respuesta2.setEnabled(false);
             respuesta2.setTextColor(Color.rgb(255, 0, 0));
         }
     }
 
     public void respuesta3 (View view){
         if(respuestaCorrecta == 3){
-            respuesta3.setVisibility(View.VISIBLE);
+            respuesta1.setEnabled(false);
+            respuesta2.setEnabled(false);
+            respuesta3.setEnabled(true);
+            respuesta4.setEnabled(false);
             respuesta3.setTextColor(Color.rgb(87, 166, 57));
-
         } else {
-            respuesta3.setVisibility(View.VISIBLE);
+            respuesta3.setEnabled(false);
             respuesta3.setTextColor(Color.rgb(255, 0, 0));
         }
     }
 
     public void respuesta4 (View view){
         if(respuestaCorrecta == 4){
-
-            respuesta4.setVisibility(View.VISIBLE);
+            respuesta1.setEnabled(false);
+            respuesta2.setEnabled(false);
+            respuesta3.setEnabled(false);
+            respuesta4.setEnabled(true);
             respuesta4.setTextColor(Color.rgb(87, 166, 57));
-
         } else {
-            respuesta4.setVisibility(View.VISIBLE);
+            respuesta4.setEnabled(false);
             respuesta4.setTextColor(Color.rgb(255, 0, 0));
         }
-
     }
 
     public void ponerRespuestas(String normas){
