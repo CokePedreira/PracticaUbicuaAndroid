@@ -216,6 +216,13 @@ public class Tablero extends AppCompatActivity {
 
             startActivity(intent);
         }
+        else if (id == R.id.options){
+
+            Intent intent = new Intent(this, Activity_ayuda.class);
+            startActivity(intent);
+
+
+        }
 
         return super.onOptionsItemSelected(item);
     }

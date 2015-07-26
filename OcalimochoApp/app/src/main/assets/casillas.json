@@ -12,7 +12,7 @@
     "nombre": "Machos",
     "descripcion": "Todos los hombres que se precien de serlo beben 1.",
     "imagen": "machos",
-    "accion": "null",
+    "accion": null,
     "color": "#E0FFFF"
   },
   {
@@ -122,7 +122,7 @@
   {
     "posicion": 15,
     "nombre": "Marcas",
-    "descripcion": "Juega con un compañero, saldra un tipo de objeto y tu y tu cmpañero a la cuenta de 3 tendreis que decir una marca que se os ocurra del mismo. Si es la misma mandais beber la canridad acordada, si no os la bebeis",
+    "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada. Si es distinta, os la bebeis",
     "imagen": "minijuego",
     "accion": "MARCAS",
     "color": "#C0C0C0"
@@ -362,7 +362,7 @@
   {
     "posicion": 45,
     "nombre": "Marcas",
-    "descripcion": "Juega con un compañero, saldra un tipo de objeto y tu y tu cmpañero a la cuenta de 3 tendreis que decir una marca que se os ocurra del mismo. Si es la misma mandais beber la canridad acordada, si no os la bebeis",
+    "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada. Si es distinta, os la bebeis",
     "imagen": "minijuego",
     "accion": "MARCAS",
     "color": "#C0C0C0"

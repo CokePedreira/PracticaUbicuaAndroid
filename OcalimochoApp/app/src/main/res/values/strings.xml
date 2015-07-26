@@ -21,5 +21,6 @@
     <string name="title_activity_pregunta">PreguntaActivity</string>
     <string name="title_activity_ranking">RankingActivity</string>
     <string name="title_activity_marcas">MarcasActivity</string>
+    <string name="title_activity_activity_ayuda">Activity_ayuda</string>
 
 </resources>

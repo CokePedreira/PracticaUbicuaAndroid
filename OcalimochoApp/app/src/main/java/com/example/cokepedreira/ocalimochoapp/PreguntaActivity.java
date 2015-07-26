@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,22 +18,19 @@ import java.util.List;
 import java.util.Random;
 
 
-public class PreguntaActivity extends ActionBarActivity {
+public class PreguntaActivity extends AppCompatActivity {
 
     List<String> nombrePreguntas;
-
-
-
     TextView titulo;
     ImageView imagenPregunta;
     TextView instrucciones;
     TextView listaPreguntas;
     Button continuar;
     int respuestaCorrecta;
-    TextView respuesta1;
-    TextView respuesta2;
-    TextView respuesta3;
-    TextView respuesta4;
+    Button respuesta1;
+    Button respuesta2;
+    Button respuesta3;
+    Button respuesta4;
 
 
     @Override
@@ -47,10 +45,10 @@ public class PreguntaActivity extends ActionBarActivity {
         continuar = (Button) findViewById(R.id.continuar);
         imagenPregunta = (ImageView) findViewById(R.id.imagenPregunta);
         imagenPregunta.setImageResource(R.drawable.pregunta);
-        respuesta1 = (TextView) findViewById(R.id.respuesta1);
-        respuesta2 = (TextView) findViewById(R.id.respuesta2);
-        respuesta3 = (TextView) findViewById(R.id.respuesta3);
-        respuesta4 = (TextView) findViewById(R.id.respuesta4);
+        respuesta1 = (Button) findViewById(R.id.respuesta1);
+        respuesta2 = (Button) findViewById(R.id.respuesta2);
+        respuesta3 = (Button) findViewById(R.id.respuesta3);
+        respuesta4 = (Button) findViewById(R.id.respuesta4);
 
         nombrePreguntas = new ArrayList<>();
         añadirPregunta();
@@ -60,7 +58,8 @@ public class PreguntaActivity extends ActionBarActivity {
         String normas = (String) listaPreguntas.getText();
         ponerRespuestas(normas);
 
-        new Handler().postDelayed(new Runnable() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
 
@@ -95,6 +94,49 @@ public class PreguntaActivity extends ActionBarActivity {
         }, 10000/* 10sec delay */);
     }
 
+    public void respuesta1 (View view){
+        if(respuestaCorrecta == 1){
+            respuesta1.setVisibility(View.VISIBLE);
+            respuesta1.setTextColor(Color.rgb(87, 166, 57));
+        } else {
+            respuesta1.setVisibility(View.VISIBLE);
+            respuesta1.setTextColor(Color.rgb(255, 0, 0));
+        }
+    }
+
+    public void respuesta2 (View view){
+        if(respuestaCorrecta == 2){
+            respuesta2.setVisibility(View.VISIBLE);
+            respuesta2.setTextColor(Color.rgb(87, 166, 57));
+        } else {
+            respuesta2.setVisibility(View.VISIBLE);
+            respuesta2.setTextColor(Color.rgb(255, 0, 0));
+        }
+    }
+
+    public void respuesta3 (View view){
+        if(respuestaCorrecta == 3){
+            respuesta3.setVisibility(View.VISIBLE);
+            respuesta3.setTextColor(Color.rgb(87, 166, 57));
+
+        } else {
+            respuesta3.setVisibility(View.VISIBLE);
+            respuesta3.setTextColor(Color.rgb(255, 0, 0));
+        }
+    }
+
+    public void respuesta4 (View view){
+        if(respuestaCorrecta == 4){
+
+            respuesta4.setVisibility(View.VISIBLE);
+            respuesta4.setTextColor(Color.rgb(87, 166, 57));
+
+        } else {
+            respuesta4.setVisibility(View.VISIBLE);
+            respuesta4.setTextColor(Color.rgb(255, 0, 0));
+        }
+
+    }
 
     public void ponerRespuestas(String normas){
 

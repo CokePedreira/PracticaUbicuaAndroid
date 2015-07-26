@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.cokepedreira.ocalimochoapp.Activity_ayuda"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="Ayuda"
+        android:id="@+id/ayuda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#000000"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="          Hipnosis: Si caes en esta casilla te toca beberte durante una ronda completa la mitad de las deudas de cada uno de tus compañeros. Si por ejemplo cuando estás en esta casilla y a un compañero le toca beber 2 en lugar de eso él bebe 1 y tu la otra y asi con todos tus compañeros.\n\n
+            Yo nunca: En este minijuego si has realizado lo que dice el texto bebes, si no no bebes, no se puede mentir.\n\n
+            Laberinto: Sicaes en esta cailla quedas atrapado hasta que en uno de tus turnos saques un 5 o un 6, en el caso de no ser asi bebes lo que has sacado, es decir, si sacas un 3 bebes 3.\n\n
+            Pregunta:\n\n
+            Zona cultural: En esta casilla hay que hacer una pregunta de respuesta multiple. Ejemplo: marcas de coches, y se responderia: Ferrari, Audi... La ronda termina cuando alguien repite una respuesta ya dicha o no se le ocurre una respuesta en un tiempo razonable.\n\n
+            Marcas: En este minijuego sadrá un objeto comercializado( en un 90% de los casos) el objetivo es que tu y un compaeros digais la misma marca del mismo a la vez. Ejemplo: Leche, y al existir diferentes marcas de leche como pascual, puleba...tu compañero y tu debeis decir la misma para ganar, de lo contradio bebeis.\n\n
+            Reglas puñeteras: En esta casilla se pone un norma que afecta a todos y quin no la cumpla bebe. Ejemplo: no se puede decir la palabra no, quin la diga bebe, pero se mantiene la norma hasta que otra nueva norma aparezca.\n\n
+            Palabra Tabu: EN este minijuego hay que acertar un personaje sin decir las 4 palabras que apareen, si dices estas palabras o tu compañero no lo adivina en el tiempo establecido bebeis los 2, si la acertais ganais.\n\n
+            Pasword: EL objetivo de este minijuego es adivinar la palabra usando solo palabras clave. Ejemplo: Si la balabra es telefono podrias decir: Llamar, colgar, contestar, movil... La norma es que no se pueden usar raices ni señalar objetos ni hacer mimica.\n\n
+            Mimica: El objetivo de este juego es adivinar una serie o pelicula usando solo gestos.\n\n
+            Carcel: En esta casilla debes permanecer en ella hasta beberte la fianza, no debes volver a tirar hasta bebertelo todo y estar un poco mas ciego.\n\n
+        "/>
+
+</ScrollView>
+</LinearLayout>

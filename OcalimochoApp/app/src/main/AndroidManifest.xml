@@ -68,6 +68,10 @@
             android:name=".MarcasActivity"
             android:label="@string/title_activity_marcas" >
         </activity>
+        <activity
+            android:name=".Activity_ayuda"
+            android:label="@string/title_activity_activity_ayuda" >
+        </activity>
     </application>
 
 </manifest>
