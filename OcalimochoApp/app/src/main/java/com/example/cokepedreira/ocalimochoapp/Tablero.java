@@ -5,18 +5,16 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bartoszlipinski.flippablestackview.FlippableStackView;
+import com.bartoszlipinski.flippablestackview.StackPageTransformer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -24,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -40,8 +37,8 @@ public class Tablero extends AppCompatActivity {
 
     private List<Casilla> casillas;
 
-    private ViewPager viewPager;
-    private PagerAdapter pagerAdapter;
+    private FlippableStackView flippableStackView;
+    private PagerAdapter tableroAdapter;
 
     private Button tirarDado;
 
@@ -55,10 +52,11 @@ public class Tablero extends AppCompatActivity {
         cargarTablero(jugadores);
         setTitle(casillas.get(0).getNombre());
 
-        viewPager = (ViewPager) findViewById(R.id.tablero_viewPager);
-        pagerAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
-        viewPager.setAdapter(pagerAdapter);
-        viewPager.setPageMargin(30);
+        flippableStackView = (FlippableStackView) findViewById(R.id.tablero_stack);
+        tableroAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
+        flippableStackView.initStack(5, StackPageTransformer.Orientation.HORIZONTAL);
+        flippableStackView.setAdapter(tableroAdapter);
+        flippableStackView.setCurrentItem(0, true);
 
         // Configurar turno inicial
         this.jugadorActual = jugadores.get(0);
@@ -90,8 +88,8 @@ public class Tablero extends AppCompatActivity {
                     // Mover jugador e interfaz
                     jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() + tirada);
                     casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
-                    pagerAdapter.notifyDataSetChanged();
-                    viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+                    tableroAdapter.notifyDataSetChanged();
+                    flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
                     if (casillas.get(jugadorActual.getCasillaActual()).getAccion() != null) {
                         switch (casillas.get(jugadorActual.getCasillaActual()).getAccion()) {
@@ -110,8 +108,8 @@ public class Tablero extends AppCompatActivity {
                                         casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
                                         jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 15);
                                         casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
-                                        pagerAdapter.notifyDataSetChanged();
-                                        viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+                                        tableroAdapter.notifyDataSetChanged();
+                                        flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
                                         Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
                                     }
@@ -131,8 +129,8 @@ public class Tablero extends AppCompatActivity {
                                             casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
                                             jugadorActual.setCasillaActual(0);
                                             casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
-                                            pagerAdapter.notifyDataSetChanged();
-                                            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+                                            tableroAdapter.notifyDataSetChanged();
+                                            flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
                                             Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
                                         }
@@ -164,6 +162,9 @@ public class Tablero extends AppCompatActivity {
             for (Jugador jugador : jugadores) {
                 this.casillas.get(0).getJugadoresEnLaCasilla().add(jugador);
             }
+
+//            Collections.reverse(this.casillas);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -196,8 +197,8 @@ public class Tablero extends AppCompatActivity {
             // Cambiar de jugador
             jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
             setTitle(jugadorActual.getNombre());
-            pagerAdapter.notifyDataSetChanged();
-            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+            tableroAdapter.notifyDataSetChanged();
+            flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
         }
         else if (id == R.id.show_ranking){
 
@@ -243,5 +244,4 @@ public class Tablero extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
-
 }

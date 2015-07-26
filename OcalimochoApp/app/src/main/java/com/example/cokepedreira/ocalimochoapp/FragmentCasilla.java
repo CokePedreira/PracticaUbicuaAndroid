@@ -126,22 +126,6 @@ public class FragmentCasilla extends Fragment {
 
     }
 
-    public Bitmap urlImageToBitmap(String urlImage) {
-
-        Bitmap mIcon1 = null;
-        String imag = "R.drawable."+ urlImage;
-        try {
-            URL url_value = new URL(urlImage);
-            if (url_value != null) {
-                mIcon1 = BitmapFactory.decodeStream(url_value.openConnection().getInputStream());
-            }
-        }catch(Exception e){
-            System.out.print("Error");
-
-        }
-        return mIcon1;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
