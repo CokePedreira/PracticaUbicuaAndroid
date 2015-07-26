@@ -208,7 +208,7 @@ public class Tablero extends AppCompatActivity {
             Collections.sort(copiaListaJugadores, new RankingComparator());
 
             for (Jugador jugador : copiaListaJugadores) {
-                ranking.add(jugador.getNombre() + " (" + jugador.getCasillaActual() + ")");
+                ranking.add(jugador.getNombre() + " - Casilla " + jugador.getCasillaActual());
             }
 
             intent.putExtra("ranking", new Gson().toJson(ranking, new TypeToken<ArrayList<String>>(){}.getType()));
