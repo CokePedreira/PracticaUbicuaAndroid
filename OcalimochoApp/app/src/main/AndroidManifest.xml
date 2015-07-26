@@ -64,6 +64,10 @@
             android:name=".RankingActivity"
             android:label="@string/title_activity_ranking" >
         </activity>
+        <activity
+            android:name=".MarcasActivity"
+            android:label="@string/title_activity_marcas" >
+        </activity>
     </application>
 
 </manifest>

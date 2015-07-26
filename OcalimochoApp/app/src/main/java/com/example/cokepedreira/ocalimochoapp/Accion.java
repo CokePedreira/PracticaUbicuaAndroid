@@ -16,7 +16,8 @@ public enum Accion {
     LABERINTO(null),
     INMUNE(null),
     MUERTE(null),
-    PATINAZO(null);
+    PATINAZO(null),
+    MARCAS(MarcasActivity.class);
 
 
 

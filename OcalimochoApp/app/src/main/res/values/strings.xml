@@ -20,5 +20,6 @@
     <string name="title_activity_pasword">PaswordActivity</string>
     <string name="title_activity_pregunta">PreguntaActivity</string>
     <string name="title_activity_ranking">RankingActivity</string>
+    <string name="title_activity_marcas">MarcasActivity</string>
 
 </resources>
