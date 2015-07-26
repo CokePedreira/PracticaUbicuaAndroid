@@ -162,7 +162,6 @@ public class FragmentCasilla extends Fragment {
         view.findViewById(R.id.card_view_linear_layout).setBackgroundColor(Color.parseColor(this.casilla.getColor()));
 
         imagen = (ImageView) view.findViewById(R.id.imagen);
-//        imagen.setImageBitmap(urlImageToBitmap(this.casilla.getImagen()));
         File file = new File(Environment.getExternalStorageDirectory()+File.separator + "alante.png"); //your image file path
         if(file.exists()) {
             imagen.setImageURI(Uri.fromFile(file));
@@ -204,13 +203,20 @@ public class FragmentCasilla extends Fragment {
 
         listaJugadores = (TextView) view.findViewById(R.id.listaJugadores);
         String nombresJugadores = "";
+
         for (Jugador jugador : casilla.getJugadoresEnLaCasilla()) {
-            nombresJugadores += jugador.getNombre() + "\n";
+            if(casilla.getJugadoresEnLaCasilla().indexOf(jugador) != casilla.getJugadoresEnLaCasilla().size()-1) {
+                nombresJugadores += jugador.getNombre() + "\n";
+            } else {
+                nombresJugadores += jugador.getNombre();
+            }
         }
 
         if(nombresJugadores.isEmpty()) {
+            view.findViewById(R.id.tituloListaJugadores).setVisibility(View.GONE);
             listaJugadores.setVisibility(View.GONE);
         } else {
+            view.findViewById(R.id.tituloListaJugadores).setVisibility(View.VISIBLE);
             listaJugadores.setVisibility(View.VISIBLE);
             listaJugadores.setText(nombresJugadores);
         }
