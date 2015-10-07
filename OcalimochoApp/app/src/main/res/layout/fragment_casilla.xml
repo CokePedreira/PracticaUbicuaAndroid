@@ -1,15 +1,15 @@
 <!-- A CardView that contains a TextView -->
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
 
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/card_view_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="15dp" >
+        android:paddingBottom="15dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,7 +102,6 @@
             android:paddingBottom="15dp"
             android:text="Texto de la descripción"/>
 
-
         <TextView
             android:id="@+id/tituloListaJugadores"
             android:layout_width="match_parent"
@@ -112,17 +111,29 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:text="Jugadores en la casilla"/>
-        <TextView
-            android:id="@+id/listaJugadores"
-            style="?android:textAppearanceLarge"
+
+        <ScrollView
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="start"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textSize="19sp"
-            android:text="Lista de jugadores"/>
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/listaJugadores"
+                    style="?android:textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:textSize="19sp"
+                    android:text="Lista de jugadores"/>
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
-</ScrollView>

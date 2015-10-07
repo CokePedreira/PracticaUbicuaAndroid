@@ -5,7 +5,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.PagerAdapter;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +28,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
+import android.support.v7.widget.CardView;
 
 /**
  * Created by cokepedreira on 19/5/15.
@@ -106,7 +109,7 @@ public class Tablero extends AppCompatActivity {
                                     @Override
                                     public void run() {
                                         casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
-                                        jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 15);
+                                        jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 20);
                                         casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
                                         tableroAdapter.notifyDataSetChanged();
                                         flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);

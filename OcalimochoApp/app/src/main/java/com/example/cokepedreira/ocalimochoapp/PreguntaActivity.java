@@ -235,7 +235,8 @@ public class PreguntaActivity extends AppCompatActivity {
 
                 respuestaCorrecta = 2;
 
-                break;case "¿Quien marco el gol mil de los mundiales?" :
+                break;
+            case "¿Quien marco el gol mil de los mundiales?" :
 
                 respuesta1.setText("Platini");
                 respuesta2.setText("Muller");
@@ -245,13 +246,13 @@ public class PreguntaActivity extends AppCompatActivity {
                 respuestaCorrecta = 4;
 
                 break;
-            case "¿En que año los Jacksons five su primer numero 1?" :{
+            case "¿En que año los Jacksons five su primer numero 1?" :
                 respuesta1.setText("1968");
                 respuesta2.setText("1969");
                 respuesta3.setText("1971");
                 respuesta4.setText("1970");
                 respuestaCorrecta = 2;
-            };
+
             break;
             case "¿Como se llama la reina del hielo en la pelicula Frozen?" :
 
@@ -273,14 +274,14 @@ public class PreguntaActivity extends AppCompatActivity {
                 respuestaCorrecta = 2;
 
                 break;
-            case "¿Quien no ha sido cantante en Iron Maiden?" :{
+            case "¿Quien no ha sido cantante en Iron Maiden?" :
                 respuesta1.setText("Blaze Bayley");
                 respuesta2.setText("Paul Di'anno");
                 respuesta3.setText("Michael Kiske");
                 respuesta4.setText("Bruce Dickinson");
                 respuestaCorrecta = 4;
 
-            };
+
             break;
             case "¿Quien era la mejor amiga de Marissa Cooper en the O.C?" :
 

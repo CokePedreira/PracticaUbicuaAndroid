@@ -1,13 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
 
     <item android:id="@+id/show_ranking" android:title="Clasificacion"
         android:icon="@android:drawable/btn_star"
         android:orderInCategory="100" app:showAsAction="ifRoom" />
 
     <item android:id="@+id/next_player" android:title="Siguiente jugador"
-        android:icon="@drawable/ic_forward_white_48dp"
+        android:icon="@drawable/ic_action_forward"
         android:orderInCategory="100" app:showAsAction="ifRoom" />
 
     <item android:id="@+id/new_game" android:title="Nueva partida"

@@ -5,7 +5,7 @@
     "descripcion": "Casilla de salida",
     "imagen": "salida",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#009688"
   },
   {
     "posicion": 1,
@@ -13,7 +13,7 @@
     "descripcion": "Todos los hombres que se precien de serlo beben 1.",
     "imagen": "machos",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#009688"
   },
   {
     "posicion": 2,
@@ -21,7 +21,7 @@
     "descripcion": "Todos aquellos que lleven gafas, lentillas o similar beben 1",
     "imagen": "cegatos",
     "accion": null,
-    "color": "#FFFACD"
+    "color": "#009688"
   },
   {
     "posicion": 3,
@@ -29,7 +29,7 @@
     "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1 por cada 2€ de menos",
     "imagen": "pobres",
     "accion": null,
-    "color": "#C0C0C0"
+    "color": "#009688"
   },
   {
     "posicion": 4,
@@ -37,7 +37,7 @@
     "descripcion": "Durante el turno que estes en esta casilla, te tocara ayudar al resto de jugadores bebiendo la mitad de las deudas que les toque.",
     "imagen": "hipnosis",
     "accion": null,
-    "color": "#FFF3B2"
+    "color": "#009688"
   },
   {
     "posicion": 5,
@@ -45,7 +45,7 @@
     "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
     "accion": "YO_NUNCA",
-    "color": "#C0C0C0"
+    "color": "#009688"
   },
   {
     "posicion": 6,
@@ -53,7 +53,7 @@
     "descripcion": "Es tu momento, reparte 5 como quieras",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#009688"
   },
   {
     "posicion": 7,
