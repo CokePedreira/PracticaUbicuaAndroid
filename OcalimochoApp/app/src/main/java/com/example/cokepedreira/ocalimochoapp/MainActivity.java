@@ -36,17 +36,13 @@ public class MainActivity extends AppCompatActivity {
         Button startButton = (Button) findViewById(R.id.start_button);
         FloatingActionButton añadirButton = (FloatingActionButton) findViewById(R.id.añadir_jugadores);
 
-        EditText primerJugador = new EditText(this);
-        nombresJugadores.add(primerJugador);
-        textViewsView.addView(primerJugador);
+        añadeNombreJugador();
 
 
         añadirButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText nombreJugador = new EditText(MainActivity.this);
-                nombresJugadores.add(nombreJugador);
-                textViewsView.addView(nombreJugador);
+                añadeNombreJugador();
             }
         });
 
@@ -69,5 +65,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void añadeNombreJugador() {
+        EditText nombreJugador = (EditText) getLayoutInflater().inflate(R.layout.nombre_jugador, textViewsView, false);
+        nombresJugadores.add(nombreJugador);
+        textViewsView.addView(nombreJugador);
+        nombreJugador.requestFocus();
     }
 }
