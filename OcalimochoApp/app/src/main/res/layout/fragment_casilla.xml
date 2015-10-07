@@ -1,126 +1,130 @@
 <!-- A CardView that contains a TextView -->
 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/card_view_linear_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="15dp"
-        >
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <android.support.v7.widget.CardView
+            android:id="@+id/tablero_stack2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="15dp"
-            android:gravity="start">
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            card_view:cardCornerRadius="4dp">
 
-            <TextView
-                android:id="@+id/nombreCasilla"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left|end"
-                android:text="Nombre"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:id="@+id/posicionCasilla"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right|end"
-                android:text="Posicion"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:layout_weight="1"/>
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="3dp"
-            android:background="@android:color/black"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="15dp"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:id="@+id/imagen"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:gravity="start"
-                android:contentDescription="Imagen de la casilla"
-                android:layout_weight="0"/>
             <LinearLayout
-                android:orientation="vertical"
+                android:id="@+id/card_view_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
 
-                <Button
-                    android:id="@+id/accion"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="iniciar"
-                    android:textSize="15sp"
-                    android:gravity="center" />
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/nombreCasilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|end"
+                        android:text="Nombre"
+                        android:textColor="#000000"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/posicionCasilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|end"
+                        android:text="Posicion"
+                        android:textColor="#000000"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="Descripción"/>
+                </LinearLayout>
 
-        <TextView
-            android:id = "@+id/descripcion"
-            style="?android:textAppearanceLarge"
-            android:textSize="19sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:paddingBottom="15dp"
-            android:text="Texto de la descripción"/>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="@android:color/black" />
 
-        <TextView
-            android:id="@+id/tituloListaJugadores"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="Jugadores en la casilla"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
 
-        <ScrollView
+                    <ImageView
+                        android:id="@+id/imagen"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0"
+                        android:contentDescription="Imagen de la casilla"
+                        android:gravity="start" />
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                        <Button
+                            android:id="@+id/accion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="iniciar"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:text="Descripción"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/descripcion"
+                    style="?android:textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:paddingBottom="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:text="Texto de la descripción"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/tituloListaJugadores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:text="Jugadores en la casilla"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/listaJugadores"
@@ -128,12 +132,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="start"
-                    android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:textSize="19sp"
-                    android:text="Lista de jugadores"/>
+                    android:paddingStart="15dp"
+                    android:text="Lista de jugadores"
+                    android:textSize="19sp" />
             </LinearLayout>
-        </ScrollView>
 
-    </LinearLayout>
+        </android.support.v7.widget.CardView>
 
+    </FrameLayout>
+
+</ScrollView>

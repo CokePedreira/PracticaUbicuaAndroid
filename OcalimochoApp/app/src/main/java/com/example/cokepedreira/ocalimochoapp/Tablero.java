@@ -5,9 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.PagerAdapter;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,8 +14,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.bartoszlipinski.flippablestackview.FlippableStackView;
-import com.bartoszlipinski.flippablestackview.StackPageTransformer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -28,7 +25,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-import android.support.v7.widget.CardView;
 
 /**
  * Created by cokepedreira on 19/5/15.
@@ -40,7 +36,7 @@ public class Tablero extends AppCompatActivity {
 
     private List<Casilla> casillas;
 
-    private FlippableStackView flippableStackView;
+    private ViewPager viewPager;
     private PagerAdapter tableroAdapter;
 
     private Button tirarDado;
@@ -50,16 +46,16 @@ public class Tablero extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablero);
 
-        jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>(){}.getType());
+        jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>() {
+        }.getType());
 
         cargarTablero(jugadores);
         setTitle(casillas.get(0).getNombre());
 
-        flippableStackView = (FlippableStackView) findViewById(R.id.tablero_stack);
+        viewPager = (ViewPager) findViewById(R.id.tablero_pager);
         tableroAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
-        flippableStackView.initStack(5, StackPageTransformer.Orientation.HORIZONTAL);
-        flippableStackView.setAdapter(tableroAdapter);
-        flippableStackView.setCurrentItem(0, true);
+        viewPager.setAdapter(tableroAdapter);
+        viewPager.setCurrentItem(0, true);
 
         // Configurar turno inicial
         this.jugadorActual = jugadores.get(0);
@@ -78,7 +74,7 @@ public class Tablero extends AppCompatActivity {
                 Toast.makeText(Tablero.this, "Tirada: " + tirada, Toast.LENGTH_SHORT).show();
 
 
-                if(jugadorActual.puedoSalir()) {
+                if (jugadorActual.puedoSalir()) {
 
                     // Quitar al jugador de la casilla actual
                     casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
@@ -92,7 +88,7 @@ public class Tablero extends AppCompatActivity {
                     jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() + tirada);
                     casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
                     tableroAdapter.notifyDataSetChanged();
-                    flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
+                    viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
                     if (casillas.get(jugadorActual.getCasillaActual()).getAccion() != null) {
                         switch (casillas.get(jugadorActual.getCasillaActual()).getAccion()) {
@@ -112,7 +108,7 @@ public class Tablero extends AppCompatActivity {
                                         jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 20);
                                         casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
                                         tableroAdapter.notifyDataSetChanged();
-                                        flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
+                                        viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
                                         Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
                                     }
@@ -133,7 +129,7 @@ public class Tablero extends AppCompatActivity {
                                             jugadorActual.setCasillaActual(0);
                                             casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
                                             tableroAdapter.notifyDataSetChanged();
-                                            flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
+                                            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
 
                                             Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
                                         }
@@ -143,7 +139,7 @@ public class Tablero extends AppCompatActivity {
                     }
                 } else {
 
-                    if(tirada == 5 || tirada == 6) {
+                    if (tirada == 5 || tirada == 6) {
                         jugadorActual.setAtrapado(false);
                         Toast.makeText(Tablero.this, "Sales del laberinto, vuelve a tirar para avanzar.", Toast.LENGTH_LONG).show();
                         tirarDado.setEnabled(true);
@@ -160,7 +156,8 @@ public class Tablero extends AppCompatActivity {
     public void cargarTablero(List<Jugador> jugadores) {
         try {
             JsonReader jsonReader = new JsonReader(new InputStreamReader(getAssets().open("casillas.json")));
-            this.casillas = new Gson().fromJson(jsonReader, new TypeToken<ArrayList<Casilla>>(){}.getType());
+            this.casillas = new Gson().fromJson(jsonReader, new TypeToken<ArrayList<Casilla>>() {
+            }.getType());
 
             for (Jugador jugador : jugadores) {
                 this.casillas.get(0).getJugadoresEnLaCasilla().add(jugador);
@@ -201,9 +198,8 @@ public class Tablero extends AppCompatActivity {
             jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
             setTitle(jugadorActual.getNombre());
             tableroAdapter.notifyDataSetChanged();
-            flippableStackView.setCurrentItem(jugadorActual.getCasillaActual(), true);
-        }
-        else if (id == R.id.show_ranking){
+            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+        } else if (id == R.id.show_ranking) {
 
             Intent intent = new Intent(this, RankingActivity.class);
 
@@ -215,11 +211,11 @@ public class Tablero extends AppCompatActivity {
                 ranking.add(jugador.getNombre() + " - Casilla " + jugador.getCasillaActual());
             }
 
-            intent.putExtra("ranking", new Gson().toJson(ranking, new TypeToken<ArrayList<String>>(){}.getType()));
+            intent.putExtra("ranking", new Gson().toJson(ranking, new TypeToken<ArrayList<String>>() {
+            }.getType()));
 
             startActivity(intent);
-        }
-        else if (id == R.id.options){
+        } else if (id == R.id.options) {
 
             Intent intent = new Intent(this, Activity_ayuda.class);
             startActivity(intent);
@@ -228,12 +224,6 @@ public class Tablero extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public class RankingComparator implements Comparator<Jugador> {
-        public int compare(Jugador object1, Jugador object2) {
-            return object2.getCasillaActual() - object1.getCasillaActual();
-        }
     }
 
     @Override
@@ -253,5 +243,11 @@ public class Tablero extends AppCompatActivity {
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
+    }
+
+    public class RankingComparator implements Comparator<Jugador> {
+        public int compare(Jugador object1, Jugador object2) {
+            return object2.getCasillaActual() - object1.getCasillaActual();
+        }
     }
 }
