@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         Button startButton = (Button) findViewById(R.id.start_button);
         FloatingActionButton añadirButton = (FloatingActionButton) findViewById(R.id.añadir_jugadores);
 
-        textViewsView.addView(new EditText(this));
+        EditText primerJugador = new EditText(this);
+        nombresJugadores.add(primerJugador);
+        textViewsView.addView(primerJugador);
 
 
         añadirButton.setOnClickListener(new View.OnClickListener() {
