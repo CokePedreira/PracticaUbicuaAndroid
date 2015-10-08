@@ -31,7 +31,7 @@ public class PaswordActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasword);
-
+        setTitle("Password");
         titulo = (TextView) findViewById(R.id.titulo);
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPalabras = (TextView) findViewById(R.id.palabra);

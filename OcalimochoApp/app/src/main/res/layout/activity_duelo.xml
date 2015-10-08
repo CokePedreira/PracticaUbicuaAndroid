@@ -5,15 +5,7 @@
     android:gravity="center"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:id="@+id/titulo"
-        android:text="DUELO"/>
+
     <ImageView
         android:id="@+id/imagenduelo"
         android:layout_width="100dp"
@@ -29,19 +21,20 @@
         android:layout_alignParentTop="true">
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/dado1"
             android:textSize="22dp"
             android:onClick="tirardado1"
-            android:textColor="#000000"
+            android:textColor="#ffff"
             android:text="dado1"/>
         <TextView
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/resultado1"
             android:textSize="22dp"
-            android:textColor="#000000"/>
+            android:textColor="#ffff"/>
 
     </LinearLayout>
     <LinearLayout
@@ -52,12 +45,13 @@
         android:gravity="center"
         android:layout_alignParentTop="true">
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/dado2"
             android:textSize="22dp"
             android:onClick="tirardado2"
-            android:textColor="#000000"
+            android:textColor="#ffff"
             android:text="dado2"/>
 
 
@@ -66,7 +60,7 @@
             android:layout_height="50dp"
             android:id="@+id/resultado2"
             android:textSize="22dp"
-            android:textColor="#000000"/>
+            android:textColor="#ffff"/>
     </LinearLayout>
 
 
@@ -76,6 +70,7 @@
 
 
     <Button
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:id="@+id/continuar"

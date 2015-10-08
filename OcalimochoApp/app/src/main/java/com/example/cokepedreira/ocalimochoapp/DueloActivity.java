@@ -36,11 +36,7 @@ public class DueloActivity extends ActionBarActivity {
         continuar = (Button) findViewById(R.id.continuar);
         imagenDuelo = (ImageView) findViewById(R.id.imagenduelo);
         imagenDuelo.setImageResource(R.drawable.duelo);
-
-
-
-
-
+        setTitle("Duelo");
 
 
     }

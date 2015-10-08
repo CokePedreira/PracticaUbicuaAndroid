@@ -25,6 +25,7 @@ public class CarcelActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carcel);
+        setTitle("Cárcel");
 
         titulo = (TextView) findViewById(R.id.titulo);
         tirardados = (Button) findViewById(R.id.tirada);
@@ -45,6 +46,8 @@ public class CarcelActivity extends ActionBarActivity {
     }
     public void tirarDados(View view){
         castigo.setText("La fianza para salir es: " +Integer.toString(   aleatorio() + aleatorio() ) );
+        tirardados.setVisibility(View.INVISIBLE);
+        tirardados.setEnabled(false);
 
 
 

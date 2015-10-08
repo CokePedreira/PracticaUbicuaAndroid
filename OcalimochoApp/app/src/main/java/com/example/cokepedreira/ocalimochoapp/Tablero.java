@@ -67,6 +67,7 @@ public class Tablero extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tirarDado.setEnabled(false);
+                tirarDado.setVisibility(View.INVISIBLE);
 
                 // Tirar el dado
                 Random rand = new Random();
@@ -193,6 +194,7 @@ public class Tablero extends AppCompatActivity {
             finish();
         } else if (id == R.id.next_player) {
             tirarDado.setEnabled(true);
+            tirarDado.setVisibility(View.VISIBLE);
 
             // Cambiar de jugador
             jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());

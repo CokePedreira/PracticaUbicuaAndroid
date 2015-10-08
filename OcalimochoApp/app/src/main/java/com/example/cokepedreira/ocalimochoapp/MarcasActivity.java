@@ -31,7 +31,7 @@ public class MarcasActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marcas);
-
+        setTitle("Marcas");
         titulo = (TextView) findViewById(R.id.titulo);
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPalabras = (TextView) findViewById(R.id.marca);

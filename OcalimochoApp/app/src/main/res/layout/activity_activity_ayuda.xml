@@ -6,15 +6,7 @@
     tools:context="com.example.cokepedreira.ocawlimochoapp.Activity_ayuda"
     android:orientation="vertical">
 
-    <TextView
-        android:text="Ayuda"
-        android:id="@+id/ayuda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textColor="#000000"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -22,6 +14,8 @@
     <TextView
         android:id="@+id/texto"
         android:layout_width="match_parent"
+        android:padding="16dp"
+        android:textSize="14sp"
         android:layout_height="match_parent"
         android:text="          Hipnosis: Si caes en esta casilla te toca beberte durante una ronda completa la mitad de las deudas de cada uno de tus compañeros. Si por ejemplo cuando estás en esta casilla y a un compañero le toca beber 2 en lugar de eso él bebe 1 y tu la otra y asi con todos tus compañeros.\n\n
             Yo nunca: En este minijuego si has realizado lo que dice el texto bebes, si no no bebes, no se puede mentir.\n\n
@@ -34,7 +28,8 @@
             Pasword: EL objetivo de este minijuego es adivinar la palabra usando solo palabras clave. Ejemplo: Si la balabra es telefono podrias decir: Llamar, colgar, contestar, movil... La norma es que no se pueden usar raices ni señalar objetos ni hacer mimica.\n\n
             Mimica: El objetivo de este juego es adivinar una serie o pelicula usando solo gestos.\n\n
             Carcel: En esta casilla debes permanecer en ella hasta beberte la fianza, no debes volver a tirar hasta bebertelo todo y estar un poco mas ciego.\n\n
-        "/>
+        "
+        />
 
 </ScrollView>
 </LinearLayout>

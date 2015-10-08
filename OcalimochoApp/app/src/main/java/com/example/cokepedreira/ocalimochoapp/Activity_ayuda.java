@@ -13,6 +13,8 @@ public class Activity_ayuda extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Ayuda");
+
         setContentView(R.layout.activity_activity_ayuda);
 
     }

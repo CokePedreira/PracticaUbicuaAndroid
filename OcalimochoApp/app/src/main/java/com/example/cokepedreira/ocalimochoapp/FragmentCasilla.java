@@ -167,7 +167,6 @@ public class FragmentCasilla extends Fragment {
                 accion.setVisibility(View.GONE);
             } else {
                 accion.setVisibility(View.VISIBLE);
-                accion.setText("Iniciar");
 
                 if(this.casilla.getAccion() == Accion.CASILLA_FINAL) {
                     accion.setText("Nueva partida");

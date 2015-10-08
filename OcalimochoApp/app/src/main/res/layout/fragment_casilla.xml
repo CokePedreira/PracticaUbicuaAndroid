@@ -138,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="iniciar"
+                android:text="INICIAR"
                 android:textSize="14sp"
 
                 />

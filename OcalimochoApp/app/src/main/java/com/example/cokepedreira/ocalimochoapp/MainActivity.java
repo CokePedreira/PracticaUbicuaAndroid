@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setTitle("Ocalimocho");
 
         jugadores = new ArrayList<>();
         nombresJugadores = new ArrayList<>();
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        startButton.setText("Comenzar");
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

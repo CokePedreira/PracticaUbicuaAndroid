@@ -37,8 +37,7 @@ public class PreguntaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
-
-
+        setTitle("Pregunta");
         titulo = (TextView) findViewById(R.id.titulo);
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPreguntas = (TextView) findViewById(R.id.pregunta);

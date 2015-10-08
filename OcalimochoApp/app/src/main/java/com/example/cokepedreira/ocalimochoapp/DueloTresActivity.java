@@ -28,6 +28,7 @@ public class DueloTresActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duelo_tres);
+        setTitle("Triple duelo");
 
         titulo = (TextView) findViewById(R.id.titulo);
         dado1 = (Button) findViewById(R.id.dado1);
