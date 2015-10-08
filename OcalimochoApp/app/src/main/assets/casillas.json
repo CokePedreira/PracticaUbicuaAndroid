@@ -5,7 +5,7 @@
     "descripcion": "Casilla de salida",
     "imagen": "salida",
     "accion": null,
-    "color": "#009688"
+    "color": "#616161"
   },
   {
     "posicion": 1,
@@ -13,7 +13,7 @@
     "descripcion": "Todos los hombres que se precien de serlo beben 1.",
     "imagen": "machos",
     "accion": null,
-    "color": "#009688"
+    "color": "#616161"
   },
   {
     "posicion": 2,
@@ -21,7 +21,7 @@
     "descripcion": "Todos aquellos que lleven gafas, lentillas o similar beben 1",
     "imagen": "cegatos",
     "accion": null,
-    "color": "#009688"
+    "color": "#616161"
   },
   {
     "posicion": 3,
@@ -29,7 +29,7 @@
     "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1 por cada 2€ de menos",
     "imagen": "pobres",
     "accion": null,
-    "color": "#009688"
+    "color": "#616161"
   },
   {
     "posicion": 4,
@@ -37,7 +37,7 @@
     "descripcion": "Durante el turno que estes en esta casilla, te tocara ayudar al resto de jugadores bebiendo la mitad de las deudas que les toque.",
     "imagen": "hipnosis",
     "accion": null,
-    "color": "#009688"
+    "color": "#616161"
   },
   {
     "posicion": 5,
@@ -45,7 +45,7 @@
     "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
     "accion": "YO_NUNCA",
-    "color": "#009688"
+    "color": "#616161"
   },
   {
     "posicion": 6,
@@ -53,7 +53,7 @@
     "descripcion": "Es tu momento, reparte 5 como quieras",
     "imagen": "suerte",
     "accion": null,
-    "color": "#009688"
+    "color": "#616161"
   },
   {
     "posicion": 7,
@@ -61,7 +61,7 @@
     "descripcion": "Todas las mujeres que se precien de serlo beben 1",
     "imagen": "hembras",
     "accion": null,
-    "color": "#FFC0CB"
+    "color": "#616161"
   },
   {
     "posicion": 8,
@@ -69,7 +69,7 @@
     "descripcion": "Reta a otro jugador por 1, el que saque menos en el dado bebe",
     "imagen": "duelo",
     "accion": "DUELO",
-    "color": "#FFFFFF"
+    "color": "#616161"
   },
   {
     "posicion": 9,
@@ -77,7 +77,7 @@
     "descripcion": "Tiras un dado cada turno y solo puedes salir si sacas 5 o 6. Si no lo sacas bebes la cantidad que obtengas en el dado.",
     "imagen": "laberinto",
     "accion": "LABERINTO",
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 10,
@@ -85,7 +85,7 @@
     "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
     "imagen": "minijuego",
     "accion": "PREGUNTA",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 11,
@@ -93,7 +93,7 @@
     "descripcion": "Beben 1 todos los que hayan nacido en año impar",
     "imagen": "impares",
     "accion": null,
-    "color": "#FFDAB9"
+    "color": "#616161"
   },
   {
     "posicion": 12,
@@ -101,7 +101,7 @@
     "descripcion": " Manda 3 a tu gusto ",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 13,
@@ -109,7 +109,7 @@
     "descripcion": "Quien caiga en esta casilla debe hacer una pregunta de respuesta multiple",
     "imagen": "zona",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 14,
@@ -117,7 +117,7 @@
     "descripcion": "Beben todos aquellos que vayan delante de ti en el juego",
     "imagen": "alante",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 15,
@@ -125,7 +125,7 @@
     "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada. Si es distinta, os la bebeis",
     "imagen": "minijuego",
     "accion": "MARCAS",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 16,
@@ -133,7 +133,7 @@
     "descripcion": "Reta a otro jugador por 2, quien saque menos en el dado bebe",
     "imagen": "duelo",
     "accion": "DUELO",
-    "color": "#FFFFFF"
+    "color": "#616161"
   },
   {
     "posicion": 17,
@@ -141,7 +141,7 @@
     "descripcion": "Ahora eres inmune, la casilla de muerte no te afectara",
     "imagen": "inmune",
     "accion": "INMUNE",
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 18,
@@ -149,7 +149,7 @@
     "descripcion": "bebe 2, pringao",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 19,
@@ -157,7 +157,7 @@
     "descripcion": "Pon una regla que os afecte a todos que durara hasta que otro jugador caiga en esta casilla",
     "imagen": "regla",
     "accion": null,
-    "color": "#FFFACD"
+    "color": "#616161"
   },
   {
     "posicion": 20,
@@ -165,7 +165,7 @@
     "descripcion": "Juega a la palabra Tabu. Tienes 30 segundos.Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 21,
@@ -173,7 +173,7 @@
     "descripcion": "Ha sido un duro camino, tomate un descanso. Durante este turno nadie puede mandarte beber",
     "imagen": "posada",
     "accion": null,
-    "color": "#DCDCDC"
+    "color": "#616161"
   },
   {
     "posicion": 22,
@@ -181,7 +181,7 @@
     "descripcion": "Te han tocado los dos patitos asique bebes dos vasitos",
     "imagen": "patito",
     "accion": null,
-    "color": "#FFFACD"
+    "color": "#616161"
   },
   {
     "posicion": 23,
@@ -189,7 +189,7 @@
     "descripcion": "Reta a un compañero por 3",
     "imagen": "duelo",
     "accion": "DUELO",
-    "color": "#FFFFFF"
+    "color": "#616161"
   },
   {
     "posicion": 24,
@@ -197,7 +197,7 @@
     "descripcion": "Reparte dos a una unica persona",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 25,
@@ -205,7 +205,7 @@
     "descripcion": "Juega a Password con un compañero por una cantidad. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado cada uno, si falla os lo bebeis los dos",
     "imagen": "minijuego",
     "accion": "PASSWORD",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 26,
@@ -213,7 +213,7 @@
     "descripcion": "Todos aquellos que hayan nacido en año par beben 1",
     "imagen": "par",
     "accion": null,
-    "color": "#FFDAB9"
+    "color": "#616161"
   },
   {
     "posicion": 27,
@@ -221,7 +221,7 @@
     "descripcion": "Haz una pregunta con respuestas multiples, el primero que falle o repita bebe",
     "imagen": "zona",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 28,
@@ -229,7 +229,7 @@
     "descripcion": "Todos aquellos que tengan familia o pareja jugando beben 3",
     "imagen": "corleone",
     "accion": null,
-    "color": "#DCDCDC"
+    "color": "#616161"
   },
   {
     "posicion": 29,
@@ -237,7 +237,7 @@
     "descripcion": "Mala suerte, te toca beber 3",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 30,
@@ -245,7 +245,7 @@
     "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 31,
@@ -253,7 +253,7 @@
     "descripcion": "Bebe 1 quien este sentado a tu izquierda",
     "imagen": "atras",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 32,
@@ -261,7 +261,7 @@
     "descripcion": "Reta a dos compañeros por la cantidad que desees, quienes pierdan se lo beben",
     "imagen": "duelotres",
     "accion": "DUELOTRES",
-    "color": "#FFFFFF"
+    "color": "#616161"
   },
   {
     "posicion": 33,
@@ -269,7 +269,7 @@
     "descripcion": "Te has columpiado y vuelves a la casilla 13",
     "imagen": "patin",
     "accion": "PATINAZO",
-    "color": "#F0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 34,
@@ -277,7 +277,7 @@
     "descripcion": "Bebe 2 el que este fumnado ahora mismo",
     "imagen": "piti",
     "accion": null,
-    "color": "#FFCCCC"
+    "color": "#616161"
   },
   {
     "posicion": 35,
@@ -285,7 +285,7 @@
     "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
     "accion": "YO_NUNCA",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 36,
@@ -293,7 +293,7 @@
     "descripcion": "Bebe 4",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 37,
@@ -301,7 +301,7 @@
     "descripcion": "Bebe 2 el que este sentado en frente de ti",
     "imagen": "enfrente",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 38,
@@ -309,7 +309,7 @@
     "descripcion": "Te ha tocado, bebes 4 o te tomas un buen chupito",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 39,
@@ -317,7 +317,7 @@
     "descripcion": "Reta a quien quieras a un duelo por 4",
     "imagen": "duelo",
     "accion": "DUELO",
-    "color": "#FFFFFF"
+    "color": "#616161"
   },
   {
     "posicion": 40,
@@ -325,7 +325,7 @@
     "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
     "imagen": "minijuego",
     "accion": "PREGUNTA",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 41,
@@ -333,7 +333,7 @@
     "descripcion": "Pon una regla que os afecte a todos y que durara hasta que otro caiga en la casilla",
     "imagen": "regla",
     "accion": null,
-    "color": "#FFFACD"
+    "color": "#616161"
   },
   {
     "posicion": 42,
@@ -341,7 +341,7 @@
     "descripcion": "Reparte 2 a tu gusto",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 43,
@@ -349,7 +349,7 @@
     "descripcion": "Cada sexo selecciona un representante y luchan en un duelo por 3. Si pierdes, cada miembro de tu grupo bebe esa cantidad",
     "imagen": "sexo",
     "accion": "DUELO",
-    "color": "#FFF0F5"
+    "color": "#616161"
   },
   {
     "posicion": 44,
@@ -357,7 +357,7 @@
     "descripcion": "bebe 2 aquel que este sentado a tu derecha",
     "imagen": "alante",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 45,
@@ -365,7 +365,7 @@
     "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada. Si es distinta, os la bebeis",
     "imagen": "minijuego",
     "accion": "MARCAS",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 46,
@@ -373,7 +373,7 @@
     "descripcion": "ESTAS EN LA CARCEL. Tira el dado dos veces, la suma de los dados es tu fianza. El juego no contunia hasta que te lo termines",
     "imagen": "carcel",
     "accion": "CARCEL",
-    "color": "#FFCCCC"
+    "color": "#616161"
   },
   {
     "posicion": 47,
@@ -381,7 +381,7 @@
     "descripcion": "Recita un trabalenguas, tienes dos oportunidades. Despues los demas tendran que decir el mismo a la primera. El primero que falle bebe 3",
     "imagen": "lengua",
     "accion": null,
-    "color": "#FFCCCC"
+    "color": "#616161"
   },
   {
     "posicion": 48,
@@ -389,7 +389,7 @@
     "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, los que pierdan se lo beben ",
     "imagen": "duelotres",
     "accion": "DUELOTRES",
-    "color": "#FFFFFF"
+    "color": "#616161"
   },
   {
     "posicion": 49,
@@ -397,7 +397,7 @@
     "descripcion": "Bebes 3, que vas muy sobrio",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 50,
@@ -405,7 +405,7 @@
     "descripcion": "Juega a la palabra Tabu. Tienes 30 segundos.Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 51,
@@ -413,7 +413,7 @@
     "descripcion": "Mientras estes en esta casilla beberas la mitad de las deudas de todos tus compañeros",
     "imagen": "hipnosis",
     "accion": null,
-    "color": "#FFF3B2"
+    "color": "#616161"
   },
   {
     "posicion": 52,
@@ -421,7 +421,7 @@
     "descripcion": "Quien caiga aqui hace una pregunta de respuesta multiple, el primero que falle bebe",
     "imagen": "zona",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 53,
@@ -429,7 +429,7 @@
     "descripcion": "Mientras estes en esta casilla no te pueden mandar beber",
     "imagen": "posada",
     "accion": null,
-    "color": "#DCDCDC"
+    "color": "#616161"
   },
   {
     "posicion": 54,
@@ -437,7 +437,7 @@
     "descripcion": "Pon una regla que os afecte a todos. Quien la incumpla bebe.",
     "imagen": "regla",
     "accion": null,
-    "color": "#FFFACD"
+    "color": "#616161"
   },
   {
     "posicion": 55,
@@ -445,7 +445,7 @@
     "descripcion": "Juega a Password con un compañero por una cantidad. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado cada uno, si falla os lo bebeis los dos",
     "imagen": "minijuego",
     "accion": "PASSWORD",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 56,
@@ -453,7 +453,7 @@
     "descripcion": "Reta a alguien por 5",
     "imagen": "duelo",
     "accion": "DUELO",
-    "color": "#FFFFFF"
+    "color": "#616161"
   },
   {
     "posicion": 57,
@@ -461,7 +461,7 @@
     "descripcion": "Es hora de putear. Reparte 5 como tu gustes",
     "imagen": "suerte",
     "accion": null,
-    "color": "#E5FFE5"
+    "color": "#616161"
   },
   {
     "posicion": 58,
@@ -469,7 +469,7 @@
     "descripcion": "Beben todos aquellos que vayan detras de ti en la partida",
     "imagen": "atras",
     "accion": null,
-    "color": "#E0FFFF"
+    "color": "#616161"
   },
   {
     "posicion": 59,
@@ -477,7 +477,7 @@
     "descripcion": "Si no eres inmune, ahora si que la has jodido. Mueres y vuelves al principio",
     "imagen": "muerte",
     "accion": "MUERTE",
-    "color": "#808080"
+    "color": "#616161"
   },
   {
     "posicion": 60,
@@ -485,7 +485,7 @@
     "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
     "imagen": "minijuego",
     "accion": "MIMICA",
-    "color": "#C0C0C0"
+    "color": "#616161"
   },
   {
     "posicion": 61,
@@ -493,7 +493,7 @@
     "descripcion": "Sin ninguna duda hoy no es tu dia. Vuelves a la casilla 41...",
     "imagen": "patin",
     "accion": "PATINAZO",
-    "color": "#F0FFF0"
+    "color": "#616161"
   },
   {
     "posicion": 62,
@@ -501,6 +501,6 @@
     "descripcion": "DIOS MIO, HAS GANADO LA PARTIDA POR FIN! COMO RECOMPENSA MANDA A TODOS ACABARSE SUS RESPECTIVOS VASOS",
     "imagen": "ganas",
     "accion": "CASILLA_FINAL",
-    "color": "#FFFF00"
+    "color": "#616161"
   }
 ]

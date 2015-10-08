@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         textViewsView = (LinearLayout) findViewById(R.id.text_views_view);
         Button startButton = (Button) findViewById(R.id.start_button);
-        FloatingActionButton añadirButton = (FloatingActionButton) findViewById(R.id.añadir_jugadores);
+        FloatingActionButton añadirButton = (FloatingActionButton) findViewById(R.id.fab);
 
         añadeNombreJugador();
 
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 for (EditText nombreJugador : nombresJugadores) {
                     jugadores.add(new Jugador(TextUtils.isEmpty(nombreJugador.getText())
                             ? "Jugador " + (++i) : nombreJugador.getText().toString()));
+
 
                 }
 

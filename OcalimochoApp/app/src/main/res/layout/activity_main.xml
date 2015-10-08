@@ -1,56 +1,64 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_view"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:fab="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/players_selection_scroll_view"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" >
-
-        <LinearLayout
-            android:id="@+id/text_views_view"
-            android:orientation="vertical"
+        <Button
+            android:id="@+id/start_button"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context="com.example.cokepedreira.ocalimochoapp.SeleccionJugadores">
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Comenzar"
+            android:textSize="14sp" />
 
-
-            <Button
-                android:id="@+id/start_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:layout_marginBottom="8dp"
-                android:text="Comenzar"
-                style="?android:attr/borderlessButtonStyle"/>
-
-        </LinearLayout>
-
-
-    </ScrollView>
 
         <com.melnykov.fab.FloatingActionButton
-            android:id="@+id/añadir_jugadores"
+            android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="bottom|right"
-            android:layout_margin="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:src="@drawable/ic_action_new"
-            fab:fab_colorNormal="#009688"
-            fab:fab_colorPressed="@color/ColorPrimaryDark"
-            fab:fab_colorRipple="#9575CD"
-            />
-    </FrameLayout>
+            fab:fab_colorNormal="@color/ColorAccent"
+            fab:fab_colorPressed="@color/ColorAccentDark" />
 
+        <ScrollView
+            android:id="@+id/players_selection_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_below="@id/start_button">
+
+
+            <LinearLayout
+                android:id="@+id/text_views_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/start_button"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                tools:context="com.example.cokepedreira.ocalimochoapp.SeleccionJugadores">
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
 
 
 </LinearLayout>
