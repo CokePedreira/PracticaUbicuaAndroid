@@ -12,7 +12,8 @@
         android:layout_gravity="center"
         android:layout_margin="30dp"
         android:translationZ="2dp"
-        card_view:cardCornerRadius="2dp">
+        card_view:cardCornerRadius="2dp"
+        android:background="#616161">
 
         <LinearLayout
             android:id="@+id/card_view_linear_layout"
@@ -36,8 +37,8 @@
                     android:layout_height="40dp"
                     android:gravity="center"
                     android:text="Pos"
-                    android:textColor="#424242"
-                    android:textSize="20sp"
+                    android:textColor="#E0F2F1"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -47,8 +48,8 @@
                     android:layout_marginStart="16dp"
                     android:gravity="left|center_vertical"
                     android:text="Nombre"
-                    android:textColor="#424242"
-                    android:textSize="20sp"
+                    android:textColor="#E0F2F1"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
 

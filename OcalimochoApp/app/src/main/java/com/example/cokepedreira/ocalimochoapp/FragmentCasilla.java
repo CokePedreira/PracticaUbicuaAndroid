@@ -87,7 +87,7 @@ public class FragmentCasilla extends Fragment {
         recursosImagen.add(new Imagen(R.drawable.azul, "azul"));
         recursosImagen.add(new Imagen(R.drawable.blanco, "blanco"));
         recursosImagen.add(new Imagen(R.drawable.carcel, "carcel"));
-        recursosImagen.add(new Imagen(R.drawable.cegatos, "cegatos"));
+        recursosImagen.add(new Imagen(R.drawable.gafas, "cegatos"));                               /*Añadido*/
         recursosImagen.add(new Imagen(R.drawable.condon, "condon"));
         recursosImagen.add(new Imagen(R.drawable.corleone, "corleone"));
         recursosImagen.add(new Imagen(R.drawable.duelo, "duelo"));
@@ -100,7 +100,7 @@ public class FragmentCasilla extends Fragment {
         recursosImagen.add(new Imagen(R.drawable.inmune, "inmune"));
         recursosImagen.add(new Imagen(R.drawable.laberinto, "laberinto"));
         recursosImagen.add(new Imagen(R.drawable.lengua, "lengua"));
-        recursosImagen.add(new Imagen(R.drawable.machos, "machos"));
+        recursosImagen.add(new Imagen(R.drawable.machos, "machos"));                               /*Añadido*/
         recursosImagen.add(new Imagen(R.drawable.minijuego, "minijuego"));
         recursosImagen.add(new Imagen(R.drawable.muerte, "muerte"));
         recursosImagen.add(new Imagen(R.drawable.musculo, "musculo"));
@@ -117,7 +117,7 @@ public class FragmentCasilla extends Fragment {
         recursosImagen.add(new Imagen(R.drawable.regla, "regla"));
         recursosImagen.add(new Imagen(R.drawable.rojo, "rojo"));
         recursosImagen.add(new Imagen(R.drawable.rosa, "rosa"));
-        recursosImagen.add(new Imagen(R.drawable.salida, "salida"));
+        recursosImagen.add(new Imagen(R.drawable.salida, "salida"));                               /*Añadido*/
         recursosImagen.add(new Imagen(R.drawable.sexo, "sexo"));
         recursosImagen.add(new Imagen(R.drawable.suerte, "suerte"));
         recursosImagen.add(new Imagen(R.drawable.travoltas, "travoltas"));
