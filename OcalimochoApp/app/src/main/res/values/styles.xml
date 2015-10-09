@@ -8,6 +8,7 @@
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
         <item name="cardColor">#616161</item>
         <item name="textColor">#EEEEEE</item>
+        <item name="laberinto">@drawable/laberinto_blanco</item>
     </style>
 
     <style name="AppTheme.Light" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -16,6 +17,7 @@
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
         <item name="cardColor">#ffff</item>
         <item name="textColor">#424242</item>
+        <item name="laberinto">@drawable/laberinto_negro</item>
 
     </style>
 </resources>

@@ -2,5 +2,6 @@
 <resources>
     <attr name="cardColor" format="color"/>
     <attr name="textColor" format="color"/>
+    <attr name="laberinto" format="reference"/>
 
 </resources>
