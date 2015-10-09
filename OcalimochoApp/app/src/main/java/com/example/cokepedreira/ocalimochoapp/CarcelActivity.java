@@ -45,8 +45,8 @@ public class CarcelActivity extends ActionBarActivity {
     }
     public void tirarDados(View view){
         castigo.setText("La fianza para salir es: " +Integer.toString(   aleatorio() + aleatorio() ) );
-        tirardados.setVisibility(View.INVISIBLE);
         tirardados.setEnabled(false);
+        tirardados.setVisibility(View.INVISIBLE);
 
 
 

@@ -28,7 +28,7 @@
             android:id="@+id/tirada"
             android:textSize="20sp"
             android:onClick="tirarDados"
-            android:textColor="#ffff"
+            android:textColor="?attr/textColor"
             android:text="TIRAR"/>
 
 
@@ -41,7 +41,7 @@
         android:id="@+id/castigo"
         android:textSize="22dp"
         android:gravity="center"
-        android:textColor="#eeeeee"
+        android:textColor="?attr/textColor"
         android:text="La fianza para salir es: "
         android:layout_marginBottom="42dp"/>
 
@@ -52,6 +52,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/continuar"
+        android:textColor="?attr/textColor"
+
         android:onClick="volverTablero"
 
         android:text="VOLVER AL TABLERO"/>

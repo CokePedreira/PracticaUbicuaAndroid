@@ -3,11 +3,19 @@
     <!-- Base application theme. -->
 
     <style name="AppTheme" parent="Theme.AppCompat">
-        <item name="colorAccent">#009688</item>
+        <item name="colorAccent">@color/ColorAccent</item>
         <item name="colorPrimary">@color/ColorPrimary</item>
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
-        <item name="android:textColor">#ffff</item>
-        <item name="android:color">#673AB7</item>
+        <item name="cardColor">#616161</item>
+        <item name="textColor">#EEEEEE</item>
     </style>
 
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="cardColor">#ffff</item>
+        <item name="textColor">#424242</item>
+
+    </style>
 </resources>

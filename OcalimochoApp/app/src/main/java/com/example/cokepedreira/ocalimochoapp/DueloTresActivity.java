@@ -49,7 +49,6 @@ public class DueloTresActivity extends ActionBarActivity {
     public void tirardado1(View view){
         resultado1.setText(Integer.toString(aleatorio()));
         dado1.setEnabled(false);
-        dado1.setVisibility(View.INVISIBLE);
 
 
 
@@ -58,14 +57,12 @@ public class DueloTresActivity extends ActionBarActivity {
 
         resultado2.setText(Integer.toString(aleatorio()));
         dado2.setEnabled(false);
-        dado2.setVisibility(View.INVISIBLE);
 
     }
     public void tirardado3(View view){
 
         resultado3.setText(Integer.toString(aleatorio()));
         dado3.setEnabled(false);
-        dado3.setVisibility(View.INVISIBLE);
 
     }
 

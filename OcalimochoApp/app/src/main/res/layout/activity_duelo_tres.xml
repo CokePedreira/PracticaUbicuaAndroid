@@ -27,11 +27,15 @@
             android:id="@+id/dado1"
             android:textSize="14sp"
             android:onClick="tirardado1"
+            android:textColor="?attr/textColor"
+
             android:text="DADO 1"/>
         <TextView
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/resultado1"
+            android:textColor="?attr/textColor"
+
             android:textSize="16sp" />
 
     </LinearLayout>
@@ -41,6 +45,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
+        android:textColor="?attr/textColor"
+
         android:layout_alignParentTop="true">
         <Button
             style="?android:attr/borderlessButtonStyle"
@@ -48,6 +54,8 @@
             android:layout_height="50dp"
             android:id="@+id/dado2"
             android:textSize="14sp"
+            android:textColor="?attr/textColor"
+
             android:onClick="tirardado2"
             android:text="DADO 2"/>
 
@@ -56,6 +64,8 @@
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/resultado2"
+            android:textColor="?attr/textColor"
+
             android:textSize="16sp"/>
     </LinearLayout>
     <LinearLayout
@@ -73,11 +83,15 @@
             android:id="@+id/dado3"
             android:textSize="14sp"
             android:onClick="tirardado3"
+            android:textColor="?attr/textColor"
+
             android:text="DADO 3"/>
         <TextView
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/resultado3"
+            android:textColor="?attr/textColor"
+
             android:textSize="16sp"/>
 
     </LinearLayout>
@@ -88,6 +102,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/continuar"
+        android:textColor="?attr/textColor"
+
         android:onClick="volverTablero"
         android:text="VOLVER AL TABLERO"/>
 

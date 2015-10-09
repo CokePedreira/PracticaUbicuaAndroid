@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
 
@@ -10,73 +11,77 @@
         android:id="@+id/imagenduelo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:gravity="start"
-        android:contentDescription="Imagen de duelo"/>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:contentDescription="Imagen de duelo"
+        android:gravity="start" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:layout_alignParentTop="true">
+        android:orientation="horizontal">
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
             android:id="@+id/dado1"
-            android:textSize="14sp"
-            android:onClick="tirardado1"
-            android:textColor="#ffff"
-            android:text="DADO 1"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:id="@+id/resultado1"
-            android:textSize="16sp"
-            android:textColor="#ffff"/>
-
-    </LinearLayout>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_alignParentTop="true">
-        <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="150dp"
             android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="tirardado1"
+            android:text="DADO 1"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/resultado1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
             android:id="@+id/dado2"
-            android:textSize="14sp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:onClick="tirardado2"
-            android:textColor="#ffff"
-            android:text="DADO 2"/>
+            android:text="DADO 2"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
 
 
         <TextView
+            android:id="@+id/resultado2"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:id="@+id/resultado2"
-            android:textSize="16sp"
-            android:textColor="#ffff"/>
+            android:gravity="center"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp" />
     </LinearLayout>
-
-
-
-
-
 
 
     <Button
+        android:id="@+id/continuar"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/continuar"
         android:onClick="volverTablero"
-        android:textSize="14sp"
-        android:text="VOLVER AL TABLERO"/>
+        android:text="VOLVER AL TABLERO"
+        android:textColor="?attr/textColor"
+
+        android:textSize="14sp" />
 
 
 </LinearLayout>

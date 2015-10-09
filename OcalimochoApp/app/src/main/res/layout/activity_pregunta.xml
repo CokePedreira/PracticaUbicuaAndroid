@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
 
@@ -10,81 +11,92 @@
         android:id="@+id/imagenPregunta"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:gravity="start"
-        android:contentDescription="Imagen de pregunta"/>
+        android:contentDescription="Imagen de pregunta"
+        android:gravity="start" />
 
     <TextView
+        android:id="@+id/pregunta"
         android:layout_width="300dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="14sp"
-        android:id="@+id/pregunta"
-        android:text=""/>
+        android:text=""
+        android:layout_marginTop="16dp"
+        android:textColor="?attr/textColor"
+        android:textSize="14sp" />
+
     <TextView
+        android:id="@+id/AvisoTabu"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="14sp"
-        android:id="@+id/AvisoTabu"
-        android:text="Las posibles respuestas son: "/>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:text="Las posibles respuestas son: "
+        android:textColor="?attr/textColor"
+        android:textSize="14sp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
         android:gravity="center"
-        android:layout_alignParentTop="true">
+        android:orientation="horizontal">
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
             android:id="@+id/respuesta1"
-            android:textSize="14sp"
-            android:onClick="respuesta1"
-            android:text="RESPUESTA 1"/>
-        <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:id="@+id/respuesta2"
-            android:textSize="14sp"
-            android:onClick="respuesta2"
-            android:text="RESPUESTA 2"/>
-    </LinearLayout>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_alignParentTop="true">
+            android:onClick="respuesta1"
+            android:text="RESPUESTA 1"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
 
         <Button
+            android:id="@+id/respuesta2"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:id="@+id/respuesta3"
-            android:textSize="14sp"
-            android:onClick="respuesta3"
-            android:text="RESPUESTA 3"/>
+            android:onClick="respuesta2"
+            android:text="RESPUESTA 2"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
+            android:id="@+id/respuesta3"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="150dp"
             android:layout_height="50dp"
+            android:onClick="respuesta3"
+            android:text="RESPUESTA 3"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
+
+        <Button
             android:id="@+id/respuesta4"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:onClick="respuesta4"
-            android:textSize="14sp"
-            android:text="RESPUESTA 4"/>
+            android:text="RESPUESTA 4"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/continuar"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:id="@+id/continuar"
         android:onClick="volverTablero"
-        android:text="VOLVER AL TABLERO"/>
+        android:text="VOLVER AL TABLERO"
+        android:textColor="?attr/textColor" />
 
 
 </LinearLayout>
