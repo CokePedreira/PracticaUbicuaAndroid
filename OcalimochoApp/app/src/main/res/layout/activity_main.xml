@@ -21,19 +21,6 @@
             android:textSize="14sp" />
 
 
-        <com.melnykov.fab.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:src="@drawable/ic_action_new"
-            fab:fab_colorNormal="@color/ColorAccent"
-            fab:fab_colorPressed="@color/ColorAccentDark" />
 
         <ScrollView
             android:id="@+id/players_selection_scroll_view"
@@ -57,6 +44,20 @@
 
             </LinearLayout>
         </ScrollView>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_action_new"
+            fab:fab_colorNormal="@color/ColorAccent"
+            fab:fab_colorPressed="@color/ColorAccentDark" />
 
     </RelativeLayout>
 
