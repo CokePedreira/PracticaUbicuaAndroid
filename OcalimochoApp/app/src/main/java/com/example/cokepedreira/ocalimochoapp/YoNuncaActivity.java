@@ -20,7 +20,6 @@ public class YoNuncaActivity extends ActionBarActivity {
 
 
 
-    TextView titulo;
     ImageView imageYoNunca;
     TextView listaYoNunca;
     Button continuar;
@@ -30,7 +29,6 @@ public class YoNuncaActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yo_nunca);
         setTitle("Yo nunca");
-        titulo = (TextView) findViewById(R.id.titulo);
         listaYoNunca = (TextView) findViewById(R.id.yoNunca);
         continuar = (Button) findViewById(R.id.continuar);
 

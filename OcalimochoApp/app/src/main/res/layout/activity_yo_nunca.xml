@@ -5,15 +5,7 @@
     android:gravity="center"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
-    <TextView
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:id="@+id/titulo"
-        android:text="YO NUNCA"/>
+
     <ImageView
         android:id="@+id/imagenYoNunca"
         android:layout_width="100dp"
@@ -22,22 +14,20 @@
         android:contentDescription="Imagen de mimica"/>
 
 
-
-
     <TextView
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="25dp"
-        android:textColor="#000000"
+        android:textSize="18sp"
         android:id="@+id/yoNunca"
         android:text=" "/>
     <Button
-        android:layout_width="120dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:id="@+id/continuar"
         android:onClick="volverTablero"
-        android:text="Continuar"/>
+        android:text="VOLVER AL TABLERO"/>
 
 
 </LinearLayout>

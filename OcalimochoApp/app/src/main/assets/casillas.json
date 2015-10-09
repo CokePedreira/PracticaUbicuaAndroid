@@ -66,7 +66,7 @@
   {
     "posicion": 8,
     "nombre": "Duelox1",
-    "descripcion": "Reta a otro jugador por 1, el que saque menos en el dado bebe",
+    "descripcion": "Reta a otro jugador por 1, el que saque menos en el dado bebe. En caso de empate bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -130,7 +130,7 @@
   {
     "posicion": 16,
     "nombre": "Duelox2",
-    "descripcion": "Reta a otro jugador por 2, quien saque menos en el dado bebe",
+    "descripcion": "Reta a otro jugador por 2, quien saque menos en el dado bebe. En caso de empate bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -186,7 +186,7 @@
   {
     "posicion": 23,
     "nombre": "Duelox3",
-    "descripcion": "Reta a un compañero por 3",
+    "descripcion": "Reta a un compañero por 3. En caso de empate bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -258,7 +258,7 @@
   {
     "posicion": 32,
     "nombre": "Triple duelo",
-    "descripcion": "Reta a dos compañeros por la cantidad que desees, quienes pierdan se lo beben",
+    "descripcion": "Reta a dos compañeros por la cantidad que desees, solo se salva el que gana. En caso de empate bebeis todos",
     "imagen": "duelotres",
     "accion": "DUELOTRES",
     "color": "#616161"
@@ -314,7 +314,7 @@
   {
     "posicion": 39,
     "nombre": "Duelox4",
-    "descripcion": "Reta a quien quieras a un duelo por 4",
+    "descripcion": "Reta a quien quieras a un duelo por 4. en caso de empate bebeis los 2",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -346,7 +346,7 @@
   {
     "posicion": 43,
     "nombre": "Guerra de sexos",
-    "descripcion": "Cada sexo selecciona un representante y luchan en un duelo por 3. Si pierdes, cada miembro de tu grupo bebe esa cantidad",
+    "descripcion": "Cada sexo selecciona un representante y luchan en un duelo por 3. Si pierdes, cada miembro de tu grupo bebe esa cantidad. En caso de empate bebis todos",
     "imagen": "sexo",
     "accion": "DUELO",
     "color": "#616161"
@@ -386,7 +386,7 @@
   {
     "posicion": 48,
     "nombre": "Triple duelo",
-    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, los que pierdan se lo beben ",
+    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, solo se salva el que mas gane, En caso de empate bebeis los 3 ",
     "imagen": "duelotres",
     "accion": "DUELOTRES",
     "color": "#616161"
@@ -450,7 +450,7 @@
   {
     "posicion": 56,
     "nombre": "Duelox5",
-    "descripcion": "Reta a alguien por 5",
+    "descripcion": "Reta a alguien por 5. Si empatais bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"

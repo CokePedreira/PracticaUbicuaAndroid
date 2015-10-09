@@ -22,7 +22,6 @@ public class MimicaActivity extends ActionBarActivity {
 
 
 
-    TextView titulo;
     ImageView imageMimica;
     TextView instrucciones;
     TextView listaPelicula;
@@ -35,7 +34,6 @@ public class MimicaActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mimica);
         setTitle("Mímica");
-        titulo = (TextView) findViewById(R.id.titulo);
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPelicula = (TextView) findViewById(R.id.pelicula);
         continuar = (Button) findViewById(R.id.continuar);
