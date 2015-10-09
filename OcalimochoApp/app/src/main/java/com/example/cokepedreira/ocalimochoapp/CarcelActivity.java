@@ -15,7 +15,6 @@ import java.util.Random;
 public class CarcelActivity extends ActionBarActivity {
 
 
-    TextView titulo;
     ImageView imagenCarcel;
     Button tirardados;
     TextView castigo;
@@ -27,7 +26,7 @@ public class CarcelActivity extends ActionBarActivity {
         setContentView(R.layout.activity_carcel);
         setTitle("Cárcel");
 
-        titulo = (TextView) findViewById(R.id.titulo);
+
         tirardados = (Button) findViewById(R.id.tirada);
         continuar = (Button) findViewById(R.id.continuar);
         imagenCarcel = (ImageView) findViewById(R.id.imagencarcel);

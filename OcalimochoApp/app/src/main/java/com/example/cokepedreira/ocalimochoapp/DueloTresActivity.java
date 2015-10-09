@@ -14,7 +14,6 @@ import java.util.Random;
 
 public class DueloTresActivity extends ActionBarActivity {
 
-    TextView titulo;
     ImageView imagenDuelotres;
     Button dado1;
     Button dado2;
@@ -30,7 +29,6 @@ public class DueloTresActivity extends ActionBarActivity {
         setContentView(R.layout.activity_duelo_tres);
         setTitle("Triple duelo");
 
-        titulo = (TextView) findViewById(R.id.titulo);
         dado1 = (Button) findViewById(R.id.dado1);
         dado2 = (Button) findViewById(R.id.dado2);
         dado3 = (Button) findViewById(R.id.dado3);
@@ -50,6 +48,8 @@ public class DueloTresActivity extends ActionBarActivity {
     }
     public void tirardado1(View view){
         resultado1.setText(Integer.toString(aleatorio()));
+        dado1.setEnabled(false);
+        dado1.setVisibility(View.INVISIBLE);
 
 
 
@@ -57,11 +57,15 @@ public class DueloTresActivity extends ActionBarActivity {
     public void tirardado2(View view){
 
         resultado2.setText(Integer.toString(aleatorio()));
+        dado2.setEnabled(false);
+        dado2.setVisibility(View.INVISIBLE);
 
     }
     public void tirardado3(View view){
 
         resultado3.setText(Integer.toString(aleatorio()));
+        dado3.setEnabled(false);
+        dado3.setVisibility(View.INVISIBLE);
 
     }
 

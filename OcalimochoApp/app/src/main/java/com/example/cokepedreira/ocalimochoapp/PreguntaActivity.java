@@ -21,7 +21,6 @@ import java.util.Random;
 public class PreguntaActivity extends AppCompatActivity {
 
     List<String> nombrePreguntas;
-    TextView titulo;
     ImageView imagenPregunta;
     TextView instrucciones;
     TextView listaPreguntas;
@@ -38,7 +37,6 @@ public class PreguntaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
         setTitle("Pregunta");
-        titulo = (TextView) findViewById(R.id.titulo);
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPreguntas = (TextView) findViewById(R.id.pregunta);
         continuar = (Button) findViewById(R.id.continuar);
@@ -97,51 +95,75 @@ public class PreguntaActivity extends AppCompatActivity {
         if(respuestaCorrecta == 1){
             respuesta1.setEnabled(true);
             respuesta2.setEnabled(false);
+            respuesta2.setVisibility(View.INVISIBLE);
             respuesta3.setEnabled(false);
+            respuesta3.setVisibility(View.INVISIBLE);
             respuesta4.setEnabled(false);
+            respuesta4.setVisibility(View.INVISIBLE);
             respuesta1.setTextColor(Color.rgb(87, 166, 57));
         } else {
             respuesta1.setEnabled(false);
             respuesta1.setTextColor(Color.rgb(255, 0, 0));
+            respuesta2.setVisibility(View.INVISIBLE);
+            respuesta3.setVisibility(View.INVISIBLE);
+            respuesta4.setVisibility(View.INVISIBLE);
         }
     }
 
     public void respuesta2 (View view){
         if(respuestaCorrecta == 2){
             respuesta1.setEnabled(false);
+            respuesta1.setVisibility(View.INVISIBLE);
             respuesta2.setEnabled(true);
             respuesta3.setEnabled(false);
+            respuesta3.setVisibility(View.INVISIBLE);
             respuesta4.setEnabled(false);
+            respuesta4.setVisibility(View.INVISIBLE);
             respuesta2.setTextColor(Color.rgb(87, 166, 57));
         } else {
             respuesta2.setEnabled(false);
             respuesta2.setTextColor(Color.rgb(255, 0, 0));
+            respuesta1.setVisibility(View.INVISIBLE);
+            respuesta3.setVisibility(View.INVISIBLE);
+            respuesta4.setVisibility(View.INVISIBLE);
         }
     }
 
     public void respuesta3 (View view){
         if(respuestaCorrecta == 3){
             respuesta1.setEnabled(false);
+            respuesta1.setVisibility(View.INVISIBLE);
             respuesta2.setEnabled(false);
+            respuesta2.setVisibility(View.INVISIBLE);
             respuesta3.setEnabled(true);
             respuesta4.setEnabled(false);
+            respuesta4.setVisibility(View.INVISIBLE);
             respuesta3.setTextColor(Color.rgb(87, 166, 57));
         } else {
             respuesta3.setEnabled(false);
             respuesta3.setTextColor(Color.rgb(255, 0, 0));
+            respuesta2.setVisibility(View.INVISIBLE);
+            respuesta1.setVisibility(View.INVISIBLE);
+            respuesta4.setVisibility(View.INVISIBLE);
         }
     }
 
     public void respuesta4 (View view){
         if(respuestaCorrecta == 4){
             respuesta1.setEnabled(false);
+            respuesta1.setVisibility(View.INVISIBLE);
             respuesta2.setEnabled(false);
+            respuesta2.setVisibility(View.INVISIBLE);
             respuesta3.setEnabled(false);
+            respuesta3.setVisibility(View.INVISIBLE);
             respuesta4.setEnabled(true);
             respuesta4.setTextColor(Color.rgb(87, 166, 57));
         } else {
             respuesta4.setEnabled(false);
             respuesta4.setTextColor(Color.rgb(255, 0, 0));
+            respuesta2.setVisibility(View.INVISIBLE);
+            respuesta3.setVisibility(View.INVISIBLE);
+            respuesta1.setVisibility(View.INVISIBLE);
         }
     }
 

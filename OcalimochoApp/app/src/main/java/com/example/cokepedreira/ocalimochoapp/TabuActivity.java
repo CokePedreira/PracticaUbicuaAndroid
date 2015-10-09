@@ -20,7 +20,6 @@ public class TabuActivity extends ActionBarActivity {
 
 
 
-    TextView titulo;
     ImageView imagenTabu;
     TextView avisoTabu;
     TextView listaPersoanjes;
@@ -35,7 +34,6 @@ public class TabuActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabu);
         setTitle("Palabra Tabú");
-        titulo = (TextView) findViewById(R.id.titulo);
         avisoTabu = (TextView) findViewById(R.id.AvisoTabu);
         listaPersoanjes = (TextView) findViewById(R.id.personaje);
         continuar = (Button) findViewById(R.id.continuar);

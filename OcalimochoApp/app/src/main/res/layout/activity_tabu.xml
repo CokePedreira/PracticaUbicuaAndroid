@@ -5,16 +5,6 @@
     android:gravity="center"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
-    <TextView
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:id="@+id/titulo"
-        android:text="PALABRA TABU"/>
-
 
     <ImageView
         android:id="@+id/imagenTABU"
@@ -27,16 +17,14 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="25dp"
-        android:textColor="#000000"
+        android:textSize="18sp"
         android:id="@+id/personaje"
         android:text=" "/>
     <TextView
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="22dp"
-        android:textColor="#000000"
+        android:textSize="14sp"
         android:id="@+id/AvisoTabu"
         android:text="Las palabras tabu son: "/>
     <LinearLayout
@@ -51,15 +39,13 @@
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/palabra1"
-            android:textSize="22dp"
-            android:textColor="#000000"
+            android:textSize="14sp"
             android:text="norma1"/>
         <TextView
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/palabra2"
-            android:textSize="22dp"
-            android:textColor="#000000"
+            android:textSize="14sp"
             android:text="norma2"/>
         </LinearLayout>
     <LinearLayout
@@ -74,24 +60,24 @@
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/palabra3"
-            android:textSize="22dp"
-            android:textColor="#000000"
+            android:textSize="14sp"
             android:text="norma3"/>
         <TextView
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:id="@+id/palabra4"
-            android:textSize="22dp"
-            android:textColor="#000000"
+            android:textSize="14sp"
             android:text="norma4"/>
     </LinearLayout>
 
     <Button
-        android:layout_width="120dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:id="@+id/continuar"
+        android:textSize="14sp"
         android:onClick="volverTablero"
-        android:text="Continuar"/>
+        android:text="VOLVER AL TABLERO"/>
 
 
 </LinearLayout>
