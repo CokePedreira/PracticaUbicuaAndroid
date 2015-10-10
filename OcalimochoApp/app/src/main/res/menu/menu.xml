@@ -8,9 +8,6 @@
         android:icon="@android:drawable/btn_star"
         android:orderInCategory="100" app:showAsAction="ifRoom" />
 
-    <item android:id="@+id/next_player" android:title="Siguiente jugador"
-        android:icon="@drawable/ic_action_forward"
-        android:orderInCategory="100" app:showAsAction="ifRoom" />
 
     <item android:id="@+id/new_game" android:title="Nueva partida"
         android:orderInCategory="100" app:showAsAction="never" />

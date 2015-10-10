@@ -113,7 +113,7 @@
   },
   {
     "posicion": 14,
-    "nombre": "Para los de alante",
+    "nombre": "Pa los de alante",
     "descripcion": "Beben todos aquellos que vayan delante de ti en el juego",
     "imagen": "alante",
     "accion": null,
@@ -249,7 +249,7 @@
   },
   {
     "posicion": 31,
-    "nombre": "Para el de la izquierda",
+    "nombre": "Pa el de la izquierda",
     "descripcion": "Bebe 1 quien este sentado a tu izquierda",
     "imagen": "atras",
     "accion": null,
@@ -297,7 +297,7 @@
   },
   {
     "posicion": 37,
-    "nombre": "Para el de en frente",
+    "nombre": "pa el de en frente",
     "descripcion": "Bebe 2 el que este sentado en frente de ti",
     "imagen": "enfrente",
     "accion": null,
@@ -353,7 +353,7 @@
   },
   {
     "posicion": 44,
-    "nombre": "Para el de la derecha",
+    "nombre": "Pa el de la derecha",
     "descripcion": "bebe 2 aquel que este sentado a tu derecha",
     "imagen": "alante",
     "accion": null,
@@ -465,7 +465,7 @@
   },
   {
     "posicion": 58,
-    "nombre": "Para los de atras",
+    "nombre": "Pa los de atras",
     "descripcion": "Beben todos aquellos que vayan detras de ti en la partida",
     "imagen": "atras",
     "accion": null,

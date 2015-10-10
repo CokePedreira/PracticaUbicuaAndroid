@@ -1,5 +1,8 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -33,14 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
         jugadores = new ArrayList<>();
         nombresJugadores = new ArrayList<>();
-
         //scrollView = (ScrollView) findViewById(R.id.players_selection_scroll_view);
         textViewsView = (LinearLayout) findViewById(R.id.text_views_view);
         añadeNombreJugador();
         Button startButton = (Button) findViewById(R.id.start_button);
         FloatingActionButton añadirButton = (FloatingActionButton) findViewById(R.id.fab);
         //añadirButton.attachToScrollView(scrollView);
-
 
 
         añadirButton.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                             ? "Jugador " + (++i) : nombreJugador.getText().toString()));
 
 
+
                 }
 
                 Intent intent = new Intent(MainActivity.this, Tablero.class);
@@ -72,8 +74,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void añadeNombreJugador() {
-        EditText nombreJugador = (EditText) getLayoutInflater().inflate(R.layout.nombre_jugador, textViewsView, false);
+        final EditText nombreJugador = (EditText) getLayoutInflater().inflate(R.layout.nombre_jugador, textViewsView, false);
         nombresJugadores.add(nombreJugador);
+                          nombreJugador.setOnLongClickListener(new View.OnLongClickListener() {
+                        @Override
+                        public boolean onLongClick(View v) {
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Eliminar")
+                                    .setMessage("¿Seguro desea eliminar al Jugador?")
+                                    .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                        nombreJugador.setVisibility(View.GONE);
+
+
+                                        }
+                                    })
+                                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            // do nothing
+                                        }
+                                    })
+                                    .show();
+
+                            return false;
+                        }
+                    });
+
         textViewsView.addView(nombreJugador);
         nombreJugador.requestFocus();
     }

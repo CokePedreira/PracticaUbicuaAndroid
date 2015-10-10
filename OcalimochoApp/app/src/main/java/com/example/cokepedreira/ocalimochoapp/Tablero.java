@@ -40,6 +40,7 @@ public class Tablero extends AppCompatActivity {
     private PagerAdapter tableroAdapter;
 
     private Button tirarDado;
+    private Button siguienteJugador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +64,17 @@ public class Tablero extends AppCompatActivity {
 
         // Configurar botones
         tirarDado = (Button) findViewById(R.id.tirarDado);
+        siguienteJugador = (Button) findViewById(R.id.siguienteJugador);
+        siguienteJugador.setEnabled(false);
+        siguienteJugador.setVisibility(View.INVISIBLE);
+
         tirarDado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tirarDado.setEnabled(false);
                 tirarDado.setVisibility(View.INVISIBLE);
+                siguienteJugador.setEnabled(true);
+                siguienteJugador.setVisibility(View.VISIBLE);
 
                 // Tirar el dado
                 Random rand = new Random();
@@ -152,6 +159,21 @@ public class Tablero extends AppCompatActivity {
 
             }
         });
+
+        siguienteJugador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tirarDado.setEnabled(true);
+                tirarDado.setVisibility(View.VISIBLE);
+                siguienteJugador.setEnabled(false);
+                siguienteJugador.setVisibility(View.INVISIBLE);
+                jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
+                setTitle(jugadorActual.getNombre());
+                tableroAdapter.notifyDataSetChanged();
+                viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
+
+            }
+        });
     }
 
     public void cargarTablero(List<Jugador> jugadores) {
@@ -192,15 +214,6 @@ public class Tablero extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
-        } else if (id == R.id.next_player) {
-            tirarDado.setEnabled(true);
-            tirarDado.setVisibility(View.VISIBLE);
-
-            // Cambiar de jugador
-            jugadorActual = jugadores.get((jugadores.indexOf(jugadorActual) + 1) % jugadores.size());
-            setTitle(jugadorActual.getNombre());
-            tableroAdapter.notifyDataSetChanged();
-            viewPager.setCurrentItem(jugadorActual.getCasillaActual(), true);
         } else if (id == R.id.show_ranking) {
 
             Intent intent = new Intent(this, RankingActivity.class);
@@ -224,7 +237,7 @@ public class Tablero extends AppCompatActivity {
 
 
         } else if (id == R.id.theme) {
-                setTheme(R.style.AppTheme);
+            setTheme(R.style.AppTheme);
 
 
         }
