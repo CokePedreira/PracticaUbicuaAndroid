@@ -113,7 +113,7 @@ public class Tablero extends AppCompatActivity {
 
                                         Toast.makeText(Tablero.this, "Patinazo: retrocede a la casilla " + jugadorActual.getCasillaActual(), Toast.LENGTH_LONG).show();
                                     }
-                                }, 4000/* 1sec delay */);
+                                }, 4000/* 4sec delay */);
 
                                 break;
 
@@ -134,7 +134,7 @@ public class Tablero extends AppCompatActivity {
 
                                             Toast.makeText(Tablero.this, "Muerte: vuelves a empezar pringao.", Toast.LENGTH_LONG).show();
                                         }
-                                    }, 4000/* 1sec delay */);
+                                    }, 4000/* 4sec delay */);
                                 }
                         }
                     }
