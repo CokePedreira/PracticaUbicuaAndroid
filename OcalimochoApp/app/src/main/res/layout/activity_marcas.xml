@@ -20,6 +20,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="14sp"
         android:id="@+id/instrucciones"
+        android:textColor="?attr/textColor"
         android:text="La marca que te ha tocado es: "/>
 
     <TextView
@@ -29,6 +30,8 @@
         android:textSize="18sp"
         android:id="@+id/marca"
         android:text=""
+        android:textColor="?attr/textColor"
+
         android:textAlignment="center" />
     <Button
         style="?android:attr/borderlessButtonStyle"
@@ -36,6 +39,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/continuar"
         android:onClick="volverTablero"
+        android:textColor="?attr/textColor"
+
         android:text="VOLVER AL TABLERO"/>
 
 

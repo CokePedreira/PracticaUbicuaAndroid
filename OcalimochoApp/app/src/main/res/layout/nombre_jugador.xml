@@ -5,4 +5,5 @@
     android:layout_height="wrap_content"
     android:singleLine="true"
     android:hint="Nombre de jugador"
+    android:textColor="?attr/textColor"
     android:imeOptions="actionNext"/>

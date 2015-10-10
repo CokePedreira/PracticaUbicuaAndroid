@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
 
@@ -10,74 +11,84 @@
         android:id="@+id/imagenTABU"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:gravity="start"
-        android:contentDescription="Imagen de tabu"/>
+        android:contentDescription="Imagen de tabu"
+        android:gravity="start" />
 
     <TextView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="18sp"
         android:id="@+id/personaje"
-        android:text=" "/>
-    <TextView
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="14sp"
+        android:text=" "
+        android:textColor="?attr/textColor"
+        android:textSize="18sp" />
+
+    <TextView
         android:id="@+id/AvisoTabu"
-        android:text="Las palabras tabu son: "/>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Las palabras tabu son: "
+        android:textColor="?attr/textColor"
+        android:textSize="14sp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
         android:gravity="center"
-        android:layout_alignParentTop="true">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="50dp"
             android:id="@+id/palabra1"
-            android:textSize="14sp"
-            android:text="norma1"/>
-        <TextView
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:id="@+id/palabra2"
-            android:textSize="14sp"
-            android:text="norma2"/>
-        </LinearLayout>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_alignParentTop="true">
+            android:text="norma1"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/palabra2"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:id="@+id/palabra3"
-            android:textSize="14sp"
-            android:text="norma3"/>
+            android:text="norma2"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <TextView
+            android:id="@+id/palabra3"
             android:layout_width="150dp"
             android:layout_height="50dp"
+            android:text="norma3"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
+
+        <TextView
             android:id="@+id/palabra4"
-            android:textSize="14sp"
-            android:text="norma4"/>
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="norma4"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/continuar"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:id="@+id/continuar"
-        android:textSize="14sp"
         android:onClick="volverTablero"
-        android:text="VOLVER AL TABLERO"/>
+        android:text="VOLVER AL TABLERO"
+        android:textColor="?attr/textColor"
+        android:textSize="14sp" />
 
 
 </LinearLayout>

@@ -223,6 +223,10 @@ public class Tablero extends AppCompatActivity {
             startActivity(intent);
 
 
+        } else if (id == R.id.theme) {
+                setTheme(R.style.AppTheme);
+
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -243,7 +247,6 @@ public class Tablero extends AppCompatActivity {
                         // do nothing
                     }
                 })
-                .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
 

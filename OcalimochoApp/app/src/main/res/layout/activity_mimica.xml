@@ -19,6 +19,8 @@
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:textSize="14sp"
+        android:textColor="?attr/textColor"
+
         android:id="@+id/instrucciones"
         android:text="La pelicula que te ha tocado es: "/>
 
@@ -28,6 +30,8 @@
         android:layout_gravity="center_horizontal"
         android:textSize="18sp"
         android:textAlignment="center"
+        android:textColor="?attr/textColor"
+
         android:id="@+id/pelicula"
         android:text=" "/>
     <Button
@@ -35,6 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/continuar"
+        android:textColor="?attr/textColor"
+
         android:onClick="volverTablero"
         android:text="VOLVER AL TABLERO"/>
 

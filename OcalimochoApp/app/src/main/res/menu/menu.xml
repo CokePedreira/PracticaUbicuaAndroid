@@ -15,6 +15,9 @@
     <item android:id="@+id/new_game" android:title="Nueva partida"
         android:orderInCategory="100" app:showAsAction="never" />
 
+    <item android:id="@+id/theme" android:title="Cambiar Tema"
+        android:orderInCategory="100" app:showAsAction="never" />
+
     <item android:id="@+id/options" android:title="Ayuda"
         android:orderInCategory="100" app:showAsAction="never" />
 

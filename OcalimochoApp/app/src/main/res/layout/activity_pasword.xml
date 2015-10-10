@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
 
@@ -10,32 +11,36 @@
         android:id="@+id/imagenpassword"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:gravity="start"
-        android:contentDescription="Imagen de password"/>
+        android:contentDescription="Imagen de password"
+        android:gravity="start" />
 
 
     <TextView
+        android:id="@+id/instrucciones"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="14sp"
-        android:id="@+id/instrucciones"
-        android:text="La palabra que te ha tocado es: "/>
+        android:text="La palabra que te ha tocado es: "
+        android:textColor="?attr/textColor"
+        android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/palabra"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="18sp"
-        android:id="@+id/palabra"
-        android:text=""/>
+        android:text=""
+        android:textColor="?attr/textColor"
+        android:textSize="18sp" />
+
     <Button
+        android:id="@+id/continuar"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:id="@+id/continuar"
         android:onClick="volverTablero"
-        android:text="CONTINUAR"/>
+        android:text="CONTINUAR"
+        android:textColor="?attr/textColor" />
 
 
 </LinearLayout>
