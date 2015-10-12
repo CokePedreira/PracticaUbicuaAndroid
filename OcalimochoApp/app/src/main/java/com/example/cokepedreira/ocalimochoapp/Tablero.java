@@ -5,8 +5,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,7 +32,8 @@ import android.support.design.widget.NavigationView;
 /**
  * Created by cokepedreira on 19/5/15.
  */
-public class Tablero extends AppCompatActivity {
+public class Tablero extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     private List<Jugador> jugadores;
     private Jugador jugadorActual;
@@ -175,6 +178,21 @@ public class Tablero extends AppCompatActivity {
 
             }
         });
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     public void cargarTablero(List<Jugador> jugadores) {

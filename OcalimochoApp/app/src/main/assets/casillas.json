@@ -83,7 +83,7 @@
     "posicion": 10,
     "nombre": "Pregunta",
     "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
-    "imagen": "pregunta",
+    "imagen": "minijuego",
     "accion": "PREGUNTA",
     "color": "#616161"
   },
@@ -323,7 +323,7 @@
     "posicion": 40,
     "nombre": "Pregunta",
     "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
-    "imagen": "pregunta",
+    "imagen": "minijuego",
     "accion": "PREGUNTA",
     "color": "#616161"
   },

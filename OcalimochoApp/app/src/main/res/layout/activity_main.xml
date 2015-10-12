@@ -21,13 +21,12 @@
             android:textSize="14sp" />
 
 
-
         <ScrollView
             android:id="@+id/players_selection_scroll_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_below="@id/start_button">
+            android:layout_below="@id/start_button"
+            android:layout_gravity="top">
 
 
             <LinearLayout
@@ -63,4 +62,3 @@
 
 
 </LinearLayout>
-
