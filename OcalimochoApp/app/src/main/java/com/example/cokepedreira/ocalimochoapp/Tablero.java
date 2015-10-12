@@ -9,7 +9,9 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,8 +34,7 @@ import android.support.design.widget.NavigationView;
 /**
  * Created by cokepedreira on 19/5/15.
  */
-public class Tablero extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+public class Tablero extends AppCompatActivity {
 
     private List<Jugador> jugadores;
     private Jugador jugadorActual;
@@ -51,11 +52,13 @@ public class Tablero extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablero);
 
+
         jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>() {
         }.getType());
 
         cargarTablero(jugadores);
         setTitle(casillas.get(0).getNombre());
+
 
         viewPager = (ViewPager) findViewById(R.id.tablero_pager);
         tableroAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
@@ -179,21 +182,9 @@ public class Tablero extends AppCompatActivity
             }
         });
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 
     public void cargarTablero(List<Jugador> jugadores) {
         try {
