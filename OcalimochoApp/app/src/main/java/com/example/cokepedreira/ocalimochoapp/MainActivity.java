@@ -64,9 +64,6 @@ public class MainActivity extends BaseActivity {
                 for (EditText nombreJugador : nombresJugadores) {
                     jugadores.add(new Jugador(TextUtils.isEmpty(nombreJugador.getText())
                             ? "Jugador " + (++i) : nombreJugador.getText().toString()));
-
-
-
                 }
 
                 Intent intent = new Intent(MainActivity.this, Tablero.class);
@@ -86,29 +83,28 @@ public class MainActivity extends BaseActivity {
     private void añadeNombreJugador() {
         final EditText nombreJugador = (EditText) getLayoutInflater().inflate(R.layout.nombre_jugador, textViewsView, false);
         nombresJugadores.add(nombreJugador);
-                          nombreJugador.setOnLongClickListener(new View.OnLongClickListener() {
-                        @Override
-                        public boolean onLongClick(View v) {
-                            new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle("Eliminar")
-                                    .setMessage("¿Seguro desea eliminar al Jugador?")
-                                    .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                        nombreJugador.setVisibility(View.GONE);
+        nombreJugador.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Eliminar")
+                        .setMessage("¿Seguro desea eliminar " + (nombreJugador.getText().toString().isEmpty() ? "al jugador " + (nombresJugadores.indexOf(nombreJugador) + 1) : "a " + nombreJugador.getText().toString()) + "?")
+                        .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                nombreJugador.setVisibility(View.GONE);
+                                nombresJugadores.remove(nombreJugador);
+                            }
+                        })
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .show();
 
-
-                                        }
-                                    })
-                                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            // do nothing
-                                        }
-                                    })
-                                    .show();
-
-                            return false;
-                        }
-                    });
+                return false;
+            }
+        });
 
         textViewsView.addView(nombreJugador);
         nombreJugador.requestFocus();
