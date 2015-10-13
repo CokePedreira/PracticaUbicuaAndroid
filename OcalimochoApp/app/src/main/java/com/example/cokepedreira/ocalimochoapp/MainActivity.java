@@ -31,6 +31,7 @@ public class MainActivity extends BaseActivity {
     private List<Jugador> jugadores;
     private List<EditText> nombresJugadores;
     private LinearLayout textViewsView;
+    private Button startButton;
     //private ScrollView scrollView;
 
     @Override
@@ -45,7 +46,7 @@ public class MainActivity extends BaseActivity {
         //scrollView = (ScrollView) findViewById(R.id.players_selection_scroll_view);
         textViewsView = (LinearLayout) findViewById(R.id.text_views_view);
         añadeNombreJugador();
-        Button startButton = (Button) findViewById(R.id.start_button);
+        startButton = (Button) findViewById(R.id.start_button);
         FloatingActionButton añadirButton = (FloatingActionButton) findViewById(R.id.fab);
         //añadirButton.attachToScrollView(scrollView);
 
@@ -54,6 +55,9 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 añadeNombreJugador();
+                if(nombresJugadores.size() == 1) {
+                    startButton.setEnabled(true);
+                }
             }
         });
 
@@ -87,20 +91,24 @@ public class MainActivity extends BaseActivity {
             @Override
             public boolean onLongClick(View v) {
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Eliminar")
-                        .setMessage("¿Seguro desea eliminar " + (nombreJugador.getText().toString().isEmpty() ? "al jugador " + (nombresJugadores.indexOf(nombreJugador) + 1) : "a " + nombreJugador.getText().toString()) + "?")
-                        .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                nombreJugador.setVisibility(View.GONE);
-                                nombresJugadores.remove(nombreJugador);
+                    .setTitle("Eliminar")
+                    .setMessage("¿Seguro desea eliminar " + (nombreJugador.getText().toString().isEmpty() ? "al jugador " + (nombresJugadores.indexOf(nombreJugador) + 1) : "a " + nombreJugador.getText().toString()) + "?")
+                    .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            nombreJugador.setVisibility(View.GONE);
+                            nombresJugadores.remove(nombreJugador);
+
+                            if (nombresJugadores.size() == 0) {
+                                startButton.setEnabled(false);
                             }
-                        })
-                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
-                            }
-                        })
-                        .show();
+                        }
+                    })
+                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // do nothing
+                        }
+                    })
+                    .show();
 
                 return false;
             }
