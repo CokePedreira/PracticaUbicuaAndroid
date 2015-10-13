@@ -11,8 +11,8 @@ public class Jugador implements Serializable {
 
     @Expose private final String nombre;
     @Expose private int casillaActual;
-    private boolean inmune;
-    private boolean atrapado;
+    @Expose private boolean inmune;
+    @Expose private boolean atrapado;
 
     public Jugador(String nombre) {
         this.nombre = nombre;

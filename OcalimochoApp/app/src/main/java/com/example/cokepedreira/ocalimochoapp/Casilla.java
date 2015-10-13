@@ -17,7 +17,7 @@ public class Casilla {
     @Expose private String descripcion;
     @Expose private Accion accion;
     @Expose private String color;
-    private List<Jugador> jugadoresEnLaCasilla = new ArrayList<>();
+    @Expose private List<Jugador> jugadoresEnLaCasilla = new ArrayList<>();
 
     public String getNombre() {
         return nombre;

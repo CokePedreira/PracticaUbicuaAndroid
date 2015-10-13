@@ -1,27 +1,17 @@
 package com.example.cokepedreira.ocalimochoapp;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.GpsStatus;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
-import android.support.v4.view.GravityCompat;
+import android.os.PersistableBundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -36,8 +26,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
-import android.support.design.widget.NavigationView;
-
 /**
  * Created by cokepedreira on 19/5/15.
  */
@@ -45,32 +33,27 @@ public class Tablero extends BaseActivity {
 
     private List<Jugador> jugadores;
     private Jugador jugadorActual;
-
     private List<Casilla> casillas;
-
     private ViewPager viewPager;
     private PagerAdapter tableroAdapter;
-
     private Button tirarDado;
     private Button siguienteJugador;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_tablero);
+        viewPager = (ViewPager) findViewById(R.id.tablero_pager);
 
+        restoreState();
 
-        jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>() {
-        }.getType());
+        jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>() {}.getType());
 
         cargarTablero(jugadores);
         setTitle(casillas.get(0).getNombre());
 
 
-        viewPager = (ViewPager) findViewById(R.id.tablero_pager);
         tableroAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
         viewPager.setAdapter(tableroAdapter);
         viewPager.setCurrentItem(0, true);
@@ -191,19 +174,28 @@ public class Tablero extends BaseActivity {
 
             }
         });
-
-
     }
 
-
-    public void recreateActivity() {
-        Intent intent = getIntent();
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        finish();
-        overridePendingTransition(0, 0);
-        startActivity(intent);
-        overridePendingTransition(0, 0);
+    private void restoreState() {
+        jugadores = BoardPersistanceData.INSTANCE.getJugadores();
+        jugadorActual = BoardPersistanceData.INSTANCE.getJugadorActual();
+        casillas = BoardPersistanceData.INSTANCE.getCasillas();
+        viewPager.setCurrentItem(BoardPersistanceData.INSTANCE.getViewPagerIndex());
     }
+
+    private void saveState() {
+        BoardPersistanceData.INSTANCE.setJugadores(jugadores);
+        BoardPersistanceData.INSTANCE.setJugadorActual(jugadorActual);
+        BoardPersistanceData.INSTANCE.setCasillas(casillas);
+        BoardPersistanceData.INSTANCE.setViewPagerIndex(viewPager.getCurrentItem());
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        saveState();
+    }
+
 
     public void cargarTablero(List<Jugador> jugadores) {
         try {
@@ -267,12 +259,12 @@ public class Tablero extends BaseActivity {
 
         } else if (id == R.id.theme_light) {
             Utility.setTheme(getApplicationContext(), 1);
-            recreateActivity();
+            recreate();
 
 
         } else if (id == R.id.theme_dark) {
             Utility.setTheme(getApplicationContext(), 2);
-            recreateActivity();
+            recreate();
         }
         return super.onOptionsItemSelected(item);
     }
