@@ -22,6 +22,7 @@
     <string name="title_activity_ranking">RankingActivity</string>
     <string name="title_activity_marcas">MarcasActivity</string>
     <string name="title_activity_activity_ayuda">Activity_ayuda</string>
+    <string name="prefs_theme_key">theme</string>
 
 
 </resources>

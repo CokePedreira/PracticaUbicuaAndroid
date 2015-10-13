@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private List<Jugador> jugadores;
     private List<EditText> nombresJugadores;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     //private ScrollView scrollView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Ocalimocho");

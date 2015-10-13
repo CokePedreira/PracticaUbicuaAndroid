@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 
-public class DueloActivity extends ActionBarActivity {
+public class DueloActivity extends BaseActivity {
 
 
     ImageView imagenDuelo;
@@ -24,7 +24,7 @@ public class DueloActivity extends ActionBarActivity {
     Button continuar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duelo);
         dado1 = (Button) findViewById(R.id.dado1);

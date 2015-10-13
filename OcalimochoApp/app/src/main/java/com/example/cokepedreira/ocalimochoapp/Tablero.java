@@ -1,10 +1,14 @@
 package com.example.cokepedreira.ocalimochoapp;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.location.GpsStatus;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -15,7 +19,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -29,12 +35,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
+
 import android.support.design.widget.NavigationView;
 
 /**
  * Created by cokepedreira on 19/5/15.
  */
-public class Tablero extends AppCompatActivity {
+public class Tablero extends BaseActivity {
 
     private List<Jugador> jugadores;
     private Jugador jugadorActual;
@@ -48,8 +55,11 @@ public class Tablero extends AppCompatActivity {
     private Button siguienteJugador;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_tablero);
 
 
@@ -186,6 +196,15 @@ public class Tablero extends AppCompatActivity {
     }
 
 
+    public void recreateActivity() {
+        Intent intent = getIntent();
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
+
     public void cargarTablero(List<Jugador> jugadores) {
         try {
             JsonReader jsonReader = new JsonReader(new InputStreamReader(getAssets().open("casillas.json")));
@@ -246,16 +265,18 @@ public class Tablero extends AppCompatActivity {
             startActivity(intent);
 
 
-        } else if (id == R.id.theme) {
-            setTheme(R.style.AppTheme);
+        } else if (id == R.id.theme_light) {
+            Utility.setTheme(getApplicationContext(), 1);
+            recreateActivity();
 
 
+        } else if (id == R.id.theme_dark) {
+            Utility.setTheme(getApplicationContext(), 2);
+            recreateActivity();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setTitle("Salir")

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class YoNuncaActivity extends ActionBarActivity {
+public class YoNuncaActivity extends BaseActivity {
 
     List<String> yoNunca;
 
@@ -25,7 +25,7 @@ public class YoNuncaActivity extends ActionBarActivity {
     Button continuar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yo_nunca);
         setTitle("Yo nunca");

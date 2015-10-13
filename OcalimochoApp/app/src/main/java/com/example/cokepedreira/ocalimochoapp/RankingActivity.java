@@ -13,12 +13,12 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 
 
-public class RankingActivity extends AppCompatActivity {
+public class RankingActivity extends BaseActivity {
 
     private ListView rankingListView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
         setTitle("Ranking");

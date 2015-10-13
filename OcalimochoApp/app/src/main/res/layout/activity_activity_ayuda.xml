@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.cokepedreira.ocawlimochoapp.Activity_ayuda"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor"
+    >
 
 
     <ScrollView
@@ -16,6 +18,8 @@
         android:layout_width="match_parent"
         android:padding="16dp"
         android:textSize="14sp"
+        android:textColor="?attr/textColor"
+
         android:layout_height="match_parent"
         android:text="          Hipnosis: Si caes en esta casilla te toca beberte durante una ronda completa la mitad de las deudas de cada uno de tus compañeros. Si por ejemplo cuando estás en esta casilla y a un compañero le toca beber 2 en lugar de eso él bebe 1 y tu la otra y asi con todos tus compañeros.\n\n
             Yo nunca: En este minijuego si has realizado lo que dice el texto bebes, si no no bebes, no se puede mentir.\n\n

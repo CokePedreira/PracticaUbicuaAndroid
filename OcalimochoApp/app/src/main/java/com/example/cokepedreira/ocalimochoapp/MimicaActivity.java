@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MimicaActivity extends ActionBarActivity {
+public class MimicaActivity extends BaseActivity {
 
     List<String> peliculas;
 
@@ -30,7 +30,7 @@ public class MimicaActivity extends ActionBarActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mimica);
         setTitle("Mímica");

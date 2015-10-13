@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class TabuActivity extends ActionBarActivity {
+public class TabuActivity extends BaseActivity {
     List<String> personajes;
 
 
@@ -30,7 +30,7 @@ public class TabuActivity extends ActionBarActivity {
     TextView norma4;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabu);
         setTitle("Palabra Tabú");

@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 
-public class CarcelActivity extends ActionBarActivity {
+public class CarcelActivity extends BaseActivity {
 
 
     ImageView imagenCarcel;
@@ -21,7 +21,7 @@ public class CarcelActivity extends ActionBarActivity {
     Button continuar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carcel);
         setTitle("Cárcel");

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class PaswordActivity extends ActionBarActivity {
+public class PaswordActivity extends BaseActivity {
 
     List<String> palabras;
 
@@ -27,7 +27,7 @@ public class PaswordActivity extends ActionBarActivity {
     Button continuar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasword);
         setTitle("Password");

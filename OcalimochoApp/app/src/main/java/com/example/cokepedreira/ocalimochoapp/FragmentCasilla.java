@@ -150,7 +150,7 @@ public class FragmentCasilla extends Fragment {
         descripcion = (TextView) view.findViewById(R.id.descripcion);
         descripcion.setText(this.casilla.getDescripcion());
 
-        view.findViewById(R.id.card_view_linear_layout).setBackgroundColor(Color.parseColor(this.casilla.getColor()));
+       // view.findViewById(R.id.card_view_linear_layout).setBackgroundColor(Color.parseColor(this.casilla.getColor()));
 
         imagen = (ImageView) view.findViewById(R.id.imagen);
         File file = new File(Environment.getExternalStorageDirectory()+File.separator + "alante.png"); //your image file path

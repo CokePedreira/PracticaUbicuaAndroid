@@ -7,11 +7,11 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class Activity_ayuda extends ActionBarActivity {
+public class Activity_ayuda extends BaseActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Ayuda");
 

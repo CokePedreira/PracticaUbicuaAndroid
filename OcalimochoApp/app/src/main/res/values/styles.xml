@@ -2,11 +2,12 @@
 
     <!-- Base application theme. -->
 
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="Theme.AppCompat" >
         <item name="colorAccent">@color/ColorAccent</item>
         <item name="colorPrimary">@color/ColorPrimary</item>
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
         <item name="cardColor">#616161</item>
+        <item name="backgroundColor">#303030</item>
         <item name="textColor">#EEEEEE</item>
         <item name="laberinto">@drawable/laberinto_blanco</item>
     </style>
@@ -16,7 +17,8 @@
         <item name="colorPrimary">@color/ColorPrimary</item>
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
         <item name="cardColor">#ffff</item>
-        <item name="textColor">#424242</item>
+        <item name="backgroundColor">#fafafa</item>
+        <item name="textColor">#212121</item>
         <item name="laberinto">@drawable/laberinto_negro</item>
 
     </style>

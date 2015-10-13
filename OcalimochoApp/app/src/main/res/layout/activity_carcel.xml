@@ -3,6 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="?attr/backgroundColor"
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
 

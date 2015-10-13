@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 
-public class DueloTresActivity extends ActionBarActivity {
+public class DueloTresActivity extends BaseActivity {
 
     ImageView imagenDuelotres;
     Button dado1;
@@ -24,7 +24,7 @@ public class DueloTresActivity extends ActionBarActivity {
     Button continuar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duelo_tres);
         setTitle("Triple duelo");

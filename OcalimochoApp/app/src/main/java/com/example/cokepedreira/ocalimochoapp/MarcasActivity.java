@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MarcasActivity extends ActionBarActivity {
+public class MarcasActivity extends BaseActivity {
 
     List<String> palabras;
 
@@ -27,7 +27,7 @@ public class MarcasActivity extends ActionBarActivity {
     Button continuar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marcas);
         setTitle("Marcas");

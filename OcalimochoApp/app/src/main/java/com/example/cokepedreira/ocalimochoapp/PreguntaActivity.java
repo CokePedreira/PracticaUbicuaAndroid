@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class PreguntaActivity extends AppCompatActivity {
+public class PreguntaActivity extends BaseActivity {
 
     List<String> nombrePreguntas;
     ImageView imagenPregunta;
@@ -33,7 +33,7 @@ public class PreguntaActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
         setTitle("Pregunta");
