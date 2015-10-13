@@ -94,19 +94,51 @@ public class PreguntaActivity extends BaseActivity {
     public void respuesta1 (View view){
         if(respuestaCorrecta == 1){
             respuesta1.setEnabled(true);
+            respuesta1.setTextColor(Color.rgb(87, 166, 57));
+
+
             respuesta2.setEnabled(false);
             respuesta2.setVisibility(View.INVISIBLE);
             respuesta3.setEnabled(false);
             respuesta3.setVisibility(View.INVISIBLE);
             respuesta4.setEnabled(false);
             respuesta4.setVisibility(View.INVISIBLE);
-            respuesta1.setTextColor(Color.rgb(87, 166, 57));
+
         } else {
+
+            respuesta1.setEnabled(false);
+            respuesta2.setEnabled(false);
+            respuesta3.setEnabled(false);
+            respuesta4.setEnabled(false);
+
+            switch (respuestaCorrecta) {
+
+                case 2:
+                    respuesta2.setEnabled(true);
+                    respuesta2.setTextColor(Color.rgb(87, 166, 57));
+                    respuesta3.setVisibility(View.INVISIBLE);
+                    respuesta4.setVisibility(View.INVISIBLE);
+                    break;
+
+                case 3:
+                    respuesta3.setEnabled(true);
+                    respuesta3.setTextColor(Color.rgb(87, 166, 57));
+                    respuesta2.setVisibility(View.INVISIBLE);
+                    respuesta4.setVisibility(View.INVISIBLE);
+
+                    break;
+
+                case 4:
+                    respuesta4.setEnabled(true);
+                    respuesta4.setTextColor(Color.rgb(87,166,57));
+                    respuesta3.setVisibility(View.INVISIBLE);
+                    respuesta2.setVisibility(View.INVISIBLE);
+                    break;
+            }
+
             respuesta1.setEnabled(false);
             respuesta1.setTextColor(Color.rgb(255, 0, 0));
-            respuesta2.setVisibility(View.INVISIBLE);
-            respuesta3.setVisibility(View.INVISIBLE);
-            respuesta4.setVisibility(View.INVISIBLE);
+
         }
     }
 
@@ -121,11 +153,39 @@ public class PreguntaActivity extends BaseActivity {
             respuesta4.setVisibility(View.INVISIBLE);
             respuesta2.setTextColor(Color.rgb(87, 166, 57));
         } else {
+
+            respuesta1.setEnabled(false);
+            respuesta2.setEnabled(false);
+            respuesta3.setEnabled(false);
+            respuesta4.setEnabled(false);
+
+            switch (respuestaCorrecta) {
+                case 1:
+                    respuesta1.setEnabled(true);
+                    respuesta1.setTextColor(Color.rgb(87, 166, 57));
+                    respuesta3.setVisibility(View.INVISIBLE);
+                    respuesta4.setVisibility(View.INVISIBLE);
+                    break;
+
+
+
+                case 3:
+                    respuesta3.setEnabled(true);
+                    respuesta3.setTextColor(Color.rgb(87,166,57));
+                    respuesta1.setVisibility(View.INVISIBLE);
+                    respuesta4.setVisibility(View.INVISIBLE);
+                    break;
+
+                case 4:
+                    respuesta4.setEnabled(true);
+                    respuesta4.setTextColor(Color.rgb(87,166,57));
+                    respuesta3.setVisibility(View.INVISIBLE);
+                    respuesta1.setVisibility(View.INVISIBLE);
+                    break;
+            }
             respuesta2.setEnabled(false);
             respuesta2.setTextColor(Color.rgb(255, 0, 0));
-            respuesta1.setVisibility(View.INVISIBLE);
-            respuesta3.setVisibility(View.INVISIBLE);
-            respuesta4.setVisibility(View.INVISIBLE);
+
         }
     }
 
@@ -140,11 +200,38 @@ public class PreguntaActivity extends BaseActivity {
             respuesta4.setVisibility(View.INVISIBLE);
             respuesta3.setTextColor(Color.rgb(87, 166, 57));
         } else {
+            respuesta1.setEnabled(false);
+            respuesta2.setEnabled(false);
+            respuesta3.setEnabled(false);
+            respuesta4.setEnabled(false);
+
+            switch (respuestaCorrecta) {
+                case 1:
+                    respuesta1.setEnabled(true);
+                    respuesta1.setTextColor(Color.rgb(87, 166, 57));
+                    respuesta2.setVisibility(View.INVISIBLE);
+                    respuesta4.setVisibility(View.INVISIBLE);
+                    break;
+
+                case 2:
+                    respuesta2.setEnabled(true);
+                    respuesta2.setTextColor(Color.rgb(87,166,57));
+                    respuesta1.setVisibility(View.INVISIBLE);
+                    respuesta4.setVisibility(View.INVISIBLE);
+                    break;
+
+
+                case 4:
+                    respuesta4.setEnabled(true);
+                    respuesta4.setTextColor(Color.rgb(87,166,57));
+                    respuesta1.setVisibility(View.INVISIBLE);
+                    respuesta4.setVisibility(View.INVISIBLE);
+                    break;
+            }
+
             respuesta3.setEnabled(false);
             respuesta3.setTextColor(Color.rgb(255, 0, 0));
-            respuesta2.setVisibility(View.INVISIBLE);
-            respuesta1.setVisibility(View.INVISIBLE);
-            respuesta4.setVisibility(View.INVISIBLE);
+
         }
     }
 
@@ -159,11 +246,38 @@ public class PreguntaActivity extends BaseActivity {
             respuesta4.setEnabled(true);
             respuesta4.setTextColor(Color.rgb(87, 166, 57));
         } else {
+            respuesta1.setEnabled(false);
+            respuesta2.setEnabled(false);
+            respuesta3.setEnabled(false);
+            respuesta4.setEnabled(false);
+
+            switch (respuestaCorrecta) {
+                case 1:
+                    respuesta1.setEnabled(true);
+                    respuesta1.setTextColor(Color.rgb(87, 166, 57));
+                    respuesta3.setVisibility(View.INVISIBLE);
+                    respuesta2.setVisibility(View.INVISIBLE);
+                    break;
+
+                case 2:
+                    respuesta2.setEnabled(true);
+                    respuesta2.setTextColor(Color.rgb(87,166,57));
+                    respuesta3.setVisibility(View.INVISIBLE);
+                    respuesta1.setVisibility(View.INVISIBLE);
+                    break;
+
+                case 3:
+                    respuesta3.setEnabled(true);
+                    respuesta3.setTextColor(Color.rgb(87,166,57));
+                    respuesta1.setVisibility(View.INVISIBLE);
+                    respuesta2.setVisibility(View.INVISIBLE);
+                    break;
+
+            }
+
             respuesta4.setEnabled(false);
             respuesta4.setTextColor(Color.rgb(255, 0, 0));
-            respuesta2.setVisibility(View.INVISIBLE);
-            respuesta3.setVisibility(View.INVISIBLE);
-            respuesta1.setVisibility(View.INVISIBLE);
+
         }
     }
 
@@ -446,7 +560,7 @@ public class PreguntaActivity extends BaseActivity {
         nombrePreguntas.add("¿Que pais elimino a España en el mundial de futbol de 1990?");
         nombrePreguntas.add("¿Quien marco el gol mil de los mundiales?");
 
-        nombrePreguntas.add("¿En que año los Jacksons five su primer numero 1");
+        nombrePreguntas.add("¿En que año los Jacksons five su primer numero 1?");
         nombrePreguntas.add("¿Como se llama la reina del hielo en la pelicula Frozen?");
         nombrePreguntas.add("¿Cual es el apellido de un protagonista de Friends?");
         nombrePreguntas.add("¿Quien no ha sido cantante en Iron Maiden?");
