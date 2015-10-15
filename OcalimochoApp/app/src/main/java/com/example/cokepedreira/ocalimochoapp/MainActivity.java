@@ -21,8 +21,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_inicio);
         ButterKnife.bind(this);
 
-
-
         comenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +31,14 @@ public class MainActivity extends BaseActivity {
             }
         });
 
+        minijuegos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(MainActivity.this, ListaMinijuegosActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
-
 }
