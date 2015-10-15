@@ -17,27 +17,30 @@ import com.melnykov.fab.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class SelectorJugadoresActivity extends BaseActivity {
 
     private List<Jugador> jugadores;
     private List<EditText> nombresJugadores;
-    private LinearLayout textViewsView;
-    private Button startButton;
+    @Bind(R.id.text_views_view) LinearLayout textViewsView;
+    @Bind(R.id.start_button) Button startButton;
     //private ScrollView scrollView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ButterKnife.bind(this);
 
         jugadores = new ArrayList<>();
         nombresJugadores = new ArrayList<>();
         //scrollView = (ScrollView) findViewById(R.id.players_selection_scroll_view);
-        textViewsView = (LinearLayout) findViewById(R.id.text_views_view);
+
         añadeNombreJugador();
-        startButton = (Button) findViewById(R.id.start_button);
+
         FloatingActionButton añadirButton = (FloatingActionButton) findViewById(R.id.fab);
         //añadirButton.attachToScrollView(scrollView);
 

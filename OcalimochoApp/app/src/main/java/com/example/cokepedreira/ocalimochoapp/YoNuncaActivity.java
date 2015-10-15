@@ -10,24 +10,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class YoNuncaActivity extends BaseActivity {
 
     List<String> yoNunca;
 
 
-    ImageView imageYoNunca;
-    TextView listaYoNunca;
-    Button continuar;
+    @Bind(R.id.imagenYoNunca) ImageView imageYoNunca;
+    @Bind(R.id.yoNunca) TextView listaYoNunca;
+    @Bind(R.id.continuar) Button continuar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yo_nunca);
-        listaYoNunca = (TextView) findViewById(R.id.yoNunca);
-        continuar = (Button) findViewById(R.id.continuar);
+        ButterKnife.bind(this);
 
-        imageYoNunca = (ImageView) findViewById(R.id.imagenYoNunca);
         imageYoNunca.setImageResource(R.drawable.yo_nunca);
 
         yoNunca = new ArrayList<>();

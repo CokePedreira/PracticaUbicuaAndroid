@@ -34,6 +34,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by cokepedreira on 21/5/15.
  */
@@ -41,14 +44,14 @@ import java.util.Random;
 public class FragmentCasilla extends Fragment {
 
     private Casilla casilla;
-
-    private TextView nombreCasilla;
-    private TextView posicionCasilla;
-    private TextView listaJugadores;
-    private TextView descripcion;
-    private ImageView imagen;
-    private Button accion;
     private Jugador jugador;
+
+    @Bind(R.id.nombreCasilla) TextView nombreCasilla;
+    @Bind(R.id.posicionCasilla) TextView posicionCasilla;
+    @Bind(R.id.listaJugadores) TextView listaJugadores;
+    @Bind(R.id.descripcion) TextView descripcion;
+    @Bind(R.id.imagen) ImageView imagen;
+    @Bind(R.id.accion) Button accion;
 
 
 
@@ -142,17 +145,11 @@ public class FragmentCasilla extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_casilla, container, false);
+        ButterKnife.bind(this, view);
 
-        nombreCasilla = (TextView) view.findViewById(R.id.nombreCasilla);
         nombreCasilla.setText(this.casilla.getNombre());
-        posicionCasilla = (TextView) view.findViewById(R.id.posicionCasilla);
         posicionCasilla.setText(this.casilla.getPosicion());
-        descripcion = (TextView) view.findViewById(R.id.descripcion);
         descripcion.setText(this.casilla.getDescripcion());
-
-       // view.findViewById(R.id.card_view_linear_layout).setBackgroundColor(Color.parseColor(this.casilla.getColor()));
-
-        imagen = (ImageView) view.findViewById(R.id.imagen);
         File file = new File(Environment.getExternalStorageDirectory()+File.separator + "alante.png"); //your image file path
         if(file.exists()) {
             imagen.setImageURI(Uri.fromFile(file));
@@ -165,7 +162,6 @@ public class FragmentCasilla extends Fragment {
         if(imagenCasilla != null) {
             imagen.setBackgroundResource(imagenCasilla.getResourceID());
         }
-        accion = (Button) view.findViewById(R.id.accion);
         if(this.casilla.getAccion()==null) {
             accion.setVisibility(View.GONE);
         } else {
@@ -191,7 +187,6 @@ public class FragmentCasilla extends Fragment {
             }
         }
 
-        listaJugadores = (TextView) view.findViewById(R.id.listaJugadores);
         String nombresJugadores = "";
 
         for (Jugador jugador : casilla.getJugadoresEnLaCasilla()) {

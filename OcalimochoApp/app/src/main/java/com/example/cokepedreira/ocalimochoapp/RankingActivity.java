@@ -12,16 +12,20 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class RankingActivity extends BaseActivity {
 
-    private ListView rankingListView;
+    @Bind(R.id.ranking_list_view) ListView rankingListView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
-        rankingListView = (ListView) findViewById(R.id.ranking_list_view);
+        ButterKnife.bind(this);
+
         ArrayList<String> ranking = new Gson().fromJson(getIntent().getStringExtra("ranking"), new TypeToken<ArrayList<String>>(){}.getType());
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ranking);
         rankingListView.setAdapter(arrayAdapter);

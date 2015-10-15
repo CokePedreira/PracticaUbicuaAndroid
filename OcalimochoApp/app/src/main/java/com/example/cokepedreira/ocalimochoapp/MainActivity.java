@@ -6,20 +6,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends BaseActivity {
 
-    private Button comenzar;
-    private Button minijuegos;
-    private Switch cambiarTema;
+    @Bind(R.id.comenzar) Button comenzar;
+    @Bind(R.id.minijuegos) Button minijuegos;
+    @Bind(R.id.cambiarTema) Switch cambiarTema;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-
-        comenzar = (Button) findViewById(R.id.comenzar);
-        minijuegos = (Button) findViewById(R.id.minijuegos);
-        cambiarTema = (Switch) findViewById(R.id.cambiarTema);
+        ButterKnife.bind(this);
 
 
 

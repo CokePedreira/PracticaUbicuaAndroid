@@ -25,6 +25,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by cokepedreira on 19/5/15.
  */
@@ -35,20 +38,16 @@ public class Tablero extends BaseActivity {
 
     private List<Casilla> casillas;
 
-    private ViewPager viewPager;
     private PagerAdapter tableroAdapter;
-
-    private Button tirarDado;
-    private Button siguienteJugador;
+    @Bind(R.id.tirarDado) Button tirarDado;
+    @Bind(R.id.siguienteJugador) Button siguienteJugador;
+    @Bind(R.id.tablero_pager) ViewPager viewPager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_tablero);
-
+        ButterKnife.bind(this);
 
         jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>() {
         }.getType());
@@ -57,7 +56,6 @@ public class Tablero extends BaseActivity {
         setTitle(casillas.get(0).getNombre());
 
 
-        viewPager = (ViewPager) findViewById(R.id.tablero_pager);
         tableroAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
         viewPager.setAdapter(tableroAdapter);
         viewPager.setCurrentItem(0, true);
@@ -67,8 +65,6 @@ public class Tablero extends BaseActivity {
         setTitle(jugadorActual.getNombre());
 
         // Configurar botones
-        tirarDado = (Button) findViewById(R.id.tirarDado);
-        siguienteJugador = (Button) findViewById(R.id.siguienteJugador);
         siguienteJugador.setEnabled(false);
         siguienteJugador.setVisibility(View.INVISIBLE);
 

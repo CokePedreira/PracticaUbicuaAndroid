@@ -16,18 +16,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class MimicaActivity extends BaseActivity {
 
     List<String> peliculas;
 
-
-
-    ImageView imageMimica;
-    TextView instrucciones;
-    TextView listaPelicula;
-    TextView cronometro;
-    Button continuar;
+    @Bind(R.id.imagenmimica) ImageView imageMimica;
+    @Bind(R.id.instrucciones) TextView instrucciones;
+    @Bind(R.id.pelicula) TextView listaPelicula;
+    @Bind(R.id.cronometro) TextView cronometro;
+    @Bind(R.id.continuar) Button continuar;
 
 
 
@@ -35,14 +36,9 @@ public class MimicaActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mimica);
+        ButterKnife.bind(this);
 
-        instrucciones = (TextView) findViewById(R.id.instrucciones);
-        listaPelicula = (TextView) findViewById(R.id.pelicula);
-        cronometro = (TextView) findViewById(R.id.cronometro);
-        continuar = (Button) findViewById(R.id.continuar);
-        imageMimica = (ImageView) findViewById(R.id.imagenmimica);
         imageMimica.setImageResource(R.drawable.mimica);
-
         continuar.setEnabled(false);
 
         peliculas = new ArrayList<>();
