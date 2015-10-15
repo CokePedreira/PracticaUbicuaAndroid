@@ -24,7 +24,6 @@ public class CarcelActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carcel);
-        setTitle("Cárcel");
 
 
         tirardados = (Button) findViewById(R.id.tirada);

@@ -4,7 +4,7 @@ package com.example.cokepedreira.ocalimochoapp;
  * Created by cokepedreira on 19/5/15.
  */
 public enum Accion {
-    CASILLA_FINAL(MainActivity.class),
+    CASILLA_FINAL(SelectorJugadoresActivity.class),
     MIMICA(MimicaActivity.class),
     PALABRA_TABU(TabuActivity.class),
     YO_NUNCA(YoNuncaActivity.class),

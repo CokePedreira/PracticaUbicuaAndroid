@@ -1,9 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="?attr/backgroundColor"
+    android:gravity="center"
+    android:orientation="vertical"
 
     tools:context="com.example.cokepedreira.ocalimochoapp.MimicaActivity">
 
@@ -12,39 +13,51 @@
         android:id="@+id/imagenmimica"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:gravity="start"
-        android:contentDescription="Imagen de mimica"/>
-
+        android:contentDescription="Imagen de mimica"
+        android:gravity="start" />
 
     <TextView
+        android:id="@+id/cronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginBottom="16dp"
+        android:text="cronometro"
+        android:textSize="16sp"
+        android:textColor="?attr/textColor" />
+
+    <TextView
+        android:id="@+id/instrucciones"
         android:layout_width="300dp"
         android:layout_height="60dp"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
-        android:textSize="14sp"
-        android:textColor="?attr/textColor"
+        android:text="La pelicula que te ha tocado es: "
 
-        android:id="@+id/instrucciones"
-        android:text="La pelicula que te ha tocado es: "/>
+        android:textColor="?attr/textColor"
+        android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/pelicula"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="18sp"
+        android:gravity="center"
+        android:text=" "
         android:textAlignment="center"
-        android:textColor="?attr/textColor"
 
-        android:id="@+id/pelicula"
-        android:text=" "/>
+        android:textColor="?attr/textColor"
+        android:textSize="18sp" />
+
     <Button
+        android:id="@+id/continuar"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/continuar"
-        android:textColor="?attr/textColor"
-
         android:onClick="volverTablero"
-        android:text="VOLVER AL TABLERO"/>
+
+        android:text="VOLVER AL TABLERO"
+        android:textColor="?attr/textColor" />
 
 
 </LinearLayout>

@@ -36,7 +36,6 @@ public class PreguntaActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
-        setTitle("Pregunta");
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPreguntas = (TextView) findViewById(R.id.pregunta);
         continuar = (Button) findViewById(R.id.continuar);

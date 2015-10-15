@@ -21,7 +21,6 @@ public class RankingActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
-        setTitle("Ranking");
         rankingListView = (ListView) findViewById(R.id.ranking_list_view);
         ArrayList<String> ranking = new Gson().fromJson(getIntent().getStringExtra("ranking"), new TypeToken<ArrayList<String>>(){}.getType());
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ranking);

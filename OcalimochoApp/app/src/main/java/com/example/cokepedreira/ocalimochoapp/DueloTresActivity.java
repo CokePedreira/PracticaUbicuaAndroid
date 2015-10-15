@@ -27,7 +27,6 @@ public class DueloTresActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duelo_tres);
-        setTitle("Triple duelo");
 
         dado1 = (Button) findViewById(R.id.dado1);
         dado2 = (Button) findViewById(R.id.dado2);

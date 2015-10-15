@@ -33,7 +33,6 @@ public class TabuActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabu);
-        setTitle("Palabra Tabú");
         avisoTabu = (TextView) findViewById(R.id.AvisoTabu);
         listaPersoanjes = (TextView) findViewById(R.id.personaje);
         continuar = (Button) findViewById(R.id.continuar);

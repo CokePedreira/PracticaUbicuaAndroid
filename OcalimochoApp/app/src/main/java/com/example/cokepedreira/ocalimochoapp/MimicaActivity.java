@@ -1,6 +1,7 @@
 package com.example.cokepedreira.ocalimochoapp;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class MimicaActivity extends BaseActivity {
     ImageView imageMimica;
     TextView instrucciones;
     TextView listaPelicula;
+    TextView cronometro;
     Button continuar;
 
 
@@ -33,12 +35,15 @@ public class MimicaActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mimica);
-        setTitle("Mímica");
+
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPelicula = (TextView) findViewById(R.id.pelicula);
+        cronometro = (TextView) findViewById(R.id.cronometro);
         continuar = (Button) findViewById(R.id.continuar);
         imageMimica = (ImageView) findViewById(R.id.imagenmimica);
         imageMimica.setImageResource(R.drawable.mimica);
+
+        continuar.setEnabled(false);
 
         peliculas = new ArrayList<>();
         añadirPeliculas();
@@ -46,14 +51,21 @@ public class MimicaActivity extends BaseActivity {
         int tirada = rand.nextInt(peliculas.size());
         listaPelicula.setText(peliculas.get(tirada));
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+
+        new CountDownTimer(15000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                cronometro.setText("Te quedan: " + millisUntilFinished / 1000 + " segundos");
+            }
+
+            public void onFinish() {
                 listaPelicula.setText("Se te ha terminado el tiempo");
+                continuar.setEnabled(true);
                 instrucciones.setVisibility(View.GONE);
+                cronometro.setVisibility(View.GONE);
 
             }
-        }, 30000/* 30sec delay */);
+        }.start();
 
     }
 

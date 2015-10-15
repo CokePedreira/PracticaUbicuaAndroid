@@ -30,7 +30,6 @@ public class PaswordActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasword);
-        setTitle("Password");
         instrucciones = (TextView) findViewById(R.id.instrucciones);
         listaPalabras = (TextView) findViewById(R.id.palabra);
         continuar = (Button) findViewById(R.id.continuar);

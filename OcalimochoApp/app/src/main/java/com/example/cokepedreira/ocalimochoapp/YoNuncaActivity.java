@@ -1,9 +1,6 @@
 package com.example.cokepedreira.ocalimochoapp;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,7 +16,6 @@ public class YoNuncaActivity extends BaseActivity {
     List<String> yoNunca;
 
 
-
     ImageView imageYoNunca;
     TextView listaYoNunca;
     Button continuar;
@@ -28,7 +24,6 @@ public class YoNuncaActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yo_nunca);
-        setTitle("Yo nunca");
         listaYoNunca = (TextView) findViewById(R.id.yoNunca);
         continuar = (Button) findViewById(R.id.continuar);
 
@@ -42,7 +37,7 @@ public class YoNuncaActivity extends BaseActivity {
         listaYoNunca.setText(yoNunca.get(tirada));
     }
 
-    public void añadirYoNunca(){
+    public void añadirYoNunca() {
 
         yoNunca.add("Yo nunca me he bañado desnudo en la playa");
         yoNunca.add("Yo nunca he bebido hasta mearme encima");
@@ -106,11 +101,9 @@ public class YoNuncaActivity extends BaseActivity {
         yoNunca.add("Yo nunca me liaria con ninguno de los que esta jugando(si es pareja no vale)");
 
 
-
-
     }
 
-    public void volverTablero(View view){
+    public void volverTablero(View view) {
 
         finish();
     }
