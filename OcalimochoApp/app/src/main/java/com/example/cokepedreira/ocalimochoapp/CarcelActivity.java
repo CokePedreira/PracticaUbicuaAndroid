@@ -11,29 +11,26 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.BindDrawable;
+import butterknife.ButterKnife;
+
 
 public class CarcelActivity extends BaseActivity {
 
 
-    ImageView imagenCarcel;
-    Button tirardados;
-    TextView castigo;
-    Button continuar;
+    @Bind(R.id.imagencarcel) ImageView imagenCarcel;
+    @Bind(R.id.tirada) Button tirardados;
+    @Bind(R.id.castigo) TextView castigo;
+    @Bind(R.id.continuar) Button continuar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carcel);
-        setTitle("Cárcel");
+        ButterKnife.bind(this);
 
-
-        tirardados = (Button) findViewById(R.id.tirada);
-        continuar = (Button) findViewById(R.id.continuar);
-        imagenCarcel = (ImageView) findViewById(R.id.imagencarcel);
         imagenCarcel.setImageResource(R.drawable.carcel);
-        castigo = (TextView) findViewById(R.id.castigo);
-
-
     }
 
 

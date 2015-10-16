@@ -1,6 +1,7 @@
 package com.example.cokepedreira.ocalimochoapp;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,17 +16,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class MimicaActivity extends BaseActivity {
 
     List<String> peliculas;
 
-
-
-    ImageView imageMimica;
-    TextView instrucciones;
-    TextView listaPelicula;
-    Button continuar;
+    @Bind(R.id.imagenmimica) ImageView imageMimica;
+    @Bind(R.id.instrucciones) TextView instrucciones;
+    @Bind(R.id.pelicula) TextView listaPelicula;
+    @Bind(R.id.cronometro) TextView cronometro;
+    @Bind(R.id.continuar) Button continuar;
 
 
 
@@ -33,12 +36,10 @@ public class MimicaActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mimica);
-        setTitle("Mímica");
-        instrucciones = (TextView) findViewById(R.id.instrucciones);
-        listaPelicula = (TextView) findViewById(R.id.pelicula);
-        continuar = (Button) findViewById(R.id.continuar);
-        imageMimica = (ImageView) findViewById(R.id.imagenmimica);
+        ButterKnife.bind(this);
+
         imageMimica.setImageResource(R.drawable.mimica);
+        continuar.setEnabled(false);
 
         peliculas = new ArrayList<>();
         añadirPeliculas();
@@ -46,14 +47,21 @@ public class MimicaActivity extends BaseActivity {
         int tirada = rand.nextInt(peliculas.size());
         listaPelicula.setText(peliculas.get(tirada));
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+
+        new CountDownTimer(15000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                cronometro.setText("Te quedan: " + millisUntilFinished / 1000 + " segundos");
+            }
+
+            public void onFinish() {
                 listaPelicula.setText("Se te ha terminado el tiempo");
+                continuar.setEnabled(true);
                 instrucciones.setVisibility(View.GONE);
+                cronometro.setVisibility(View.GONE);
 
             }
-        }, 30000/* 30sec delay */);
+        }.start();
 
     }
 

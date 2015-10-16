@@ -1,9 +1,6 @@
 package com.example.cokepedreira.ocalimochoapp;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,26 +10,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class YoNuncaActivity extends BaseActivity {
 
     List<String> yoNunca;
 
 
-
-    ImageView imageYoNunca;
-    TextView listaYoNunca;
-    Button continuar;
+    @Bind(R.id.imagenYoNunca) ImageView imageYoNunca;
+    @Bind(R.id.yoNunca) TextView listaYoNunca;
+    @Bind(R.id.continuar) Button continuar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yo_nunca);
-        setTitle("Yo nunca");
-        listaYoNunca = (TextView) findViewById(R.id.yoNunca);
-        continuar = (Button) findViewById(R.id.continuar);
+        ButterKnife.bind(this);
 
-        imageYoNunca = (ImageView) findViewById(R.id.imagenYoNunca);
         imageYoNunca.setImageResource(R.drawable.yo_nunca);
 
         yoNunca = new ArrayList<>();
@@ -42,7 +38,7 @@ public class YoNuncaActivity extends BaseActivity {
         listaYoNunca.setText(yoNunca.get(tirada));
     }
 
-    public void añadirYoNunca(){
+    public void añadirYoNunca() {
 
         yoNunca.add("Yo nunca me he bañado desnudo en la playa");
         yoNunca.add("Yo nunca he bebido hasta mearme encima");
@@ -106,11 +102,9 @@ public class YoNuncaActivity extends BaseActivity {
         yoNunca.add("Yo nunca me liaria con ninguno de los que esta jugando(si es pareja no vale)");
 
 
-
-
     }
 
-    public void volverTablero(View view){
+    public void volverTablero(View view) {
 
         finish();
     }

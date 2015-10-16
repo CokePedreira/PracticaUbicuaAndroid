@@ -14,35 +14,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class TabuActivity extends BaseActivity {
     List<String> personajes;
 
 
 
-    ImageView imagenTabu;
-    TextView avisoTabu;
-    TextView listaPersoanjes;
-    Button continuar;
-    TextView norma1;
-    TextView norma2;
-    TextView norma3;
-    TextView norma4;
+    @Bind(R.id.imagenTABU) ImageView imagenTabu;
+    @Bind(R.id.AvisoTabu) TextView avisoTabu;
+    @Bind(R.id.personaje) TextView listaPersoanjes;
+    @Bind(R.id.continuar) Button continuar;
+    @Bind(R.id.palabra1) TextView norma1;
+    @Bind(R.id.palabra2) TextView norma2;
+    @Bind(R.id.palabra3) TextView norma3;
+    @Bind(R.id.palabra4) TextView norma4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabu);
-        setTitle("Palabra Tabú");
-        avisoTabu = (TextView) findViewById(R.id.AvisoTabu);
-        listaPersoanjes = (TextView) findViewById(R.id.personaje);
-        continuar = (Button) findViewById(R.id.continuar);
-        imagenTabu = (ImageView) findViewById(R.id.imagenTABU);
+        ButterKnife.bind(this);
+
         imagenTabu.setImageResource(R.drawable.tabu);
-        norma1 = (TextView) findViewById(R.id.palabra1);
-        norma2 = (TextView) findViewById(R.id.palabra2);
-        norma3 = (TextView) findViewById(R.id.palabra3);
-        norma4 = (TextView) findViewById(R.id.palabra4);
+
 
         personajes = new ArrayList<>();
         añadirPersonajes();

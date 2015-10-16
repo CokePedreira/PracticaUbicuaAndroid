@@ -1,27 +1,16 @@
 package com.example.cokepedreira.ocalimochoapp;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.GpsStatus;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -36,7 +25,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
-import android.support.design.widget.NavigationView;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by cokepedreira on 19/5/15.
@@ -48,20 +38,16 @@ public class Tablero extends BaseActivity {
 
     private List<Casilla> casillas;
 
-    private ViewPager viewPager;
     private PagerAdapter tableroAdapter;
-
-    private Button tirarDado;
-    private Button siguienteJugador;
+    @Bind(R.id.tirarDado) Button tirarDado;
+    @Bind(R.id.siguienteJugador) Button siguienteJugador;
+    @Bind(R.id.tablero_pager) ViewPager viewPager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_tablero);
-
+        ButterKnife.bind(this);
 
         jugadores = new Gson().fromJson(getIntent().getStringExtra("jugadores"), new TypeToken<ArrayList<Jugador>>() {
         }.getType());
@@ -70,7 +56,6 @@ public class Tablero extends BaseActivity {
         setTitle(casillas.get(0).getNombre());
 
 
-        viewPager = (ViewPager) findViewById(R.id.tablero_pager);
         tableroAdapter = new TableroPagerAdapter(getSupportFragmentManager(), casillas);
         viewPager.setAdapter(tableroAdapter);
         viewPager.setCurrentItem(0, true);
@@ -80,8 +65,6 @@ public class Tablero extends BaseActivity {
         setTitle(jugadorActual.getNombre());
 
         // Configurar botones
-        tirarDado = (Button) findViewById(R.id.tirarDado);
-        siguienteJugador = (Button) findViewById(R.id.siguienteJugador);
         siguienteJugador.setEnabled(false);
         siguienteJugador.setVisibility(View.INVISIBLE);
 

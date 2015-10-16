@@ -14,27 +14,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class MarcasActivity extends BaseActivity {
 
     List<String> palabras;
 
-
-
-    ImageView imagenmarcas;
-    TextView instrucciones;
-    TextView listaPalabras;
-    Button continuar;
+    @Bind(R.id.imagenmarcas) ImageView imagenmarcas;
+    @Bind(R.id.instrucciones) TextView instrucciones;
+    @Bind(R.id.marca) TextView listaPalabras;
+    @Bind(R.id.continuar) Button continuar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marcas);
-        setTitle("Marcas");
-        instrucciones = (TextView) findViewById(R.id.instrucciones);
-        listaPalabras = (TextView) findViewById(R.id.marca);
-        continuar = (Button) findViewById(R.id.continuar);
-        imagenmarcas = (ImageView) findViewById(R.id.imagenmarcas);
+        ButterKnife.bind(this);
+
         imagenmarcas.setImageResource(R.drawable.marcas);
 
         palabras = new ArrayList<>();
@@ -42,9 +40,8 @@ public class MarcasActivity extends BaseActivity {
         Random rand = new Random();
         int tirada = rand.nextInt(palabras.size());
         listaPalabras.setText(palabras.get(tirada));
-
-
     }
+
     public void volverTablero(View view){
 
         finish();

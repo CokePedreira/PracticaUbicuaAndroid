@@ -14,27 +14,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class PaswordActivity extends BaseActivity {
 
     List<String> palabras;
 
+    @Bind(R.id.imagenpassword) ImageView imagenPassword;
+    @Bind(R.id.instrucciones) TextView instrucciones;
+    @Bind(R.id.palabra) TextView listaPalabras;
+    @Bind(R.id.continuar) Button continuar;
 
-
-    ImageView imagenPassword;
-    TextView instrucciones;
-    TextView listaPalabras;
-    Button continuar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasword);
-        setTitle("Password");
-        instrucciones = (TextView) findViewById(R.id.instrucciones);
-        listaPalabras = (TextView) findViewById(R.id.palabra);
-        continuar = (Button) findViewById(R.id.continuar);
-        imagenPassword = (ImageView) findViewById(R.id.imagenpassword);
+        ButterKnife.bind(this);
+
         imagenPassword.setImageResource(R.drawable.password);
 
         palabras = new ArrayList<>();

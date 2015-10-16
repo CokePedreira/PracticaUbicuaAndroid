@@ -12,31 +12,26 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class DueloActivity extends BaseActivity {
 
-
-    ImageView imagenDuelo;
-    Button dado1;
-    Button dado2;
-    TextView resultado1;
-    TextView resultado2;
-    Button continuar;
+    @Bind(R.id.imagenduelo) ImageView imagenDuelo;
+    @Bind(R.id.dado1) Button dado1;
+    @Bind(R.id.dado2) Button dado2;
+    @Bind(R.id.resultado1) TextView resultado1;
+    @Bind(R.id.resultado2) TextView resultado2;
+    @Bind(R.id.continuar) Button continuar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duelo);
-        dado1 = (Button) findViewById(R.id.dado1);
-        dado2 = (Button) findViewById(R.id.dado2);
-        resultado1 = (TextView) findViewById(R.id.resultado1);
-        resultado2 = (TextView) findViewById(R.id.resultado2);
-        continuar = (Button) findViewById(R.id.continuar);
-        imagenDuelo = (ImageView) findViewById(R.id.imagenduelo);
+        ButterKnife.bind(this);
+
         imagenDuelo.setImageResource(R.drawable.duelo);
-        setTitle("Duelo");
-
-
     }
     public int aleatorio(){
         Random rand = new Random();

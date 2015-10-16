@@ -4,25 +4,26 @@
     <string name="app_name">OcalimochoApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_seleccion_jugadores">SeleccionJugadores</string>
     <string name="title_activity_adapter">adapter</string>
     <string name="title_activity_casilla1">casilla1</string>
     <string name="title_activity_casilla2">casilla2</string>
 
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_mimica">MimicaActivity</string>
-    <string name="title_activity_yo_nunca">YoNuncaActivity</string>
-    <string name="title_activity_tabu">TabuActivity</string>
-    <string name="title_activity_duelo">DueloActivity</string>
-    <string name="title_activity_duelo_tres">DueloTresActivity</string>
-    <string name="title_activity_carcel">CarcelActivity</string>
-    <string name="title_activity_pasword">PaswordActivity</string>
-    <string name="title_activity_pregunta">PreguntaActivity</string>
-    <string name="title_activity_ranking">RankingActivity</string>
-    <string name="title_activity_marcas">MarcasActivity</string>
-    <string name="title_activity_activity_ayuda">Activity_ayuda</string>
+    <string name="title_activity_mimica">Mímica</string>
+    <string name="title_activity_yo_nunca">Yo nunca</string>
+    <string name="title_activity_tabu">Palabra tabú</string>
+    <string name="title_activity_duelo">Duelo</string>
+    <string name="title_activity_duelo_tres">Triple duelo</string>
+    <string name="title_activity_carcel">Cárcel</string>
+    <string name="title_activity_pasword">Password</string>
+    <string name="title_activity_pregunta">Pregunta</string>
+    <string name="title_activity_ranking">Ranking</string>
+    <string name="title_activity_marcas">Marcas</string>
+    <string name="title_activity_activity_ayuda">Ayuda</string>
     <string name="prefs_theme_key">theme</string>
+    <string name="title_activity_inicio">Ocalimocho</string>
+    <string name="title_activity_activity_main">Jugadores</string>
+    <string name="title_activity_lista_minijuegos">ListaMinijuegosActivity</string>
 
 
 </resources>

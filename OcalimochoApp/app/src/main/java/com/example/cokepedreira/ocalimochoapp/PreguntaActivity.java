@@ -17,35 +17,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class PreguntaActivity extends BaseActivity {
 
     List<String> nombrePreguntas;
-    ImageView imagenPregunta;
-    TextView instrucciones;
-    TextView listaPreguntas;
-    Button continuar;
     int respuestaCorrecta;
-    Button respuesta1;
-    Button respuesta2;
-    Button respuesta3;
-    Button respuesta4;
+
+    @Bind(R.id.imagenPregunta) ImageView imagenPregunta;
+    @Bind(R.id.preguntas) TextView listaPreguntas;
+    @Bind(R.id.respuesta1) Button respuesta1;
+    @Bind(R.id.respuesta2) Button respuesta2;
+    @Bind(R.id.respuesta3) Button respuesta3;
+    @Bind(R.id.respuesta4) Button respuesta4;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
-        setTitle("Pregunta");
-        instrucciones = (TextView) findViewById(R.id.instrucciones);
-        listaPreguntas = (TextView) findViewById(R.id.pregunta);
-        continuar = (Button) findViewById(R.id.continuar);
-        imagenPregunta = (ImageView) findViewById(R.id.imagenPregunta);
+        ButterKnife.bind(this);
+
         imagenPregunta.setImageResource(R.drawable.pregunta);
-        respuesta1 = (Button) findViewById(R.id.respuesta1);
-        respuesta2 = (Button) findViewById(R.id.respuesta2);
-        respuesta3 = (Button) findViewById(R.id.respuesta3);
-        respuesta4 = (Button) findViewById(R.id.respuesta4);
 
         nombrePreguntas = new ArrayList<>();
         añadirPregunta();
