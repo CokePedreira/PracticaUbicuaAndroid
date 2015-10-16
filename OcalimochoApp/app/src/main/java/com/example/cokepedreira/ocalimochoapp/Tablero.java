@@ -179,14 +179,6 @@ public class Tablero extends BaseActivity {
     }
 
 
-    public void recreateActivity() {
-        Intent intent = getIntent();
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        finish();
-        overridePendingTransition(0, 0);
-        startActivity(intent);
-        overridePendingTransition(0, 0);
-    }
 
     public void cargarTablero(List<Jugador> jugadores) {
         try {
@@ -246,16 +238,6 @@ public class Tablero extends BaseActivity {
 
             Intent intent = new Intent(this, Activity_ayuda.class);
             startActivity(intent);
-
-
-        } else if (id == R.id.theme_light) {
-            Utility.setTheme(getApplicationContext(), 1);
-            recreateActivity();
-
-
-        } else if (id == R.id.theme_dark) {
-            Utility.setTheme(getApplicationContext(), 2);
-            recreateActivity();
         }
         return super.onOptionsItemSelected(item);
     }

@@ -10,23 +10,10 @@
         android:title="Clasificacion"
         app:showAsAction="ifRoom" />
 
-
     <item
         android:id="@+id/new_game"
         android:orderInCategory="100"
         android:title="Salir de la partida"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/theme_light"
-        android:orderInCategory="100"
-        android:title="Modo Normal"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/theme_dark"
-        android:orderInCategory="100"
-        android:title="Modo Nocturno"
         app:showAsAction="never" />
 
     <item
