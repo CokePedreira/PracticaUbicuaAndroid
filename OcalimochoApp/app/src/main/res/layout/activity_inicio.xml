@@ -42,24 +42,21 @@
 
         </LinearLayout>
 
-        <Button
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:id="@+id/comenzar"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="COMENZAR"
-            android:textColor="?attr/textColor" />
+            android:src="@drawable/ocalimocho"
+            android:layout_margin="16dp"
+        />
 
-        <Button
-            android:id="@+id/minijuegos"
-            style="?android:attr/borderlessButtonStyle"
+        <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:id="@+id/minijuegos"
             android:layout_gravity="center"
-            android:layout_marginTop="48dp"
-            android:text="JUGAR A MINIJUEGOS"
-            android:textColor="?attr/textColor" />
+            android:src="@drawable/minijuegos"/>
 
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

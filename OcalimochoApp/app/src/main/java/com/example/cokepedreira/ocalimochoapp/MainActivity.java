@@ -7,6 +7,7 @@ import android.transition.Fade;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
@@ -16,9 +17,9 @@ import butterknife.ButterKnife;
 public class MainActivity extends BaseActivity {
 
     @Bind(R.id.comenzar)
-    Button comenzar;
+    ImageButton comenzar;
     @Bind(R.id.minijuegos)
-    Button minijuegos;
+    ImageButton minijuegos;
     @Bind(R.id.cambiarTema)
     Switch cambiarTema;
 
@@ -31,9 +32,9 @@ public class MainActivity extends BaseActivity {
         SharedPreferences prefs = getSharedPreferences("Ocalimocho_Shared_Preferences", MODE_PRIVATE);
         boolean modoNoche = prefs.getBoolean("modo_noche", true);
         if (modoNoche) {
-            Utility.setTheme(getApplicationContext(), 1);
-        } else {
             Utility.setTheme(getApplicationContext(), 2);
+        } else {
+            Utility.setTheme(getApplicationContext(), 1);
         }
 
         cambiarTema.setChecked(modoNoche);
