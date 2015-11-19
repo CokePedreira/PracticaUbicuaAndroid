@@ -26,6 +26,7 @@ public class ListaMinijuegosActivity extends BaseActivity {
         setContentView(R.layout.activity_lista_minijuegos);
         ButterKnife.bind(this);
 
+
         minijuegos = new ArrayList<>();
         minijuegosNombres = new ArrayList<>();
         for (Accion accion : Accion.values()) {

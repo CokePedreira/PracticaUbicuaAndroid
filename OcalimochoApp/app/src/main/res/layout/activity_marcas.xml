@@ -15,10 +15,20 @@
         android:gravity="start"
         android:contentDescription="Imagen de marcas"/>
 
+    <TextView
+        android:id="@+id/cronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginBottom="16dp"
+        android:text="cronometro"
+        android:textSize="16sp"
+        android:textColor="?attr/textColor" />
+
 
     <TextView
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="14sp"
         android:id="@+id/instrucciones"
@@ -26,8 +36,8 @@
         android:text="La marca que te ha tocado es: "/>
 
     <TextView
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="18sp"
         android:id="@+id/marca"

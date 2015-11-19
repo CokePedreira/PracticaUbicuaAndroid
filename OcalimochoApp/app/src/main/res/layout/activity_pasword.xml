@@ -16,11 +16,21 @@
         android:contentDescription="Imagen de password"
         android:gravity="start" />
 
+    <TextView
+        android:id="@+id/cronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginBottom="16dp"
+        android:text="cronometro"
+        android:textSize="16sp"
+        android:textColor="?attr/textColor" />
+
 
     <TextView
         android:id="@+id/instrucciones"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="La palabra que te ha tocado es: "
         android:textColor="?attr/textColor"
@@ -41,7 +51,7 @@
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:onClick="volverTablero"
-        android:text="CONTINUAR"
+        android:text="VOLVER AL TABLERO"
         android:textColor="?attr/textColor" />
 
 

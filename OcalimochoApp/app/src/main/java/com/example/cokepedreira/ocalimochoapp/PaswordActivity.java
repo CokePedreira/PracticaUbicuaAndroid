@@ -1,5 +1,6 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ public class PaswordActivity extends BaseActivity {
     @Bind(R.id.instrucciones) TextView instrucciones;
     @Bind(R.id.palabra) TextView listaPalabras;
     @Bind(R.id.continuar) Button continuar;
+    @Bind(R.id.cronometro)TextView cronometro;
 
 
     @Override
@@ -41,14 +43,20 @@ public class PaswordActivity extends BaseActivity {
         Random rand = new Random();
         int tirada = rand.nextInt(palabras.size());
         listaPalabras.setText(palabras.get(tirada));
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        new CountDownTimer(15000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                cronometro.setText("Te quedan: " + millisUntilFinished / 1000 + " segundos");
+            }
+
+            public void onFinish() {
                 listaPalabras.setText("Se te ha terminado el tiempo");
+                continuar.setEnabled(true);
                 instrucciones.setVisibility(View.GONE);
+                cronometro.setVisibility(View.GONE);
 
             }
-        }, 15000/* 15sec delay */);
+        }.start();
 
     }
     public void volverTablero(View view){

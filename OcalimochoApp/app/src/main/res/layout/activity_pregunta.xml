@@ -17,9 +17,19 @@
         android:gravity="start" />
 
     <TextView
+        android:id="@+id/cronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginBottom="16dp"
+        android:text="cronometro"
+        android:textSize="16sp"
+        android:textColor="?attr/textColor" />
+
+    <TextView
         android:id="@+id/preguntas"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text=""
         android:layout_marginTop="16dp"

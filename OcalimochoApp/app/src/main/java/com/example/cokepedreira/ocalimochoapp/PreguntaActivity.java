@@ -1,6 +1,7 @@
 package com.example.cokepedreira.ocalimochoapp;
 
 import android.graphics.Color;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -32,6 +33,8 @@ public class PreguntaActivity extends BaseActivity {
     @Bind(R.id.respuesta2) Button respuesta2;
     @Bind(R.id.respuesta3) Button respuesta3;
     @Bind(R.id.respuesta4) Button respuesta4;
+    @Bind(R.id.continuar) Button continuar;
+    @Bind(R.id.cronometro)TextView cronometro;
 
 
     @Override
@@ -50,10 +53,14 @@ public class PreguntaActivity extends BaseActivity {
         String normas = (String) listaPreguntas.getText();
         ponerRespuestas(normas);
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+
+        new CountDownTimer(10000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                cronometro.setText("Te quedan: " + millisUntilFinished / 1000 + " segundos");
+            }
+
+            public void onFinish() {
 
                 respuesta1.setEnabled(false);
                 respuesta2.setEnabled(false);
@@ -82,14 +89,24 @@ public class PreguntaActivity extends BaseActivity {
                         break;
                 }
 
+                continuar.setEnabled(true);
+                cronometro.setVisibility(View.GONE);
+
+
             }
-        }, 10000/* 10sec delay */);
+        }.start();
+
+
+
     }
 
     public void respuesta1 (View view){
+        cronometro.setVisibility(View.GONE);
+
         if(respuestaCorrecta == 1){
             respuesta1.setEnabled(true);
             respuesta1.setTextColor(Color.rgb(87, 166, 57));
+
 
 
             respuesta2.setEnabled(false);
@@ -138,6 +155,8 @@ public class PreguntaActivity extends BaseActivity {
     }
 
     public void respuesta2 (View view){
+        cronometro.setVisibility(View.GONE);
+
         if(respuestaCorrecta == 2){
             respuesta1.setEnabled(false);
             respuesta1.setVisibility(View.INVISIBLE);
@@ -147,6 +166,7 @@ public class PreguntaActivity extends BaseActivity {
             respuesta4.setEnabled(false);
             respuesta4.setVisibility(View.INVISIBLE);
             respuesta2.setTextColor(Color.rgb(87, 166, 57));
+
         } else {
 
             respuesta1.setEnabled(false);
@@ -185,6 +205,8 @@ public class PreguntaActivity extends BaseActivity {
     }
 
     public void respuesta3 (View view){
+        cronometro.setVisibility(View.GONE);
+
         if(respuestaCorrecta == 3){
             respuesta1.setEnabled(false);
             respuesta1.setVisibility(View.INVISIBLE);
@@ -231,6 +253,8 @@ public class PreguntaActivity extends BaseActivity {
     }
 
     public void respuesta4 (View view){
+        cronometro.setVisibility(View.GONE);
+
         if(respuestaCorrecta == 4){
             respuesta1.setEnabled(false);
             respuesta1.setVisibility(View.INVISIBLE);

@@ -1,5 +1,6 @@
 package com.example.cokepedreira.ocalimochoapp;
 
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class TabuActivity extends BaseActivity {
     @Bind(R.id.palabra2) TextView norma2;
     @Bind(R.id.palabra3) TextView norma3;
     @Bind(R.id.palabra4) TextView norma4;
+    @Bind(R.id.cronometro)TextView cronometro;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,18 +50,30 @@ public class TabuActivity extends BaseActivity {
         listaPersoanjes.setText(personajes.get(tirada));
         String normas = (String)listaPersoanjes.getText();
         ponerNorma(normas);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+
+
+
+
+        new CountDownTimer(15000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                cronometro.setText("Te quedan: " + millisUntilFinished / 1000 + " segundos");
+            }
+
+            public void onFinish() {
                 listaPersoanjes.setText("Se ha acabado el tiempo");
                 norma1.setVisibility(View.GONE);
                 norma2.setVisibility(View.GONE);
                 norma3.setVisibility(View.GONE);
                 norma4.setVisibility(View.GONE);
                 avisoTabu.setVisibility(View.GONE);
+                continuar.setEnabled(true);
+                cronometro.setVisibility(View.GONE);
 
             }
-        }, 30000/* 30sec delay */);
+        }.start();
+
+
 
 
     }

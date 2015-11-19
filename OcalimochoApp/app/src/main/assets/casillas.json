@@ -10,7 +10,7 @@
   {
     "posicion": 1,
     "nombre": "Machos",
-    "descripcion": "Todos los hombres que se precien de serlo beben 1.",
+    "descripcion": "Todos los hombres que se precien de serlo beben una .",
     "imagen": "machos",
     "accion": null,
     "color": "#616161"
@@ -18,7 +18,7 @@
   {
     "posicion": 2,
     "nombre": "Cegatos",
-    "descripcion": "Todos aquellos que lleven gafas, lentillas o similar beben 1",
+    "descripcion": "Todos aquellos que lleven gafas o lentillas beben una",
     "imagen": "cegatos",
     "accion": null,
     "color": "#616161"
@@ -26,7 +26,7 @@
   {
     "posicion": 3,
     "nombre": "Pobres",
-    "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben 1 por cada 2€ de menos",
+    "descripcion": "Todos aquellos que lleven menos de 10€ en la cartera beben una por cada 2€ de menos",
     "imagen": "pobres",
     "accion": null,
     "color": "#616161"
@@ -34,7 +34,7 @@
   {
     "posicion": 4,
     "nombre": "Hipnosis",
-    "descripcion": "Durante el turno que estes en esta casilla, te tocara ayudar al resto de jugadores bebiendo la mitad de las deudas que les toque.",
+    "descripcion": "Durante el turno que estes en esta casilla, te tocara ayudar al resto de jugadores bebiendo la mitad de lo que les toque beber.",
     "imagen": "hipnosis",
     "accion": null,
     "color": "#616161"
@@ -42,7 +42,7 @@
   {
     "posicion": 5,
     "nombre": "Yo nunca",
-    "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que se dice bebes. Sencillo, facil de recordar.",
+    "descripcion": "Juega una ronda de yo nunca. Si has hecho lo que pone bebes. Sencillo, facil de recordar.",
     "imagen": "minijuego",
     "accion": "YO_NUNCA",
     "color": "#616161"
@@ -50,7 +50,7 @@
   {
     "posicion": 6,
     "nombre": "Suerte",
-    "descripcion": "Es tu momento, reparte 5 como quieras",
+    "descripcion": "Es tu momento, reparte cinco como quieras",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -58,7 +58,7 @@
   {
     "posicion": 7,
     "nombre": "Hembras",
-    "descripcion": "Todas las mujeres que se precien de serlo beben 1",
+    "descripcion": "Todas las mujeres que se precien de serlo beben una",
     "imagen": "hembras",
     "accion": null,
     "color": "#616161"
@@ -66,7 +66,7 @@
   {
     "posicion": 8,
     "nombre": "Duelox1",
-    "descripcion": "Reta a otro jugador por 1, el que saque menos en el dado bebe. En caso de empate bebeis los dos",
+    "descripcion": "Reta a otro jugador a los dados por una, el que saque menos bebe. En caso de empate bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -74,7 +74,7 @@
   {
     "posicion": 9,
     "nombre": "Laberinto",
-    "descripcion": "Tiras un dado cada turno y solo puedes salir si sacas 5 o 6. Si no lo sacas bebes la cantidad que obtengas en el dado.",
+    "descripcion": "Tiras un dado cada turno. Solo puedes salir si sacas un 5 o un 6. Si sacas menos de un 5 bebes la cantidad que obtengas en el dado.",
     "imagen": "laberinto",
     "accion": "LABERINTO",
     "color": "#616161"
@@ -82,7 +82,7 @@
   {
     "posicion": 10,
     "nombre": "Pregunta",
-    "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
+    "descripcion": "Juegate una cantidad de tragos. Tienes 10 segundos para adivinar la pregunta. Si aciertas mandas beber, si fallas bebes.",
     "imagen": "minijuego",
     "accion": "PREGUNTA",
     "color": "#616161"
@@ -90,7 +90,7 @@
   {
     "posicion": 11,
     "nombre": "Impares",
-    "descripcion": "Beben 1 todos los que hayan nacido en año impar",
+    "descripcion": "Beben dos todos los que hayan nacido en año impar",
     "imagen": "impares",
     "accion": null,
     "color": "#616161"
@@ -98,7 +98,7 @@
   {
     "posicion": 12,
     "nombre": "Suerte",
-    "descripcion": " Manda 3 a tu gusto ",
+    "descripcion": " Manda tres a tu gusto ",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -106,7 +106,7 @@
   {
     "posicion": 13,
     "nombre": "Zona Cultural",
-    "descripcion": "Quien caiga en esta casilla debe hacer una pregunta de respuesta multiple",
+    "descripcion": "Elige un tema por una cantidad de tragos. Cada uno de los jugadores deben dar una marca del mismo hasta que uno falle o repita. EJEMLO: marcas de coches. Ferrari, Renault, Ford, Mercedes; Citroen,........, Ford. Quien dijo Ford la segunda vez bebe la antidad acordada. ",
     "imagen": "zona",
     "accion": null,
     "color": "#616161"
@@ -122,7 +122,7 @@
   {
     "posicion": 15,
     "nombre": "Marcas",
-    "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada. Si es distinta, os la bebeis",
+    "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada entre los dos. Si es distinta os la bebeis cada uno",
     "imagen": "minijuego",
     "accion": "MARCAS",
     "color": "#616161"
@@ -130,7 +130,7 @@
   {
     "posicion": 16,
     "nombre": "Duelox2",
-    "descripcion": "Reta a otro jugador por 2, quien saque menos en el dado bebe. En caso de empate bebeis los dos",
+    "descripcion": "Reta a otro jugador en los dados por dos, quien saque menos bebe. En caso de empate bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -146,7 +146,7 @@
   {
     "posicion": 18,
     "nombre": "Suerte",
-    "descripcion": "bebe 2, pringao",
+    "descripcion": "bebe dos, pringao",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -154,7 +154,7 @@
   {
     "posicion": 19,
     "nombre": "Reglas puñeteras",
-    "descripcion": "Pon una regla que os afecte a todos que durara hasta que otro jugador caiga en esta casilla",
+    "descripcion": "Pon una regla que os afecte a todos que durara hasta que otro jugador caiga en esta casilla y la cambie. Quien la incumpla bebe.",
     "imagen": "regla",
     "accion": null,
     "color": "#616161"
@@ -162,7 +162,7 @@
   {
     "posicion": 20,
     "nombre": "Palabra Tabu",
-    "descripcion": "Juega a la palabra Tabu. Tienes 30 segundos.Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
+    "descripcion": "Reta a  un compañero por una cantidad a adivinar un personaje sin decir las palabras que apaerecen en menos de 15 segundos.Si el compañero acierta el personaje, mandais beber la cantidad acordada. Si no lo acierta os bebeis cada uno esa misma cantidad.",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU",
     "color": "#616161"
@@ -186,7 +186,7 @@
   {
     "posicion": 23,
     "nombre": "Duelox3",
-    "descripcion": "Reta a un compañero por 3. En caso de empate bebeis los dos",
+    "descripcion": "Reta a un compañero a los dados por tres. El que saque menos bebe. En caso de empate bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -202,7 +202,7 @@
   {
     "posicion": 25,
     "nombre": "Password",
-    "descripcion": "Juega a Password con un compañero por una cantidad. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado cada uno, si falla os lo bebeis los dos",
+    "descripcion": "Juegate una cantidad de bebida. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado, si falla os bebeis esa cantidad cada uno",
     "imagen": "minijuego",
     "accion": "PASSWORD",
     "color": "#616161"
@@ -210,7 +210,7 @@
   {
     "posicion": 26,
     "nombre": "Pares",
-    "descripcion": "Todos aquellos que hayan nacido en año par beben 1",
+    "descripcion": "Todos aquellos que hayan nacido en año par beben dos",
     "imagen": "par",
     "accion": null,
     "color": "#616161"
@@ -218,7 +218,7 @@
   {
     "posicion": 27,
     "nombre": "Zona cultural",
-    "descripcion": "Haz una pregunta con respuestas multiples, el primero que falle o repita bebe",
+    "descripcion": "Elige un tema por una cantidad de tragos. Cada uno de los jugadores deben dar una marca del mismo hasta que uno falle o repita. EJEMLO: marcas de coches. Ferrari, Renault, Ford, Mercedes; Citroen,........, Ford. Quien dijo Ford la segunda vez bebe la antidad acordada.",
     "imagen": "zona",
     "accion": null,
     "color": "#616161"
@@ -226,7 +226,7 @@
   {
     "posicion": 28,
     "nombre": "Corleone",
-    "descripcion": "Todos aquellos que tengan familia o pareja jugando beben 3",
+    "descripcion": "Todos aquellos que tengan familia o pareja jugando beben tres",
     "imagen": "corleone",
     "accion": null,
     "color": "#616161"
@@ -234,7 +234,7 @@
   {
     "posicion": 29,
     "nombre": "Suerte",
-    "descripcion": "Mala suerte, te toca beber 3",
+    "descripcion": "Mala suerte, te toca beber tres",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -242,7 +242,7 @@
   {
     "posicion": 30,
     "nombre": "Mimica",
-    "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
+    "descripcion": "Juega con un compañero por una cantidad. Mediante gestos tu compañero tiene que adivinar la pelicula o serie. Si acierta madias beber la cantidad acordada. Si falla os bebeis cada uno esa cantidad",
     "imagen": "minijuego",
     "accion": "MIMICA",
     "color": "#616161"
@@ -250,7 +250,7 @@
   {
     "posicion": 31,
     "nombre": "Pa el de la izquierda",
-    "descripcion": "Bebe 1 quien este sentado a tu izquierda",
+    "descripcion": "Bebe uno quien este sentado a tu izquierda",
     "imagen": "atras",
     "accion": null,
     "color": "#616161"
@@ -274,7 +274,7 @@
   {
     "posicion": 34,
     "nombre": "Fumadores",
-    "descripcion": "Bebe 2 el que este fumnado ahora mismo",
+    "descripcion": "Bebe dos el que este fumnado ahora mismo",
     "imagen": "piti",
     "accion": null,
     "color": "#616161"
@@ -290,7 +290,7 @@
   {
     "posicion": 36,
     "nombre": "Suerte",
-    "descripcion": "Bebe 4",
+    "descripcion": "Bebe cuatro",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -298,7 +298,7 @@
   {
     "posicion": 37,
     "nombre": "pa el de en frente",
-    "descripcion": "Bebe 2 el que este sentado en frente de ti",
+    "descripcion": "Bebe dos el que este sentado en frente de ti",
     "imagen": "enfrente",
     "accion": null,
     "color": "#616161"
@@ -306,7 +306,7 @@
   {
     "posicion": 38,
     "nombre": "Suerte",
-    "descripcion": "Te ha tocado, bebes 4 o te tomas un buen chupito",
+    "descripcion": "Te ha tocado, bebes cuatro o haces un reto que decidan entre tus compañeros.",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -314,7 +314,7 @@
   {
     "posicion": 39,
     "nombre": "Duelox4",
-    "descripcion": "Reta a quien quieras a un duelo por 4. en caso de empate bebeis los 2",
+    "descripcion": "Reta a quien quieras a un duelo por cuatro. en caso de empate bebeis los 2",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -322,7 +322,7 @@
   {
     "posicion": 40,
     "nombre": "Pregunta",
-    "descripcion": "Tienes 10 segundos para adivinar la pregunta por una cantidad. Si aciertas mandas beber, si fallas bebes.",
+    "descripcion": "Juegate una cantidad de tragos. Tienes 10 segundos para adivinar la pregunta. Si aciertas mandas beber, si fallas bebes",
     "imagen": "minijuego",
     "accion": "PREGUNTA",
     "color": "#616161"
@@ -330,7 +330,7 @@
   {
     "posicion": 41,
     "nombre": "Reglas Puñeteras",
-    "descripcion": "Pon una regla que os afecte a todos y que durara hasta que otro caiga en la casilla",
+    "descripcion": "Pon una regla que os afecte a todos que durara hasta que otro jugador caiga en esta casilla y la cambie. Quien la incumpla bebe.",
     "imagen": "regla",
     "accion": null,
     "color": "#616161"
@@ -338,7 +338,7 @@
   {
     "posicion": 42,
     "nombre": "Suerte",
-    "descripcion": "Reparte 2 a tu gusto",
+    "descripcion": "Reparte dos a tu gusto",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -346,7 +346,7 @@
   {
     "posicion": 43,
     "nombre": "Guerra de sexos",
-    "descripcion": "Cada sexo selecciona un representante y luchan en un duelo por 3. Si pierdes, cada miembro de tu grupo bebe esa cantidad. En caso de empate bebis todos",
+    "descripcion": "Cada sexo selecciona un representante y luchan en un duelo a los dados por tres.Cada miembro del sexo que pierda bebe esa cantidad. En caso de empate bebeis todos",
     "imagen": "sexo",
     "accion": "DUELO",
     "color": "#616161"
@@ -354,7 +354,7 @@
   {
     "posicion": 44,
     "nombre": "Pa el de la derecha",
-    "descripcion": "bebe 2 aquel que este sentado a tu derecha",
+    "descripcion": "bebe dos aquel que este sentado a tu derecha",
     "imagen": "alante",
     "accion": null,
     "color": "#616161"
@@ -362,7 +362,7 @@
   {
     "posicion": 45,
     "nombre": "Marcas",
-    "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada. Si es distinta, os la bebeis",
+    "descripcion": "Juega con un compañero por una cantidad. Saldra un tipo de objeto, a la cuenta de 3 tendreis que decir una marca del mismo. Si es la misma mandais beber la cantidad acordada entre los dos. Si es distinta os la bebeis cada uno",
     "imagen": "minijuego",
     "accion": "MARCAS",
     "color": "#616161"
@@ -370,7 +370,7 @@
   {
     "posicion": 46,
     "nombre": "Carcel",
-    "descripcion": "ESTAS EN LA CARCEL. Tira el dado dos veces, la suma de los dados es tu fianza. El juego no contunia hasta que te lo termines",
+    "descripcion": "ESTAS EN LA CARCEL. Tira dos dados, tienes que beber la suma de esos para salir. El juego no continua hasta que te lo termines",
     "imagen": "carcel",
     "accion": "CARCEL",
     "color": "#616161"
@@ -378,7 +378,7 @@
   {
     "posicion": 47,
     "nombre": "Trabalenguas",
-    "descripcion": "Recita un trabalenguas, tienes dos oportunidades. Despues los demas tendran que decir el mismo a la primera. El primero que falle bebe 3",
+    "descripcion": "Tienes dos oportunidades para recitar un trabalenguas. Despues los demas tendran que decir el mismo a la primera. El primero que falle bebe tres",
     "imagen": "lengua",
     "accion": null,
     "color": "#616161"
@@ -386,7 +386,7 @@
   {
     "posicion": 48,
     "nombre": "Triple duelo",
-    "descripcion": "Reta a 2 de tus compañeros por la cantidad que quieras, solo se salva el que mas gane, En caso de empate bebeis los 3 ",
+    "descripcion": "Reta a dos de tus compañeros por la cantidad que quieras, solo se salva el que mas gane, En caso de empate bebeis los 3 ",
     "imagen": "duelotres",
     "accion": "DUELOTRES",
     "color": "#616161"
@@ -394,7 +394,7 @@
   {
     "posicion": 49,
     "nombre": "Suerte",
-    "descripcion": "Bebes 3, que vas muy sobrio",
+    "descripcion": "Bebes tres, que vas muy sobrio",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -402,7 +402,7 @@
   {
     "posicion": 50,
     "nombre": "Palabra Tabu",
-    "descripcion": "Juega a la palabra Tabu. Tienes 30 segundos.Quien acierte el personaje manda beber, si nadie lo acierta, bebes tu.",
+    "descripcion": "Reta a  un compañero por una cantidad a adivinar un personaje sin decir las palabras que apaerecen en menos de 15 segundos.Si el compañero acierta el personaje, mandais beber la cantidad acordada. Si no lo acierta os bebeis cada uno esa misma cantidad..",
     "imagen": "minijuego",
     "accion": "PALABRA_TABU",
     "color": "#616161"
@@ -410,7 +410,7 @@
   {
     "posicion": 51,
     "nombre": "Hipnosis",
-    "descripcion": "Mientras estes en esta casilla beberas la mitad de las deudas de todos tus compañeros",
+    "descripcion": "Durante el turno que estes en esta casilla, te tocara ayudar al resto de jugadores bebiendo la mitad de lo que les toque beber.",
     "imagen": "hipnosis",
     "accion": null,
     "color": "#616161"
@@ -418,7 +418,7 @@
   {
     "posicion": 52,
     "nombre": "Zona cultural",
-    "descripcion": "Quien caiga aqui hace una pregunta de respuesta multiple, el primero que falle bebe",
+    "descripcion": "Elige un tema por una cantidad de tragos. Cada uno de los jugadores deben dar una marca del mismo hasta que uno falle o repita. EJEMLO: marcas de coches. Ferrari, Renault, Ford, Mercedes; Citroen,........, Ford. Quien dijo Ford la segunda vez bebe la antidad acordada.",
     "imagen": "zona",
     "accion": null,
     "color": "#616161"
@@ -434,7 +434,7 @@
   {
     "posicion": 54,
     "nombre": "Reglas puñeteras",
-    "descripcion": "Pon una regla que os afecte a todos. Quien la incumpla bebe.",
+    "descripcion": "Pon una regla que os afecte a todos que durara hasta que otro jugador caiga en esta casilla y la cambie. Quien la incumpla bebe.",
     "imagen": "regla",
     "accion": null,
     "color": "#616161"
@@ -442,7 +442,7 @@
   {
     "posicion": 55,
     "nombre": "Password",
-    "descripcion": "Juega a Password con un compañero por una cantidad. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado cada uno, si falla os lo bebeis los dos",
+    "descripcion": "Juegate una cantidad de bebida. Usando solo palabras clave tu compañero tiene que adivinar la palabra en menos de 15 segundos, si acierta mandais lo apostado, si falla os bebeis esa cantidad cada uno",
     "imagen": "minijuego",
     "accion": "PASSWORD",
     "color": "#616161"
@@ -450,7 +450,7 @@
   {
     "posicion": 56,
     "nombre": "Duelox5",
-    "descripcion": "Reta a alguien por 5. Si empatais bebeis los dos",
+    "descripcion": "Reta a alguien a los dados por cinco. Si empatais bebeis los dos",
     "imagen": "duelo",
     "accion": "DUELO",
     "color": "#616161"
@@ -458,7 +458,7 @@
   {
     "posicion": 57,
     "nombre": "Suerte",
-    "descripcion": "Es hora de putear. Reparte 5 como tu gustes",
+    "descripcion": "Es hora de putear. Reparte cinco como tu gustes",
     "imagen": "suerte",
     "accion": null,
     "color": "#616161"
@@ -474,7 +474,7 @@
   {
     "posicion": 59,
     "nombre": "Muerte",
-    "descripcion": "Si no eres inmune, ahora si que la has jodido. Mueres y vuelves al principio",
+    "descripcion": "Si no eres inmune, ahora si que la has jodido. Mueres y vuelves a la primera casilla.",
     "imagen": "muerte",
     "accion": "MUERTE",
     "color": "#616161"
@@ -482,7 +482,7 @@
   {
     "posicion": 60,
     "nombre": "Mimica",
-    "descripcion": "Juega al juego de mimica por una cantidad. Tienes 30 segundos para que alguien acierte. Quien acierte la pelicula o serie y tu mandais beber, si nadie la acierta bebes.",
+    "descripcion": "Juega con un compañero por una cantidad. Mediante gestos tu compañero tiene que adivinar la pelicula o serie. Si acierta madias beber la cantidad acordada. Si falla os bebeis cada uno esa cantidad"",
     "imagen": "minijuego",
     "accion": "MIMICA",
     "color": "#616161"

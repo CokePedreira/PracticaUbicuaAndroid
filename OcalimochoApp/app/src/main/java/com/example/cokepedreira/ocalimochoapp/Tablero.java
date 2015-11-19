@@ -108,10 +108,11 @@ public class Tablero extends BaseActivity {
 
 
                             case PATINAZO:
-
+                                siguienteJugador.setEnabled(false);
                                 new Handler().postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
+                                        siguienteJugador.setEnabled(true);
                                         casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().remove(jugadorActual);
                                         jugadorActual.setCasillaActual(jugadorActual.getCasillaActual() - 20);
                                         casillas.get(jugadorActual.getCasillaActual()).getJugadoresEnLaCasilla().add(jugadorActual);
